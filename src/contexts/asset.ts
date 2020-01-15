@@ -39,6 +39,12 @@ import kidWithAsses_3x from "../images/kis-with-asses@3x.png"
 import wall from "../images/wall.png"
 import wall_2x from "../images/wall@2x.png"
 import wall_3x from "../images/wall@3x.png"
+import next from "../images/next.png"
+import next_2x from "../images/next@2x.png"
+import next_3x from "../images/next@3x.png"
+import prev from "../images/prev.png"
+import prev_2x from "../images/prev@2x.png"
+import prev_3x from "../images/prev@3x.png"
 
 export const initAsset = {
   news1and4,
@@ -80,6 +86,12 @@ export const initAsset = {
   wall,
   wall_2x,
   wall_3x,
+  next,
+  next_2x,
+  next_3x,
+  prev,
+  prev_2x,
+  prev_3x,
 }
 
 export const asset = createContext(initAsset)

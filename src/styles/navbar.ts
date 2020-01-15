@@ -22,6 +22,8 @@ export const LogoContainer = styled.div`
   left: 0;
   margin-left: 60px;
   transform: translateY(20%);
+  background: white;
+  z-index: 1;
 
   > img {
     width: 80%;
