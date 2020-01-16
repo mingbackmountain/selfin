@@ -17,9 +17,15 @@ export const NavbarContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-flow: wrap;
+  }
 
-    .hamburger {
-      width: 30px;
+  .hamburger {
+    width: 30px;
+    display: flex;
+    align-items: center;
+
+    > img {
+      width: 100%;
     }
   }
 
