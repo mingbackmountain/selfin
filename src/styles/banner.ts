@@ -3,11 +3,15 @@ import styled from "styled-components"
 import { SlideButtonProps } from "../interfaces/banner"
 
 export const BannerContainer = styled.div`
-  margin-top: 98px;
+  margin-top: 78px;
   position: relative;
 
   > .banner {
     width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 98px;
   }
 `
 
