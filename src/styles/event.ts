@@ -4,7 +4,15 @@ export const EventContainer = styled.div`
   margin-top: 45px;
 
   > h1 {
+    font-weight: 500;
     color: #461313;
+  }
+
+  > .recommend {
+    font-size: 50px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
   }
 
   > .cards {

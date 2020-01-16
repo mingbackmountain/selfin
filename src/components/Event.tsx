@@ -4,10 +4,16 @@ import { EventCard } from "./EventCard"
 
 import { Container } from "../styles/container"
 import { EventContainer } from "../styles/event"
+import { LongerYellowHeadline } from "../styles/yellow-headline"
 
 import { asset } from "../contexts/asset"
 
-export const Events: React.FC = () => {
+interface EventTypeProps {
+  isRecommend: boolean
+  text: string
+}
+
+export const Events: React.FC<EventTypeProps> = ({ isRecommend, text }) => {
   const { news1and4, news2, news3 } = useContext(asset)
 
   const mockData = [
@@ -45,7 +51,14 @@ export const Events: React.FC = () => {
   return (
     <Container>
       <EventContainer>
-        <h1>กิจกรรมที่น่าสนใจในเดือนนี้</h1>
+        {isRecommend ? (
+          <h1>{text}</h1>
+        ) : (
+          <h1 className="recommend">
+            {text}
+            <LongerYellowHeadline />
+          </h1>
+        )}
 
         <div className="cards">
           {mockData.map((event, index) => (
