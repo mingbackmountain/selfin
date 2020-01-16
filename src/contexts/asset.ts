@@ -54,6 +54,7 @@ import timeAt_3x from "../images/clock-circular-outline@3x.png"
 import whiteLogo from "../images/white.png"
 import whiteLogo_2x from "../images/white@2x.png"
 import whiteLogo_3x from "../images/white@3x.png"
+import faBars from "../images/fa-bars.svg"
 
 export const initAsset = {
   news1and4,
@@ -110,6 +111,7 @@ export const initAsset = {
   whiteLogo,
   whiteLogo_2x,
   whiteLogo_3x,
+  faBars,
 }
 
 export const asset = createContext(initAsset)
