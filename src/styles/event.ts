@@ -9,6 +9,7 @@ export const EventContainer = styled.div`
   }
 
   > .recommend {
+    font-weight: 700;
     font-size: 50px;
     display: flex;
     flex-flow: column;
