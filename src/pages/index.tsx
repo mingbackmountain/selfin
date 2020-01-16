@@ -18,7 +18,7 @@ export const HomePage: React.FC = () => {
       <Test />
       <Events isRecommend={false} text="กิจกรรมที่ใช่สำหรับลูกของคุณ" />
       <Blog />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

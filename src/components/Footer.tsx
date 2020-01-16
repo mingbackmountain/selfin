@@ -13,11 +13,14 @@ export const Footer: React.FC = () => {
       <Container>
         <img src={whiteLogo} alt="white logo" />
         <div>
-          <div>
-            ติดตามเราได้ที่ <img src={fbLogo} alt="fb logo" />{" "}
-            <img src={instagramLogo} alt="instagram logo" />
-          </div>
-          <div>contact.selfin@gmail.com</div>
+          <p>
+            ติดตามเราได้ที่{" "}
+            <span className="social">
+              <img src={fbLogo} alt="fb logo" />{" "}
+              <img src={instagramLogo} alt="instagram logo" />
+            </span>
+          </p>
+          <p>contact.selfin@gmail.com</p>
         </div>
       </Container>
     </FooterContainer>
