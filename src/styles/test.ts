@@ -24,6 +24,8 @@ export const TestSection = styled.section`
 
   @media screen and (min-width: 1600px) {
     .kid-image {
+      position: static;
+
       > img {
         width: 80%;
       }
