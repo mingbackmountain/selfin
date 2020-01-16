@@ -14,8 +14,8 @@ export const HomePage: React.FC = () => {
       <Banner />
       <NearbyEventForm />
       <Events isRecommend={true} text="กิจกรรมที่น่าสนใจในเดือนนี้" />
-      {/* <Description />
-      <Test />
+      <Description />
+      {/* <Test />
       <Events isRecommend={false} text="กิจกรรมที่ใช่สำหรับลูกของคุณ" />
       <Blog />
       <Footer /> */}
