@@ -8,8 +8,9 @@ export const NavbarContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 1;
+  background: white;
 
   > div {
     display: flex;
@@ -23,6 +24,8 @@ export const NavbarContainer = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
+    padding: 0;
+
     .hamburger {
       display: none;
     }
@@ -48,7 +51,7 @@ export const LogoContainer = styled.div`
     position: absolute;
     left: 0;
     margin-left: 60px;
-    transform: translateY(20%);
+    transform: translateY(40%);
     background: white;
     z-index: 1;
 
