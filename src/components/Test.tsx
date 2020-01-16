@@ -10,7 +10,7 @@ export const Test: React.FC = () => {
 
   return (
     <TestSection>
-      <div>
+      <div className="kid-image">
         <img src={kidWithAsses} alt="kid with asses" />
       </div>
       <DescriptionContainer>
