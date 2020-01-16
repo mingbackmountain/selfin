@@ -51,6 +51,9 @@ import placeAt_3x from "../images/facebook-placeholder-for-locate-places-on-maps
 import timeAt from "../images/clock-circular-outline.png"
 import timeAt_2x from "../images/clock-circular-outline@2x.png"
 import timeAt_3x from "../images/clock-circular-outline@3x.png"
+import whiteLogo from "../images/white.png"
+import whiteLogo_2x from "../images/white@2x.png"
+import whiteLogo_3x from "../images/white@3x.png"
 
 export const initAsset = {
   news1and4,
@@ -104,6 +107,9 @@ export const initAsset = {
   timeAt,
   timeAt_2x,
   timeAt_3x,
+  whiteLogo,
+  whiteLogo_2x,
+  whiteLogo_3x,
 }
 
 export const asset = createContext(initAsset)

@@ -6,6 +6,7 @@ import { Events } from "../components/Event"
 import { Description } from "../components/Description"
 import { Test } from "../components/Test"
 import { Blog } from "../components/Blog"
+import { Footer } from "../components/Footer"
 
 export const HomePage: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ export const HomePage: React.FC = () => {
       <Test />
       <Events isRecommend={false} text="กิจกรรมที่ใช่สำหรับลูกของคุณ" />
       <Blog />
+      <Footer />
     </div>
   )
 }
