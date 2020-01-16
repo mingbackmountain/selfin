@@ -3,14 +3,19 @@ import styled from "styled-components"
 import { SelectState } from "../interfaces/custom-dropdown"
 
 export const Select = styled.div<SelectState>`
+  box-sizing: border-box;
   position: relative;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   font-weight: 600;
-  height: 55px;
+  height: 70px;
   border: 1px solid #b3b3b3;
   border-radius: 20px;
   padding: 5px 10px;
   color: #b3b3b3;
+  font-size: 18px;
+  width: 100% !important;
+  margin: 5px;
+  max-width: 400px;
 
   span {
     font-size: 20px;
@@ -44,5 +49,9 @@ export const Select = styled.div<SelectState>`
       padding: 5px 10px;
       border: 1px solid #b3b3b3;
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 55px;
   }
 `

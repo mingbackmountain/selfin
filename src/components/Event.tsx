@@ -44,7 +44,6 @@ export const Events: React.FC<EventTypeProps> = ({ isRecommend, text }) => {
     },
   ]
 
-  // @todo add responsive at event card
   return (
     <Container>
       <EventContainer>

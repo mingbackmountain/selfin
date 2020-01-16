@@ -39,10 +39,10 @@ export const Description: React.FC = () => {
         </p>
         <button>อ่านต่อ</button>
       </DescriptionContainer>
-      <div>
+      <div className="kid-image">
         <img src={kidWithAdhd} alt="kid with ADHD" />
-        <img src={wall} alt="wall" />
-        <img src={wall} alt="wall" />
+        <img className="wall1" src={wall} alt="wall" />
+        <img className="wall2" src={wall} alt="wall" />
       </div>
     </ADHDSection>
   )

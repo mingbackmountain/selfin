@@ -11,16 +11,33 @@ export const BlogSection = styled.section`
 
   > .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 120px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
   }
 
   > .all-blog-button {
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 500;
     color: #ffa81f;
     text-align: right;
+  }
+
+  @media screen and (min-width: 900px) {
+    > .cards {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    > .all-blog-button {
+      font-size: 28px;
+    }
+
+    > .cards {
+      grid-gap: 120px;
+    }
   }
 `
 
@@ -38,7 +55,7 @@ export const BlogCardContainer = styled.div`
     font-weight: 600;
     word-break: break-word;
     overflow-wrap: break-word;
-    min-height: 140px;
+    min-height: 90px;
   }
 
   > p {
@@ -55,6 +72,28 @@ export const BlogCardContainer = styled.div`
       font-weight: 300;
       color: #818181;
       font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    > h3 {
+      font-size: 20px;
+      min-height: 130px;
+    }
+
+    > p {
+      min-height: 180px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    > h3 {
+      font-size: 24px;
+      min-height: 160px;
+    }
+
+    > p {
+      min-height: 110px;
     }
   }
 `
