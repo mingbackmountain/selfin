@@ -8,10 +8,7 @@ import { LongerYellowHeadline } from "../styles/yellow-headline"
 
 import { asset } from "../contexts/asset"
 
-interface EventTypeProps {
-  isRecommend: boolean
-  text: string
-}
+import { EventTypeProps } from "../interfaces/event"
 
 export const Events: React.FC<EventTypeProps> = ({ isRecommend, text }) => {
   const { news1and4, news2, news3 } = useContext(asset)

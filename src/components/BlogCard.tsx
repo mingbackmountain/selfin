@@ -2,14 +2,7 @@ import React from "react"
 
 import { BlogCardContainer } from "../styles/blog"
 
-interface BlogCardProps {
-  blog: {
-    img: string
-    title: string
-    excerpt: string
-    date: string
-  }
-}
+import { BlogCardProps } from "../interfaces/blog"
 
 export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (

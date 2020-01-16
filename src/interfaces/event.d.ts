@@ -12,3 +12,8 @@ export interface EventInfoProps {
   placeName?: string
   time?: string
 }
+
+export interface EventTypeProps {
+  isRecommend: boolean
+  text: string
+}
