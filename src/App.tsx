@@ -18,6 +18,9 @@ const App: React.FC = () => {
           <Route exact path="/">
             <HomePage />
           </Route>
+          <Route path="/selfin">
+            <HomePage />
+          </Route>
         </Switch>
         <GlobalStyle />
       </Router>
