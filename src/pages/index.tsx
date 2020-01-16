@@ -16,9 +16,9 @@ export const HomePage: React.FC = () => {
       <Events isRecommend={true} text="กิจกรรมที่น่าสนใจในเดือนนี้" />
       <Description />
       <Test />
-      {/* <Events isRecommend={false} text="กิจกรรมที่ใช่สำหรับลูกของคุณ" />
+      <Events isRecommend={false} text="กิจกรรมที่ใช่สำหรับลูกของคุณ" />
       <Blog />
-      <Footer /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
