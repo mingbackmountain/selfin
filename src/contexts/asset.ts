@@ -45,6 +45,12 @@ import next_3x from "../images/next@3x.png"
 import prev from "../images/prev.png"
 import prev_2x from "../images/prev@2x.png"
 import prev_3x from "../images/prev@3x.png"
+import placeAt from "../images/facebook-placeholder-for-locate-places-on-maps.png"
+import placeAt_2x from "../images/facebook-placeholder-for-locate-places-on-maps@2x.png"
+import placeAt_3x from "../images/facebook-placeholder-for-locate-places-on-maps@3x.png"
+import timeAt from "../images/clock-circular-outline.png"
+import timeAt_2x from "../images/clock-circular-outline@2x.png"
+import timeAt_3x from "../images/clock-circular-outline@3x.png"
 
 export const initAsset = {
   news1and4,
@@ -92,6 +98,12 @@ export const initAsset = {
   prev,
   prev_2x,
   prev_3x,
+  placeAt,
+  placeAt_2x,
+  placeAt_3x,
+  timeAt,
+  timeAt_2x,
+  timeAt_3x,
 }
 
 export const asset = createContext(initAsset)
