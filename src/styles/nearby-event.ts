@@ -1,30 +1,56 @@
 import styled from "styled-components"
 
 export const NearbyFormContainer = styled.div`
-  border-radius: 55px;
+  border-radius: 20px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
-  padding: 20px 70px;
-  transform: translateY(-45%);
+  padding: 10px;
 
   > h1 {
-    font-size: 34px;
-    margin: 0 0 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    border-radius: 55px;
+    background-color: #ffffff;
+    padding: 20px 70px;
+    transform: translateY(-45%);
+
+    > h1 {
+      font-size: 34px;
+      margin: 0 0 20px;
+      text-align: start;
+    }
   }
 `
 
 export const DropdownForm = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 25% 25% 20% 20%;
+    grid-gap: 3.33%;
+  }
 `
 
 export const Button = styled.button`
   width: 259px;
-  height: 67px;
+  height: 50px;
   border-radius: 19px;
   color: white;
   background-color: #f23318;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 32px;
+    width: 100%;
+    height: 67px;
+    margin-top: auto;
+  }
 `
