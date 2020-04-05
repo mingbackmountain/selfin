@@ -51,7 +51,7 @@ export const Select = styled.div<SelectState>`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     height: 55px;
   }
 `

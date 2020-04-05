@@ -29,7 +29,7 @@ export const NavbarContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     padding: 0;
 
     .hamburger {
@@ -46,7 +46,7 @@ export const LogoContainer = styled.div`
     max-width: 100px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     border-radius: 50%;
     width: 125px;
     height: 125px;
@@ -75,7 +75,7 @@ export const NavItem = styled.div<NavItemOpenProps>`
   align-items: center;
   display: ${props => (props.isOpen ? "flex" : "none")};
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     margin: 27px 0;
     display: flex;
     flex-flow: row;
@@ -101,7 +101,7 @@ export const AuthButton = styled.a`
   margin: 5px 0;
   text-align: center;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     margin: 0 calc(30px / 2);
   }
 `

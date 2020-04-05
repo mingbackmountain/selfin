@@ -49,7 +49,7 @@ export const EventContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     > .cards {
       grid-gap: 10px;
     }
@@ -116,7 +116,7 @@ export const EventCardContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     > .cards {
       grid-gap: 10px;
     }
@@ -135,7 +135,7 @@ export const Price = styled.div`
     margin-right: 20px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     font-size: 48px;
 
     > span {

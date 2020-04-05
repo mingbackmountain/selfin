@@ -10,7 +10,7 @@ export const NearbyFormContainer = styled.div`
     text-align: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     border-radius: 55px;
     background-color: #ffffff;
     padding: 20px 70px;
@@ -29,7 +29,7 @@ export const DropdownForm = styled.div`
   flex-flow: column;
   align-items: center;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     display: grid;
     grid-template-columns: 25% 25% 20% 20%;
     grid-gap: 3.33%;
@@ -47,7 +47,7 @@ export const Button = styled.button`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   margin-top: 20px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     font-size: 32px;
     width: 100%;
     height: 67px;

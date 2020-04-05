@@ -71,7 +71,7 @@ export const DescriptionContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     > h1 {
       font-size: 50px;
     }

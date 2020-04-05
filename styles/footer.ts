@@ -51,7 +51,7 @@ export const FooterContainer = styled.footer`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     > div {
       font-size: 28px;
     }

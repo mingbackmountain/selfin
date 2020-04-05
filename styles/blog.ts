@@ -30,7 +30,7 @@ export const BlogSection = styled.section`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     > .all-blog-button {
       font-size: 28px;
     }
@@ -86,7 +86,7 @@ export const BlogCardContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1100px) {
     > h3 {
       font-size: 24px;
       min-height: 160px;
