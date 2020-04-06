@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { AuthButtonProps, NavItemOpenProps } from "../types/navbar"
+import { NavItemOpenProps } from "../types/navbar"
 
 export const NavbarContainer = styled.div`
   position: fixed;
@@ -13,41 +13,46 @@ export const NavbarContainer = styled.div`
   background: white;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
-  > div,
-  > div > div {
+  > div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-flow: wrap;
     height: inherit;
+    flex: 0 1 10%;
   }
 
   .hamburger {
+    flex: 0 1 50%;
     width: 30px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 
     > img {
       width: 100%;
     }
   }
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 769px) {
     padding: 0;
 
     .hamburger {
+      flex: 0 1 50%;
       display: none;
     }
   }
 `
 
 export const LogoContainer = styled.div`
+  flex: 0 1 50%;
+
   > img {
     width: 100%;
     max-width: 100px;
   }
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 769px) {
+    flex: 0 1 auto;
     width: 84px;
     height: auto;
     display: flex;
@@ -67,13 +72,16 @@ export const NavItem = styled.div<NavItemOpenProps>`
   font-weight: 300;
   font-size: 18px;
   flex-flow: column;
+  flex: 0 1 100%;
   align-items: center;
+  width: auto;
   display: ${props => (props.isOpen ? "flex" : "none")};
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 769px) {
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
+    flex: 0 1 90%;
   }
 `
 
@@ -88,9 +96,15 @@ export const NavLink = styled.a`
 export const LoginButton = styled.a`
   width: 32px;
   height: 32px;
+  margin: 0 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  > img {
-    width: 100%;
+  > svg {
     color: #ffc626;
+  }
+
+  @media screen and (min-width: 769px) {
   }
 `
