@@ -1,23 +1,36 @@
 import React, { useContext } from "react"
 
 import { Container } from "../styles/container"
-import { FooterContainer } from "../styles/footer"
+import { FooterContainer, LeftSection, RightSection } from "../styles/footer"
 
 export const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <Container>
-        <img src="/images/white.png" alt="white logo" />
-        <div>
+        <LeftSection>
+          <img src="/images/white.png" alt="white logo" />
           <p>
-            ติดตามเราได้ที่{" "}
-            <span className="social">
-              <img src="/images/f-logo-rgb-blue-144.png" alt="fb logo" />{" "}
-              <img src="/images/instagram.png" alt="instagram logo" />
-            </span>
+            We believe every kid has Potential.
+            <br />
+            We offer a wide range of classes from
+            <br />
+            20+ fields of interest especially for your kids.
           </p>
-          <p>contact.selfin@gmail.com</p>
-        </div>
+        </LeftSection>
+        <RightSection>
+          <h6>ADDRESS</h6>
+          <p>
+            999 Phutthamonthon Sai 4 Rd, Salaya,
+            <br />
+            Phutthamonthon District, Nakhon Pathom 73170
+            <br />
+            <br />
+            Email: Sparkspace.edu.com
+            <br />
+            <br />
+            Call: +66-987654321
+          </p>
+        </RightSection>
       </Container>
     </FooterContainer>
   )
