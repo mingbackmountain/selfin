@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Link } from "react-router-dom"
 
 import { AuthButtonProps, NavItemOpenProps } from "../types/navbar"
 
@@ -8,15 +7,19 @@ export const NavbarContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
+  height: 84px;
   padding: 10px 0;
   z-index: 2;
   background: white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 
-  > div {
+  > div,
+  > div > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-flow: wrap;
+    height: inherit;
   }
 
   .hamburger {
@@ -39,25 +42,17 @@ export const NavbarContainer = styled.div`
 `
 
 export const LogoContainer = styled.div`
-  flex: 0 1 40%;
-
   > img {
     width: 100%;
     max-width: 100px;
   }
 
   @media screen and (min-width: 1100px) {
-    border-radius: 50%;
-    width: 125px;
-    height: 125px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.16);
+    width: 84px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 0;
-    margin-left: 60px;
-    transform: translateY(40%);
     background: white;
     z-index: 1;
 
@@ -68,15 +63,14 @@ export const LogoContainer = styled.div`
 `
 
 export const NavItem = styled.div<NavItemOpenProps>`
-  font-family: "Mitr", Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  flex: 0 1 100%;
+  font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
   flex-flow: column;
   align-items: center;
   display: ${props => (props.isOpen ? "flex" : "none")};
 
   @media screen and (min-width: 1100px) {
-    margin: 27px 0;
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
@@ -91,17 +85,12 @@ export const NavLink = styled.a`
   text-align: center;
 `
 
-export const AuthButton = styled.a`
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  background-color: ${(props: AuthButtonProps) =>
-    props.isLogin ? `#50bf8a` : `#f23318`};
-  padding: 5px 20px;
-  margin: 5px 0;
-  text-align: center;
+export const LoginButton = styled.a`
+  width: 32px;
+  height: 32px;
 
-  @media screen and (min-width: 1100px) {
-    margin: 0 calc(30px / 2);
+  > img {
+    width: 100%;
+    color: #ffc626;
   }
 `
