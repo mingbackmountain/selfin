@@ -1,8 +1,8 @@
 import React from "react"
 
-import { BlogCardContainer } from "../styles/blog"
+import { BlogCardContainer } from "./styles/blog"
 
-import { BlogCardProps } from "../types/blog"
+import { BlogCardProps } from "./types"
 
 export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
