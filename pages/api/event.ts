@@ -17,10 +17,10 @@ const mockData = [
   },
   {
     img: "/images/s-1450014.png",
-    name: "ฟาร์มนี้มีฝัน ฉันคือ School life",
+    name: "ฟาร์มนี้มีฝัน",
     place: "Parkchong-Nakhonratchasima",
     time: "7 - 9 December 2019",
-    price: 690,
+    price: 4900,
   },
   {
     img: "/images/s-1450016.png",
