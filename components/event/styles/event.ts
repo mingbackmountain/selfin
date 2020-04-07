@@ -2,18 +2,11 @@ import styled from "styled-components"
 
 export const EventContainer = styled.div`
   margin-top: 45px;
+  font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
 
   > h1 {
-    font-weight: 500;
+    font-weight: 600;
     color: #461313;
-  }
-
-  > .recommend {
-    font-weight: 700;
-    font-size: 50px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
   }
 
   > .cards {
@@ -26,7 +19,6 @@ export const EventContainer = styled.div`
     margin-top: 20px;
     font-size: 20px;
     font-weight: 500;
-    color: #50bf8a;
     text-align: right;
   }
 
@@ -72,41 +64,23 @@ export const EventCardContainer = styled.div`
     width: 100%;
   }
 
-  > h2,
-  > p {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
   p {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 20px;
   }
 
   h2 {
     font-size: 24px;
     color: #50bf8a;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 20px;
   }
 
   @media screen and (min-width: 500px) {
     h2 {
-      font-size: 20px;
+      font-size: 24px;
     }
 
     p {
-      font-size: 14px;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    h2 {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 
@@ -125,28 +99,19 @@ export const EventCardContainer = styled.div`
 
 export const Price = styled.div`
   color: #50bf8a;
-  font-size: 20px;
-  font-family: "Mitr", Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-size: 35px;
+  font-weight: 700;
   text-align: right;
 
   > span {
-    font-size: 14px;
+    font-size: 25px;
     margin-right: 20px;
-  }
-
-  @media screen and (min-width: 1100px) {
-    font-size: 48px;
-
-    > span {
-      font-size: 24px;
-    }
   }
 `
 
 export const EventInfoText = styled.p`
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 300;
   margin: 0;
   display: flex;
   align-items: center;

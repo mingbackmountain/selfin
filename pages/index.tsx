@@ -1,6 +1,6 @@
 import { Banner } from "../components/Banner"
 import { NearbyEventForm } from "../components/NearbyEvent"
-import { Events } from "../components/Event"
+import { Events } from "../components/event"
 import { Layout } from "../components/Layout"
 
 const HomePage: React.FC = () => {
@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
 
       <NearbyEventForm />
 
-      <Events isRecommend={true} text="กิจกรรมที่น่าสนใจในเดือนนี้" />
+      <Events text="กิจกรรมที่น่าสนใจในเดือนนี้" />
     </Layout>
   )
 }
