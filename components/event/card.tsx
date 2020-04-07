@@ -2,7 +2,7 @@ import React from "react"
 
 import { EventInfo } from "./card-info"
 
-import { EventCardContainer, Price } from "./style/event"
+import { EventCardContainer, Price } from "./styles/event"
 
 import { Event } from "./types/event"
 

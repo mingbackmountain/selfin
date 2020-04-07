@@ -3,7 +3,7 @@ import axios from "axios"
 import { EventCard } from "./card"
 
 import { Container } from "../../styles/container"
-import { EventContainer } from "./style/event"
+import { EventContainer } from "./styles/event"
 import { LongerYellowHeadline } from "../../styles/yellow-headline"
 
 import { EventTypeProps } from "./types/event"

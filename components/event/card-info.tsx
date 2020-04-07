@@ -1,4 +1,4 @@
-import { EventInfoText } from "./style/event"
+import { EventInfoText } from "./styles/event"
 
 import { EventInfoProps } from "./types/event"
 
