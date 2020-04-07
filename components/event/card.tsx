@@ -1,12 +1,12 @@
 import React from "react"
 
-import { EventInfo } from "./EventInfo"
+import { EventInfo } from "./card-info"
 
-import { EventCardContainer, Price } from "../styles/event"
+import { EventCardContainer, Price } from "./style/event"
 
-import { EventCardProps } from "../types/event"
+import { Event } from "./types/event"
 
-export const EventCard: React.FC<EventCardProps> = ({ event }) => {
+export const EventCard: React.FC<Event> = ({ event }) => {
   return (
     <EventCardContainer>
       <img src={event.img} alt="event" />

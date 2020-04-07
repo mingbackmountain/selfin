@@ -1,4 +1,4 @@
-export interface EventCardProps {
+export interface Event {
   event: {
     img: string
     name: string
@@ -14,6 +14,5 @@ export interface EventInfoProps {
 }
 
 export interface EventTypeProps {
-  isRecommend: boolean
   text: string
 }

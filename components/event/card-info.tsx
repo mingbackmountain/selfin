@@ -1,6 +1,6 @@
-import { EventInfoText } from "../styles/event"
+import { EventInfoText } from "./style/event"
 
-import { EventInfoProps } from "../types/event"
+import { EventInfoProps } from "./types/event"
 
 export const EventInfo: React.FC<EventInfoProps> = ({ placeName, time }) => {
   return (
