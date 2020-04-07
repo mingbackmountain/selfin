@@ -1,3 +1,7 @@
+export interface TitleProps {
+  text: string
+}
+
 export interface Blog {
   img: string
   title: string

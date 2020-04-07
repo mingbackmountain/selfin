@@ -1,6 +1,6 @@
 import { BlogCard } from "./card"
+import { Title } from "./title"
 
-import { YellowHeadline } from "../../styles/yellow-headline"
 import { Container } from "../../styles/container"
 import { BlogSection } from "./styles/blog"
 
@@ -12,14 +12,15 @@ export const Blog: React.FC = () => {
   return (
     <Container>
       <BlogSection>
-        <h1>
-          บล็อก
-          <YellowHeadline />
-        </h1>
+        <Title text="กระดานความรู้" />
+
+        <div className="all-blog-button">ดูทั้งหมด ></div>
+
         <div className="cards">
           {data && data.map(blog => <BlogCard key={blog.title} blog={blog} />)}
         </div>
-        <div className="all-blog-button">ดูบล็อกทั้งหมด ></div>
+
+        <div className="all-blog-button mobile">ดูทั้งหมด ></div>
       </BlogSection>
     </Container>
   )

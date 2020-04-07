@@ -1,5 +1,3 @@
-import React from "react"
-
 import { BlogCardContainer } from "./styles/blog"
 
 import { BlogCardProps } from "./types"
@@ -8,11 +6,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
     <BlogCardContainer key={blog.title}>
       <img src={blog.img} alt={blog.title} />
-      <h3>{blog.title}</h3>
-      <p dangerouslySetInnerHTML={{ __html: blog.excerpt }} />
-      <div>
-        <p>{blog.date}</p>
-      </div>
+      <h1>{blog.title}</h1>
     </BlogCardContainer>
   )
 }

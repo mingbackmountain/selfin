@@ -1,9 +1,12 @@
 import styled from "styled-components"
 
 export const BlogSection = styled.section`
+  font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
+
   > h1 {
     color: #461313;
-    font-size: 50px;
+    font-size: 32px;
+    font-weight: 600;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -16,11 +19,15 @@ export const BlogSection = styled.section`
   }
 
   > .all-blog-button {
-    margin-top: 20px;
-    font-size: 20px;
+    display: none;
+    font-size: 14px;
     font-weight: 500;
-    color: #ffa81f;
     text-align: right;
+    margin: 10px 0;
+
+    &.mobile {
+      display: block;
+    }
   }
 
   @media screen and (min-width: 900px) {
@@ -28,72 +35,30 @@ export const BlogSection = styled.section`
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
     }
-  }
 
-  @media screen and (min-width: 1100px) {
     > .all-blog-button {
-      font-size: 28px;
-    }
+      display: block;
+      margin: 0px 0px 10px;
 
-    > .cards {
-      grid-gap: 120px;
+      &.mobile {
+        display: none;
+      }
     }
   }
 `
 
 export const BlogCardContainer = styled.div`
   width: 100%;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+  text-align: center;
 
   > img {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
   }
 
-  > h3 {
-    margin: 20px 20px 0;
-    font-size: 24px;
-    font-weight: 600;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    min-height: 90px;
-  }
-
-  > p {
-    margin: 0 20px;
-    min-height: 100px;
-  }
-
-  > div {
-    width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, 0.16);
-
-    > p {
-      margin-left: 20px;
-      font-weight: 300;
-      color: #818181;
-      font-size: 16px;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    > h3 {
-      font-size: 20px;
-      min-height: 130px;
-    }
-
-    > p {
-      min-height: 180px;
-    }
-  }
-
-  @media screen and (min-width: 1100px) {
-    > h3 {
-      font-size: 24px;
-      min-height: 160px;
-    }
-
-    > p {
-      min-height: 110px;
-    }
+  > h1 {
+    font-weight: 300;
+    font-size: 18px;
   }
 `
