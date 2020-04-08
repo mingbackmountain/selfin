@@ -1,6 +1,6 @@
 import { Layout } from "../components/Layout"
-import { Banner } from "../components/Banner"
-import { NearbyEventForm } from "../components/NearbyEvent"
+import { Banner } from "../components/banner"
+import { NearbyEventForm } from "../components/search-bar"
 import { Events } from "../components/event"
 import { Blog } from "../components/blog"
 

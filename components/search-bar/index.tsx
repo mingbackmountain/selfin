@@ -1,14 +1,13 @@
-import React from "react"
-import { CustomDropdown } from "./CustomDropdown"
+import { CustomDropdown } from "./search-bar"
 
-import { Container } from "../styles/container"
+import { Container } from "../../styles/container"
 import {
   NearbyFormContainer,
   DropdownForm,
   Button,
-} from "../styles/nearby-event"
+} from "./styles/nearby-event"
 
-import { useDropdownData } from "../utils/hooks-dropdown"
+import { useDropdownData } from "../../utils/hooks-dropdown"
 
 export const NearbyEventForm: React.FC = () => {
   const { eventTypeOption, stateOption, monthOption } = useDropdownData()

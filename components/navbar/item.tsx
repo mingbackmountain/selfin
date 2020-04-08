@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { NavLink } from "../styles/navbar"
+
+import { NavLink } from "./styles/navbar"
 
 interface NavbarItemProps {
   href: string

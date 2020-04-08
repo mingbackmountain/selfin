@@ -1,6 +1,4 @@
-import React from "react"
-
-import { LogoContainer } from "../styles/navbar"
+import { LogoContainer } from "./styles/navbar"
 
 export const Logo: React.FC = () => {
   return (

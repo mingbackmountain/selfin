@@ -1,6 +1,4 @@
-import React from "react"
-
-import { BannerContainer, SlideButton } from "../styles/banner"
+import { BannerContainer, SlideButton } from "./styles/banner"
 
 export const Banner: React.FC = () => {
   return (

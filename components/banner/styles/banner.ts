@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { SlideButtonProps } from "../types/banner"
+import { SlideButtonProps } from "../types"
 
 export const BannerContainer = styled.div`
   margin-top: 8px;
