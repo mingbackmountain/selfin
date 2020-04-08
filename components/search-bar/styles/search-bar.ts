@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { SelectState } from "../types/custom-dropdown"
+import { SelectState } from "../types"
 
 export const Select = styled.div<SelectState>`
   box-sizing: border-box;

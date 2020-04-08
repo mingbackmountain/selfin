@@ -1,8 +1,6 @@
-import React from "react"
+import { Select } from "./styles/search-bar"
 
-import { DropdownProps } from "../types/custom-dropdown"
-
-import { Select } from "../styles/custom-dropdown"
+import { DropdownProps } from "./types"
 
 export const CustomDropdown: React.FC<DropdownProps> = ({
   options,

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { NavItemOpenProps } from "../types/navbar"
+import { NavItemOpenProps } from "../types"
 
 export const NavbarContainer = styled.div`
   position: fixed;

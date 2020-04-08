@@ -1,7 +1,7 @@
 import { useOpenState } from "./hooks-open-state"
 import { useValue } from "./hooks-select-value"
 
-import { DropdownProps } from "../types/custom-dropdown"
+import { DropdownProps } from "../components/search-bar/types"
 
 export function useDropdownData() {
   const opt1_openState = useOpenState()

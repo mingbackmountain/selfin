@@ -1,12 +1,13 @@
-import { Logo } from "./NavbarLogo"
-
-import { Container } from "../styles/container"
-import { NavbarContainer, NavItem, LoginButton } from "../styles/navbar"
-import { NavbarItem } from "./NavbarItem"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUser, faBars } from "@fortawesome/free-solid-svg-icons"
 
-import { useOpenState } from "../utils/hooks-open-state"
+import { Logo } from "./logo"
+import { NavbarItem } from "./item"
+
+import { Container } from "../../styles/container"
+import { NavbarContainer, NavItem, LoginButton } from "./styles/navbar"
+
+import { useOpenState } from "../../utils/hooks-open-state"
 
 export const Navbar: React.FC = () => {
   const { isOpen, setOpenState } = useOpenState()

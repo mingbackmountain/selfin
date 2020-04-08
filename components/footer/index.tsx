@@ -1,7 +1,5 @@
-import React, { useContext } from "react"
-
-import { Container } from "../styles/container"
-import { FooterContainer, LeftSection, RightSection } from "../styles/footer"
+import { Container } from "../../styles/container"
+import { FooterContainer, LeftSection, RightSection } from "./styles/footer"
 
 export const Footer: React.FC = () => {
   return (
