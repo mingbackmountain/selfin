@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const InfoContainer = styled.div`
-  margin-top: 30px;
   background: url("/images/kid.png") center center;
   background-size: cover;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
