@@ -70,7 +70,7 @@ export const LeftSection = styled.div`
 `
 
 export const RightSection = styled.div`
-  flex: 0 1 50%;
+  flex: 0 1 40%;
   min-height: 450px;
   background-color: #fff;
   border-radius: 10px;
@@ -82,11 +82,11 @@ export const RightSection = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    flex: 0 1 40%;
     padding: 30px 50px 50px;
   }
 
   @media screen and (min-width: 1440px) {
+    flex: 0 1 50%;
     padding: 50px 80px 80px;
   }
 `
