@@ -11,7 +11,7 @@ export const BannerContainer = styled.div`
   }
 
   @media screen and (min-width: 769px) {
-    margin-top: 85px;
+    margin-top: 84px;
   }
 `
 
