@@ -1,8 +1,12 @@
 import styled from "styled-components"
 
-export const InfoContainer = styled.div`
-  background: url("/images/kid.png") center center;
-  background-size: cover;
+import { InfoContainerProps } from "../types"
+
+export const InfoContainer = styled.div<InfoContainerProps>`
+  ${props =>
+    props.usingBackground &&
+    `background: url("/images/kid.png") center center;
+    background-size: cover;`}
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   padding: 20px 0 50px;
 

@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
 
       <Promotion />
 
-      <Info />
+      <Info usingBackground={true} />
 
       <Blog />
     </Layout>

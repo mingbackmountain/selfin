@@ -1,7 +1,9 @@
 import { InfoContainer, WrapContainer, Card } from "./styles/info"
 
-export const Info: React.FC = () => (
-  <InfoContainer>
+import { InfoContainerProps } from "./types"
+
+export const Info: React.FC<InfoContainerProps> = ({ usingBackground }) => (
+  <InfoContainer usingBackground={usingBackground}>
     <h1>จองกิจกรรมให้ลูกง่ายๆ</h1>
     <WrapContainer>
       <Card>
