@@ -1,4 +1,4 @@
-import { Layout } from "../components/Layout"
+import { Layout } from "../components/layout"
 import { Banner } from "../components/banner"
 import { NearbyEventForm } from "../components/search-bar"
 import { Events } from "../components/event"

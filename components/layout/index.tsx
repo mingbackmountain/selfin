@@ -1,3 +1,5 @@
+import { Global } from "@emotion/core"
+
 import { Navbar } from "../navbar"
 import { Footer } from "../footer"
 import { GlobalStyle } from "../../styles/global"
@@ -13,7 +15,7 @@ export const Layout: React.FC<LayoutProps> = props => {
 
       <Footer />
 
-      <GlobalStyle />
+      <Global styles={GlobalStyle} />
     </div>
   )
 }
