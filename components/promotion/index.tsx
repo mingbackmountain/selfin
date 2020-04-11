@@ -1,4 +1,4 @@
-import { SectionTitle } from "./section-title"
+import { SectionTitle } from "../section-title"
 import { MenuItem } from "./menu-item"
 
 import {

@@ -1,4 +1,4 @@
-import { Title } from "./styles/promotion"
+import { Title } from "./styles/section-title"
 import { RedLine } from "../../styles/red-headline"
 
 import { SectionTitleProps } from "./types"

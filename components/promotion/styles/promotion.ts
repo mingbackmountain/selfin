@@ -84,14 +84,6 @@ export const RightSection = styled.div`
   }
 `
 
-export const Title = styled.div`
-  width: fit-content;
-
-  h1 {
-    margin: 0;
-  }
-`
-
 export const Button = styled.div`
   width: 230px;
   border-radius: 20px;
