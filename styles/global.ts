@@ -57,4 +57,8 @@ export const GlobalStyle = css`
     margin: 0;
     font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   }
+
+  button {
+    font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
+  }
 `
