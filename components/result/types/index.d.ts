@@ -7,3 +7,7 @@ export interface EventResult extends Event {
 export interface EventProps {
   event: EventResult
 }
+
+export interface Item {
+  item: number
+}

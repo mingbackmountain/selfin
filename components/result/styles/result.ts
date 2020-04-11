@@ -1,27 +1,45 @@
 import styled from "@emotion/styled"
 
+import { Item } from "../types"
+
 export const Container = styled.div`
   background-color: #ffc626;
   margin: 0 0 20px;
 
   .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
+    display: none;
   }
 
   .cards {
     display: flex;
   }
+
+  @media screen and (min-width: 768px) {
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+    }
+  }
 `
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div<Item>`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(${props => props.item}, 100%);
   grid-gap: 30px;
-  margin-top: 60px;
+  margin: 60px 20px 0;
+  overflow: hidden;
+
+  @media screen and (min-width: 425px) {
+    grid-template-columns: repeat(${props => props.item}, 1fr);
+    margin: 60px 30px 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 60px 0 0;
+  }
 `
 
 export const Card = styled.div`
@@ -29,6 +47,7 @@ export const Card = styled.div`
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 30px;
+  max-width: 280px;
 
   > img {
     width: 100%;

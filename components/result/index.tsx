@@ -17,6 +17,30 @@ const mockData: EventResult[] = [
     time: `Lorem ipsum`,
     price: 590,
   },
+  {
+    img: `/images/s-1450016.png`,
+    name: `Lorem ipsum`,
+    description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam`,
+    place: `Lorem ipsum`,
+    time: `Lorem ipsum`,
+    price: 590,
+  },
+  {
+    img: `/images/s-1450016.png`,
+    name: `Lorem ipsum`,
+    description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam`,
+    place: `Lorem ipsum`,
+    time: `Lorem ipsum`,
+    price: 590,
+  },
+  {
+    img: `/images/s-1450016.png`,
+    name: `Lorem ipsum`,
+    description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam`,
+    place: `Lorem ipsum`,
+    time: `Lorem ipsum`,
+    price: 590,
+  },
 ]
 
 export const Result: React.FC = () => (
@@ -31,7 +55,7 @@ export const Result: React.FC = () => (
       <div className="button">
         <img src="/svg/left.svg" alt="left" />
       </div>
-      <CardContainer>
+      <CardContainer item={mockData.length}>
         {mockData.map(event => (
           <EventCard key={event.name} event={event} />
         ))}
