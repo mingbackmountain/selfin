@@ -1,3 +1,5 @@
+import { css } from "@emotion/core"
+
 import { Layout } from "../components/layout"
 import { Banner } from "../components/banner"
 import { NearbyEventForm } from "../components/search-bar"
@@ -17,9 +19,22 @@ const HomePage: React.FC = () => {
 
       <Promotion />
 
-      <Info usingBackground={true} />
+      <Info
+        usingBackground={true}
+        style={css`
+          padding: 20px 0 50px;
 
-      <Blog />
+          @media screen and (min-width: 1025px) {
+            padding: 30px 0 100px;
+          }
+        `}
+      />
+
+      <Blog
+        style={css`
+          margin-bottom: 60px;
+        `}
+      />
     </Layout>
   )
 }

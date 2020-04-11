@@ -6,12 +6,14 @@ import { BlogSection } from "./styles/blog"
 
 import { useMockBlogData } from "./utils/hooks-get-mock-data"
 
-export const Blog: React.FC = () => {
+import { CSSProps } from "../layout/types"
+
+export const Blog: React.FC<CSSProps> = ({ style }) => {
   const data = useMockBlogData()
 
   return (
     <Container>
-      <BlogSection>
+      <BlogSection css={style}>
         <Title text="กระดานความรู้" />
 
         <div className="all-blog-button">ดูทั้งหมด ></div>

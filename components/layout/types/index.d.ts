@@ -1,5 +1,5 @@
-export interface LayoutProps {
-  style?: {
-    [key: string]: string | number
-  }
+import { SerializedStyles } from "@emotion/core"
+
+export interface CSSProps {
+  style?: SerializedStyles
 }

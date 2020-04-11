@@ -1,9 +1,13 @@
 import { InfoContainer, WrapContainer, Card } from "./styles/info"
 
 import { InfoContainerProps } from "./types"
+import { CSSProps } from "../layout/types"
 
-export const Info: React.FC<InfoContainerProps> = ({ usingBackground }) => (
-  <InfoContainer usingBackground={usingBackground}>
+export const Info: React.FC<InfoContainerProps & CSSProps> = ({
+  usingBackground,
+  style,
+}) => (
+  <InfoContainer usingBackground={usingBackground} css={style}>
     <h1>จองกิจกรรมให้ลูกง่ายๆ</h1>
     <WrapContainer>
       <Card>

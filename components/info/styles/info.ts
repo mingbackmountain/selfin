@@ -4,11 +4,11 @@ import { InfoContainerProps } from "../types"
 
 export const InfoContainer = styled.div<InfoContainerProps>`
   ${props =>
-    props.usingBackground &&
-    `background: url("/images/kid.png") center center;
-    background-size: cover;`}
+    props.usingBackground
+      ? `background: url("/images/kid.png") center center;
+    background-size: cover;`
+      : `background: #fff;`}
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
-  padding: 20px 0 50px;
 
   h1 {
     font-size: 16px;
@@ -24,8 +24,6 @@ export const InfoContainer = styled.div<InfoContainerProps>`
   }
 
   @media screen and (min-width: 1025px) {
-    padding: 30px 0 100px;
-
     h1 {
       font-size: 32px;
     }
