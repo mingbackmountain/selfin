@@ -7,13 +7,6 @@ export const Container = styled.div`
   padding: 60px 60px;
 `
 
-export const RedLine = styled.div`
-  width: 70%;
-  height: 5px;
-  background-color: #f23318;
-  border-radius: 40px;
-`
-
 export const Upper = styled.div`
   display: flex;
   justify-content: space-between;

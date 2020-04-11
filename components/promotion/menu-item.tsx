@@ -1,4 +1,4 @@
-import { RedLine } from "./styles/promotion"
+import { RedLine } from "../../styles/red-headline"
 
 import { MenuItemProps } from "./types"
 
