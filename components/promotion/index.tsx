@@ -8,10 +8,10 @@ import {
   MainContent,
   LeftSection,
   Navigation,
-  Pagination,
   RightSection,
   Button,
 } from "./styles/promotion"
+import { Pagination } from "../../styles/pagination"
 
 export const Promotion: React.FC = () => (
   <Container>
