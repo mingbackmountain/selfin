@@ -1,4 +1,4 @@
-import { SectionTitle } from "./section-title"
+import { SectionTitle } from "../section-title"
 import { MenuItem } from "./menu-item"
 
 import {
@@ -8,10 +8,10 @@ import {
   MainContent,
   LeftSection,
   Navigation,
-  Pagination,
   RightSection,
   Button,
 } from "./styles/promotion"
+import { Pagination } from "../../styles/pagination"
 
 export const Promotion: React.FC = () => (
   <Container>

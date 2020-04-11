@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 export const BlogSection = styled.section`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;

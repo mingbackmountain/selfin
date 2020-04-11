@@ -1,19 +1,21 @@
-import React from "react"
+import * as React from "react"
 import NextApp from "next/app"
-import { ThemeProvider } from "styled-components"
+import { CacheProvider, Global } from "@emotion/core"
 
-const theme = {
-  primary: "green",
-}
+// Use only { cache } from 'emotion'. Don't use { css }.
+import { cache } from "emotion"
+
+import { GlobalStyle } from "../styles/global"
 
 export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props
-
     return (
-      <ThemeProvider theme={theme}>
+      <CacheProvider value={cache}>
         <Component {...pageProps} />
-      </ThemeProvider>
+
+        <Global styles={GlobalStyle} />
+      </CacheProvider>
     )
   }
 }

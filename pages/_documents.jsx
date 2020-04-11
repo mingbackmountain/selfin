@@ -1,32 +1,27 @@
-import React from "react"
-import NextDocument from "next/document"
-import { ServerStyleSheet } from "styled-components"
+import Document, { Head, Main, NextScript } from "next/document"
+import { renderStylesToString, extractCritical } from "emotion-server"
 
-export default class Document extends NextDocument {
-  static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet()
+export default class MyDocument extends Document {
+  static getInitialProps({ renderPage }) {
+    const page = renderPage()
+    const styles = extractCritical(renderStylesToString(page.html))
+    return { ...page, ...styles }
+  }
 
-    const originalRenderPage = ctx.renderPage
-
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
-        })
-
-      const initialProps = await NextDocument.getInitialProps(ctx)
-
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        ),
-      }
-    } finally {
-      sheet.seal()
-    }
+  render() {
+    return (
+      <html>
+        <Head>
+          <style
+            data-emotion-css={this.props.ids.join(" ")}
+            dangerouslySetInnerHTML={{ __html: this.props.css }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    )
   }
 }

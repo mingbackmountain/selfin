@@ -1,17 +1,10 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 export const Container = styled.div`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   background: #ffc626;
   margin-top: 60px;
   padding: 60px 60px;
-`
-
-export const RedLine = styled.div`
-  width: 70%;
-  height: 5px;
-  background-color: #f23318;
-  border-radius: 40px;
 `
 
 export const Upper = styled.div`
@@ -91,14 +84,6 @@ export const RightSection = styled.div`
   }
 `
 
-export const Title = styled.div`
-  width: fit-content;
-
-  h1 {
-    margin: 0;
-  }
-`
-
 export const Button = styled.div`
   width: 230px;
   border-radius: 20px;
@@ -131,18 +116,5 @@ export const Navigation = styled.div`
     display: flex;
     margin-right: 20px;
     margin-top: 5px;
-  }
-`
-
-export const Pagination = styled.div`
-  cursor: pointer;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #ff2000;
-  border-radius: 50%;
-  margin: 0 5px;
-
-  &.selected {
-    background-color: #ff2000;
   }
 `

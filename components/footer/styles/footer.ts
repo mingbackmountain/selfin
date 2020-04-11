@@ -1,7 +1,6 @@
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 export const FooterContainer = styled.footer`
-  margin-top: 60px;
   background-color: #ffa81f;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   font-weight: 300;
