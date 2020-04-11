@@ -4,11 +4,11 @@ import { Navbar } from "../navbar"
 import { Footer } from "../footer"
 import { GlobalStyle } from "../../styles/global"
 
-import { LayoutProps } from "./types"
+import { CSSProps } from "./types"
 
-export const Layout: React.FC<LayoutProps> = props => {
+export const Layout: React.FC<CSSProps> = props => {
   return (
-    <div style={props.style}>
+    <div css={props.style}>
       <Navbar />
 
       {props.children}
