@@ -6,9 +6,22 @@ import { Banner } from "../components/banner"
 import { NearbyEventForm } from "../components/search-bar"
 import { SectionTitle } from "../components/section-title"
 import { Info } from "../components/info"
+import { Pagination } from "../styles/pagination"
 
 const Result = styled.div`
   background-color: #ffc626;
+  margin: 0 0 20px;
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+  }
+
+  .cards {
+    display: flex;
+  }
 `
 
 const CardContainer = styled.div`
@@ -16,7 +29,7 @@ const CardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
-  margin-top: 30px;
+  margin-top: 60px;
 `
 
 const Card = styled.div`
@@ -65,6 +78,18 @@ const Card = styled.div`
   }
 `
 
+const Navigation = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  margin-top: 20px;
+
+  div {
+    display: flex;
+  }
+`
+
 const SearchResult: React.FC = () => {
   return (
     <Layout
@@ -76,42 +101,59 @@ const SearchResult: React.FC = () => {
 
       <NearbyEventForm />
 
-      <Result
-        css={css`
-          margin: 0px 60px 20px;
-        `}
-      >
-        <SectionTitle title="ผลการค้นหา" />
-        <CardContainer>
-          <Card>
-            <img
-              className="event-image"
-              src="/images/s-1450016.png"
-              alt="event"
-            />
-            <div className="event-description">
-              <h1>Lorem ipsum</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam
-              </p>
-              <p>
-                <img
-                  src="/images/facebook-placeholder-for-locate-places-on-maps.png"
-                  alt="location"
-                />
-                Lorem ipsum
-              </p>
-              <p>
-                <img src="/images/clock-circular-outline.png" alt="time" />
-                Lorem ipsum
-              </p>
-              <div className="button-container">
-                <button>590 บาท</button>
+      <Result>
+        <SectionTitle
+          title="ผลการค้นหา"
+          style={css`
+            margin-left: 60px;
+          `}
+        />
+        <div className="cards">
+          <div className="button">
+            <img src="/svg/left.svg" alt="left" />
+          </div>
+          <CardContainer>
+            <Card>
+              <img
+                className="event-image"
+                src="/images/s-1450016.png"
+                alt="event"
+              />
+              <div className="event-description">
+                <h1>Lorem ipsum</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam
+                </p>
+                <p>
+                  <img
+                    src="/images/facebook-placeholder-for-locate-places-on-maps.png"
+                    alt="location"
+                  />
+                  Lorem ipsum
+                </p>
+                <p>
+                  <img src="/images/clock-circular-outline.png" alt="time" />
+                  Lorem ipsum
+                </p>
+                <div className="button-container">
+                  <button>590 บาท</button>
+                </div>
               </div>
-            </div>
-          </Card>
-        </CardContainer>
+            </Card>
+          </CardContainer>
+          <div className="button">
+            <img src="/svg/right.svg" alt="right" />
+          </div>
+        </div>
+        <Navigation>
+          <div>
+            <Pagination className="selected" />
+            <Pagination />
+            <Pagination />
+            <Pagination />
+          </div>
+        </Navigation>
       </Result>
 
       <Info
