@@ -11,7 +11,7 @@ import { Blog } from "../components/blog"
 const HomePage: React.FC = () => {
   return (
     <Layout>
-      <Banner />
+      <Banner imgUrl="/images/cover.png" />
 
       <NearbyEventForm />
 
