@@ -13,7 +13,7 @@ const SearchResult: React.FC = () => {
         background-color: #ffc626;
       `}
     >
-      <Banner />
+      <Banner imgUrl="/images/cover.png" />
 
       <NearbyEventForm />
 
