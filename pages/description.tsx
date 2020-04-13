@@ -1,9 +1,11 @@
 import { Layout } from "../components/layout"
 import { Banner } from "../components/banner"
 import { NameSection } from "../components/name-section"
+import { css } from "@emotion/core"
+
 import { EventDescription } from "../components/event-description"
 import { Location } from "../components/location"
-import { Events } from "../components/event"
+import { CustomEvent } from "../components/event"
 
 export default function Description() {
   return (
@@ -12,7 +14,13 @@ export default function Description() {
       <NameSection />
       <EventDescription />
       <Location />
-      <Events text="กิจกรรมที่ใกล้เคียงกัน" />
+      <CustomEvent
+        text="กิจกรรมที่ใกล้เคียงกัน"
+        style={css`
+          padding: 50px 120px;
+          background: #f7f7f7;
+        `}
+      />
     </Layout>
   )
 }
