@@ -7,3 +7,9 @@ export const Title = styled.div`
     margin: 0;
   }
 `
+
+export const Subtitle = styled(Title)`
+  h2 {
+    margin: 0;
+  }
+`
