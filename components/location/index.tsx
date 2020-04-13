@@ -5,14 +5,14 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 import { SectionTitle, SectionSubtitle } from "../section-title"
 
-import { LocationContainer } from "./styles/location"
+import { LocationContainer, LocationAndTime } from "./styles/location"
 
 export const Location = () => (
   <LocationContainer>
     <SectionTitle
       title="แผนที่"
       style={css`
-        margin-bottom: 20px;
+        margin: 20px 0;
       `}
     />
     <iframe
@@ -25,16 +25,16 @@ export const Location = () => (
     <SectionSubtitle
       title="สอบถามข้อมูลเพิ่มเติม"
       style={css`
-        margin-bottom: 20px;
+        margin: 20px 0;
       `}
     />
-    <div>
+    <LocationAndTime>
       <FontAwesomeIcon icon={faFacebook} size="lg" />
       <div>Lorem ipsum</div>
-    </div>
-    <div>
+    </LocationAndTime>
+    <LocationAndTime>
       <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
       <div>Lorem ipsum</div>
-    </div>
+    </LocationAndTime>
   </LocationContainer>
 )
