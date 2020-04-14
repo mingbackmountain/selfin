@@ -4,7 +4,7 @@ import { EventCard } from "./card"
 import { TitleWithYellowLine } from "../section-title/index"
 import { SectionTitle } from "../section-title"
 
-import { Container } from "../../styles/container"
+import { PagePadding } from "../../styles/container"
 import { EventContainer } from "./styles/event"
 
 import { useMockEventData } from "./utils/hooks-get-mock-data"
@@ -16,20 +16,25 @@ export const Events: React.FC<EventTypeProps> = ({ text }) => {
   const data = useMockEventData()
 
   return (
-    <Container>
-      <EventContainer>
-        <TitleWithYellowLine title={text} />
+    <EventContainer css={PagePadding()}>
+      <TitleWithYellowLine
+        style={css`
+          margin-bottom: 30px;
+        `}
+        title={text}
+      />
 
-        <div className="cards">
-          {data &&
-            data.map((event, index) => (
-              <EventCard key={`${event.name}${index}`} event={event} />
-            ))}
-        </div>
+      <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด >></div>
 
-        <div className="all-event-button">ดูกิจกรรมทั้งหมด ></div>
-      </EventContainer>
-    </Container>
+      <div className="cards">
+        {data &&
+          data.map((event, index) => (
+            <EventCard key={`${event.name}${index}`} event={event} />
+          ))}
+      </div>
+
+      <div className="all-event-button">ดูกิจกรรมทั้งหมด ></div>
+    </EventContainer>
   )
 }
 

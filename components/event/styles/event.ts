@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 export const EventContainer = styled.div`
-  margin-top: 45px;
+  margin: 45px auto;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
 
   > h1 {
@@ -11,18 +11,35 @@ export const EventContainer = styled.div`
 
   > .cards {
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 80%);
+    overflow: scroll;
+    padding-bottom: 10px;
   }
 
   > .all-event-button {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: right;
+    display: none;
+
+    &.mobile {
+      display: block;
+      text-align: right;
+      margin-bottom: 10px;
+    }
   }
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 769px) {
+    > .all-event-button {
+      display: block;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: right;
+
+      &.mobile {
+        display: none;
+      }
+    }
+
     > .cards {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
@@ -56,7 +73,7 @@ export const EventCardContainer = styled.div`
   width: 100%;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.16);
   word-break: break-word;
   overflow-wrap: break-word;
 
@@ -65,16 +82,19 @@ export const EventCardContainer = styled.div`
   }
 
   p {
+    font-size: 13px;
     margin: 5px 20px;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 15px;
     color: #50bf8a;
     margin: 10px 20px;
   }
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 769px) {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+
     h2 {
       font-size: 24px;
     }
@@ -99,12 +119,11 @@ export const EventCardContainer = styled.div`
 
 export const Price = styled.div`
   color: #50bf8a;
-  font-size: 35px;
+  font-size: 15px;
   font-weight: 700;
   text-align: right;
 
   > span {
-    font-size: 25px;
     margin-right: 20px;
   }
 `
@@ -117,7 +136,7 @@ export const EventInfoText = styled.p`
   align-items: center;
 
   > img {
-    width: 24px;
+    width: 13px;
     margin-right: 10px;
   }
 `
