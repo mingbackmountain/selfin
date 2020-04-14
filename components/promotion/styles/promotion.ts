@@ -4,7 +4,11 @@ export const Container = styled.div`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   background: #ffc626;
   margin-top: 60px;
-  padding: 60px 60px;
+  display: none;
+
+  @media screen and (min-width: 769px) {
+    display: block;
+  }
 `
 
 export const Upper = styled.div`
