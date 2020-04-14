@@ -2,25 +2,16 @@ import styled from "@emotion/styled"
 
 export const NearbyFormContainer = styled.div`
   border-radius: 20px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
-  > h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 1025px) {
+    display: block;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
     border-radius: 55px;
     background-color: #ffffff;
-    padding: 20px 70px;
     transform: translateY(-45%);
-
-    > h1 {
-      font-size: 34px;
-      margin: 0 0 20px;
-      text-align: start;
-    }
   }
 `
 
@@ -53,4 +44,17 @@ export const Button = styled.button`
     height: 67px;
     margin-top: auto;
   }
+`
+
+export const SearchButton = styled.div`
+  width: 100px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 300px;
+  color: #fff;
+  background-color: #ff2000;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `

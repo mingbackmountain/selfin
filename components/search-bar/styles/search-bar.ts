@@ -55,3 +55,25 @@ export const Select = styled.div<SelectState>`
     height: 55px;
   }
 `
+
+export const QuestionContainer = styled.div`
+  width: 100%;
+  margin: 10px 0;
+
+  h2 {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+  }
+`
+
+export const SelectTab = styled.select`
+  font-weight: 300;
+  background-color: #efefef;
+  width: 100%;
+  appearance: none;
+  border-radius: 5px;
+  border: none;
+  padding: 4px 0;
+  text-align-last: center;
+`
