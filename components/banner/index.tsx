@@ -11,3 +11,12 @@ export const Banner: React.FC<BannerProps> = ({ imgUrl }) => {
     </BannerContainer>
   )
 }
+
+export const MobileBanner: React.FC<BannerProps> = ({ imgUrl }) => {
+  return (
+    <BannerContainer>
+      <div>แหล่งรวมกิจกรรมเพื่อพัฒนาเด็ก ADHD</div>
+      <img className="banner" src={imgUrl} alt="banner" />
+    </BannerContainer>
+  )
+}
