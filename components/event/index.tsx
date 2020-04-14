@@ -1,7 +1,7 @@
 import { css } from "@emotion/core"
 
 import { EventCard } from "./card"
-import { Title } from "./title"
+import { TitleWithYellowLine } from "../section-title/index"
 import { SectionTitle } from "../section-title"
 
 import { Container } from "../../styles/container"
@@ -18,7 +18,7 @@ export const Events: React.FC<EventTypeProps> = ({ text }) => {
   return (
     <Container>
       <EventContainer>
-        <Title text={text} />
+        <TitleWithYellowLine title={text} />
 
         <div className="cards">
           {data &&

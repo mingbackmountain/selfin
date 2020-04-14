@@ -1,7 +1,3 @@
-interface TitleProps {
-  text: string
-}
-
 export interface Event {
   img: string
   name: string

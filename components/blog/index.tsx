@@ -1,5 +1,5 @@
 import { BlogCard } from "./card"
-import { Title } from "./title"
+import { TitleWithYellowLine } from "../section-title/index"
 
 import { Container } from "../../styles/container"
 import { BlogSection } from "./styles/blog"
@@ -14,7 +14,7 @@ export const Blog: React.FC<CSSProps> = ({ style }) => {
   return (
     <Container>
       <BlogSection css={style}>
-        <Title text="กระดานความรู้" />
+        <TitleWithYellowLine title="กระดานความรู้" />
 
         <div className="all-blog-button">ดูทั้งหมด ></div>
 
