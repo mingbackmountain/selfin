@@ -4,7 +4,7 @@ import { faUser, faBars } from "@fortawesome/free-solid-svg-icons"
 import { Logo } from "./logo"
 import { NavbarItem } from "./item"
 
-import { Container } from "../../styles/container"
+import { PagePadding } from "../../styles/container"
 import { NavbarContainer, NavItem, LoginButton } from "./styles/navbar"
 
 import { useOpenState } from "../../utils/hooks-open-state"
@@ -13,8 +13,8 @@ export const Navbar: React.FC = () => {
   const { isOpen, setOpenState } = useOpenState()
 
   return (
-    <NavbarContainer>
-      <Container>
+    <NavbarContainer css={PagePadding()}>
+      <div>
         <Logo />
         <div className="hamburger" onClick={() => setOpenState(!isOpen)}>
           <FontAwesomeIcon icon={faBars} size="2x" />
@@ -25,10 +25,10 @@ export const Navbar: React.FC = () => {
           <NavbarItem href="/" linkName="กิจกรรม" />
           <NavbarItem href="/" linkName="ติดต่อเรา" />
           <LoginButton>
-            <FontAwesomeIcon icon={faUser} color="#ffc626" size="lg" />
+            <FontAwesomeIcon icon={faUser} size="lg" />
           </LoginButton>
         </NavItem>
-      </Container>
+      </div>
     </NavbarContainer>
   )
 }

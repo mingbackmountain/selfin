@@ -27,6 +27,7 @@ export const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    color: #ffba00;
 
     > img {
       width: 100%;
@@ -101,10 +102,7 @@ export const LoginButton = styled.a`
   justify-content: center;
   align-items: center;
 
-  > svg {
-    color: #ffc626;
-  }
-
-  @media screen and (min-width: 769px) {
+  svg {
+    color: #ffba00;
   }
 `
