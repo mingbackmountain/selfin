@@ -26,11 +26,12 @@ export const SectionSubtitle: React.FC<SectionTitleProps & CSSProps> = ({
 
 export const TitleWithYellowLine: React.FC<SectionTitleProps & CSSProps> = ({
   title,
+  style,
 }) => {
   return (
-    <h1>
-      {title}
+    <Title css={style}>
+      <h1>{title}</h1>
       <UnderLine color="yellow" />
-    </h1>
+    </Title>
   )
 }
