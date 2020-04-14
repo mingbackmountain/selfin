@@ -52,6 +52,10 @@ export const GlobalStyle = css`
     font-weight: 700;
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   html,
   body {
     margin: 0;
