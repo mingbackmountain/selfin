@@ -54,15 +54,11 @@ export const GlobalStyle = css`
 
   * {
     box-sizing: border-box;
+    font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   }
 
   html,
   body {
     margin: 0;
-    font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
-  }
-
-  button {
-    font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   }
 `
