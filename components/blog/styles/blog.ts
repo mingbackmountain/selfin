@@ -43,9 +43,8 @@ export const BlogSection = styled.section`
     }
   }
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 769px) {
     > .cards {
-      grid-template-columns: repeat(3, 1fr);
       grid-gap: 20px;
     }
 
