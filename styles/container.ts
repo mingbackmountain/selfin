@@ -33,7 +33,11 @@ export function PagePadding(sizes?: any): any {
           padding: ${padding.top} 40px ${padding.bottom};
         }
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 769px) {
+          padding: ${padding.top} 60px ${padding.bottom};
+        }
+
+        @media screen and (min-width: 1025px) {
           padding: ${padding.top} 120px ${padding.bottom};
         }
       `
@@ -48,7 +52,11 @@ export function PagePadding(sizes?: any): any {
         padding: ${padding.topAndBottom} 40px;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 769px) {
+        padding: ${padding.topAndBottom} 60px;
+      }
+
+      @media screen and (min-width: 1025px) {
         padding: ${padding.topAndBottom} 120px;
       }
     `
@@ -61,7 +69,11 @@ export function PagePadding(sizes?: any): any {
       padding: 0 40px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 769px) {
+      padding: 0 60px;
+    }
+
+    @media screen and (min-width: 1025px) {
       padding: 0 120px;
     }
   `
