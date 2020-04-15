@@ -8,6 +8,12 @@ export const Title = styled.div`
     margin: 0;
   }
 
+  @media screen and (min-width: 426px) {
+    h1 {
+      font-size: 24px;
+    }
+  }
+
   @media screen and (min-width: 769px) {
     h1 {
       font-size: 2rem;
