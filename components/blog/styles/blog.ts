@@ -58,6 +58,12 @@ export const BlogSection = styled.section`
       }
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 `
 
 export const BlogCardContainer = styled.div`
