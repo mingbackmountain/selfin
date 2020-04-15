@@ -23,8 +23,9 @@ export const BannerContainer = styled.div`
     @media screen and (min-width: 426px) {
       top: 100px;
       left: 30px;
-      font-size: 32px;
-      width: 600px;
+      font-size: 20px;
+      width: 380px;
+      padding: 10px;
     }
   }
 
