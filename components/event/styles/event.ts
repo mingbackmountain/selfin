@@ -11,8 +11,8 @@ export const EventContainer = styled.div`
 
   > .cards {
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(4, 80%);
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 250px);
     overflow: scroll;
     padding-bottom: 10px;
   }
@@ -30,12 +30,12 @@ export const EventContainer = styled.div`
 
   @media screen and (min-width: 426px) {
     .cards {
-      grid-template-columns: repeat(4, 45%);
+      gap: 20px;
     }
   }
 
   @media screen and (min-width: 769px) {
-    > .all-event-button {
+    .all-event-button {
       display: block;
       margin-top: 20px;
       font-size: 20px;
@@ -46,32 +46,11 @@ export const EventContainer = styled.div`
         display: none;
       }
     }
-
-    > .cards {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px;
-    }
   }
 
-  @media screen and (min-width: 900px) {
-    > .cards {
-      grid-gap: 40px;
-    }
-  }
-
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1025px) {
     > .cards {
       grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 1100px) {
-    > .cards {
-      grid-gap: 10px;
-    }
-
-    > .all-event-button {
-      font-size: 28px;
     }
   }
 `
@@ -99,27 +78,25 @@ export const EventCardContainer = styled.div`
     margin: 10px 20px;
   }
 
+  @media screen and (min-width: 426px) {
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
   @media screen and (min-width: 769px) {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
 
     h2 {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     p {
-      font-size: 18px;
-    }
-  }
-
-  @media screen and (min-width: 1000px) {
-    > .cards {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 1100px) {
-    > .cards {
-      grid-gap: 10px;
+      font-size: 16px;
     }
   }
 `
@@ -132,6 +109,10 @@ export const Price = styled.div`
 
   > span {
     margin-right: 20px;
+  }
+
+  @media screen and (min-width: 426px) {
+    font-size: 20px;
   }
 `
 
