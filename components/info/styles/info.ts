@@ -37,6 +37,10 @@ export const WrapContainer = styled.div`
   padding: 0 20px;
   margin-top: 20px;
 
+  @media screen and (min-width: 425px) {
+    gap: 40px;
+  }
+
   @media screen and (min-width: 769px) {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
@@ -52,8 +56,8 @@ export const Card = styled.div`
   text-align: center;
 
   > img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
   }
 
   > h1 {
@@ -62,6 +66,13 @@ export const Card = styled.div`
 
   > p {
     font-size: 14px;
+  }
+
+  @media screen and (min-width: 426px) {
+    > img {
+      width: 110px;
+      height: 110px;
+    }
   }
 
   @media screen and (min-width: 769px) {

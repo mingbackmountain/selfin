@@ -63,6 +63,7 @@ export const MobileInfo: React.FC<InfoContainerProps & CSSProps> = ({
           display: flex;
           flex-flow: column;
           align-items: center;
+          margin-bottom: 30px;
         `}
       />
     </div>
