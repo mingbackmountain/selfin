@@ -30,7 +30,7 @@ export const EventContainer = styled.div`
 
   @media screen and (min-width: 426px) {
     .cards {
-      grid-template-columns: repeat(4, 40%);
+      grid-template-columns: repeat(4, 45%);
     }
   }
 
