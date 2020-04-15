@@ -37,8 +37,9 @@ export const Select = styled.div<SelectState>`
     width: 100%;
     display: ${props => (props.isOpen ? `block` : `none`)};
     position: absolute;
-    left: 50px;
-    bottom: -40px;
+    left: 50%;
+    bottom: -100%;
+    transform: translate(-50%, -100%);
     z-index: 1;
     list-style-type: none;
     padding: 0;
@@ -50,8 +51,36 @@ export const Select = styled.div<SelectState>`
       border: 1px solid #b3b3b3;
     }
   }
+`
 
-  @media screen and (min-width: 1100px) {
-    height: 55px;
+export const QuestionContainer = styled.div`
+  width: 100%;
+  margin: 10px 0;
+
+  h2 {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 426px) {
+    h2 {
+      font-size: 20px;
+    }
+  }
+`
+
+export const SelectTab = styled.select`
+  font-weight: 300;
+  background-color: #efefef;
+  width: 100%;
+  appearance: none;
+  border-radius: 5px;
+  border: none;
+  padding: 4px 0;
+  text-align-last: center;
+
+  @media screen and (min-width: 426px) {
+    font-size: 16px;
   }
 `

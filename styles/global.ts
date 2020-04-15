@@ -52,13 +52,13 @@ export const GlobalStyle = css`
     font-weight: 700;
   }
 
-  html,
-  body {
-    margin: 0;
+  * {
+    box-sizing: border-box;
     font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   }
 
-  button {
-    font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
+  html,
+  body {
+    margin: 0;
   }
 `

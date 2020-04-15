@@ -2,25 +2,24 @@ import styled from "@emotion/styled"
 
 export const NearbyFormContainer = styled.div`
   border-radius: 20px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
-  > h1 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  @media screen and (min-width: 1100px) {
-    border-radius: 55px;
+  @media screen and (min-width: 1025px) {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 25px;
     background-color: #ffffff;
-    padding: 20px 70px;
     transform: translateY(-45%);
+  }
+`
 
-    > h1 {
-      font-size: 34px;
-      margin: 0 0 20px;
-      text-align: start;
-    }
+export const MobileContainer = styled(NearbyFormContainer)`
+  @media screen and (min-width: 769px) {
+    box-shadow: none;
+    border-radius: none;
+    background-color: #ffffff;
+    transform: translateY(0);
   }
 `
 
@@ -29,15 +28,17 @@ export const DropdownForm = styled.div`
   flex-flow: column;
   align-items: center;
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 1025px) {
+    width: 100%;
+    padding: 0 20px 20px;
     display: grid;
-    grid-template-columns: 25% 25% 20% 20%;
+    grid-template-columns: repeat(4, 22.5%);
     grid-gap: 3.33%;
   }
 `
 
 export const Button = styled.button`
-  width: 259px;
+  width: 200px;
   height: 50px;
   border-radius: 19px;
   color: white;
@@ -46,11 +47,23 @@ export const Button = styled.button`
   font-weight: 600;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   margin-top: 20px;
+`
 
-  @media screen and (min-width: 1100px) {
-    font-size: 32px;
-    width: 100%;
-    height: 67px;
-    margin-top: auto;
+export const SearchButton = styled.div`
+  width: 100px;
+  height: 32px;
+  font-size: 12px;
+  font-weight: 300px;
+  color: #fff;
+  background-color: #ff2000;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 426px) {
+    width: 150px;
+    height: 48px;
+    font-size: 16px;
   }
 `

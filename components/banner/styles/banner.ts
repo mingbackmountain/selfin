@@ -5,13 +5,32 @@ import { SlideButtonProps } from "../types"
 export const BannerContainer = styled.div`
   margin-top: 8px;
   position: relative;
+  margin-top: 84px;
+
+  > div {
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    padding: 5px;
+    width: 230px;
+    font-size: 13px;
+    background: #ffba00;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 426px) {
+      top: 100px;
+      left: 30px;
+      font-size: 20px;
+      width: 380px;
+      padding: 10px;
+    }
+  }
 
   > .banner {
     width: 100%;
-  }
-
-  @media screen and (min-width: 769px) {
-    margin-top: 84px;
   }
 `
 

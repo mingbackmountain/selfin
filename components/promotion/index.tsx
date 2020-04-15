@@ -11,10 +11,11 @@ import {
   RightSection,
   Button,
 } from "./styles/promotion"
+import { PagePadding } from "../../styles/container"
 import { Pagination } from "../../styles/pagination"
 
 export const Promotion: React.FC = () => (
-  <Container>
+  <Container css={PagePadding({ topAndBottom: 60 })}>
     <Upper>
       <SectionTitle title="โปรโมชั่นประจำเดือน" />
 

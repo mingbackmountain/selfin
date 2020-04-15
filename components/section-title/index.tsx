@@ -1,5 +1,5 @@
 import { Title, Subtitle } from "./styles/section-title"
-import { RedLine } from "../../styles/red-headline"
+import { UnderLine } from "../../styles/underline"
 
 import { SectionTitleProps } from "./types"
 import { CSSProps } from "../layout/types"
@@ -10,7 +10,7 @@ export const SectionTitle: React.FC<SectionTitleProps & CSSProps> = ({
 }) => (
   <Title css={style}>
     <h1>{title}</h1>
-    <RedLine />
+    <UnderLine color="red" />
   </Title>
 )
 
@@ -20,6 +20,18 @@ export const SectionSubtitle: React.FC<SectionTitleProps & CSSProps> = ({
 }) => (
   <Subtitle css={style}>
     <h2>{title}</h2>
-    <RedLine />
+    <UnderLine color="red" />
   </Subtitle>
 )
+
+export const TitleWithYellowLine: React.FC<SectionTitleProps & CSSProps> = ({
+  title,
+  style,
+}) => {
+  return (
+    <Title css={style}>
+      <h1>{title}</h1>
+      <UnderLine color="yellow" />
+    </Title>
+  )
+}
