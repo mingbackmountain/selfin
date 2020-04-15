@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
   const { isOpen, setOpenState } = useOpenState()
 
   return (
-    <NavbarContainer css={PagePadding()}>
+    <NavbarContainer>
       <div>
         <Logo />
         <div className="hamburger" onClick={() => setOpenState(!isOpen)}>

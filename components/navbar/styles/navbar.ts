@@ -8,7 +8,6 @@ export const NavbarContainer = styled.div`
   left: 0;
   width: 100%;
   height: 84px;
-  padding: 10px 0;
   z-index: 2;
   background: white;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -23,6 +22,7 @@ export const NavbarContainer = styled.div`
 
   .hamburger {
     flex: 0 1 50%;
+    padding-right: 20px;
     width: 30px;
     display: flex;
     align-items: center;
@@ -34,40 +34,57 @@ export const NavbarContainer = styled.div`
     }
   }
 
+  @media screen and (min-width: 426px) {
+    .hamburger {
+      padding-right: 40px;
+    }
+  }
+
   @media screen and (min-width: 769px) {
-    padding: 0;
+    padding: 0 60px;
 
     > div {
       flex-flow: nowrap;
     }
 
     .hamburger {
+      padding-right: 0;
       flex: 0 1 50%;
       display: none;
     }
+  }
+
+  @media screen and (min-width: 1441px) {
+    padding: 0 120px;
   }
 `
 
 export const LogoContainer = styled.div`
   flex: 0 1 50%;
+  padding-left: 20px;
+  height: inherit;
+  display: flex;
+  align-items: center;
 
   > img {
-    width: 100%;
     max-width: 100px;
   }
 
+  @media screen and (min-width: 426px) {
+    padding-left: 40px;
+  }
+
   @media screen and (min-width: 769px) {
+    padding-left: 0;
     flex: 0 1 auto;
     width: 84px;
     height: auto;
-    display: flex;
     justify-content: center;
-    align-items: center;
     background: white;
     z-index: 1;
 
     > img {
-      width: 80%;
+      width: 100%;
     }
   }
 `
@@ -79,14 +96,18 @@ export const NavItem = styled.div<NavItemOpenProps>`
   flex-flow: column;
   flex: 0 1 100%;
   align-items: center;
-  width: auto;
   display: ${props => (props.isOpen ? "flex" : "none")};
+  background-color: #ffba00;
+  padding: 25px 0;
 
   @media screen and (min-width: 769px) {
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
     flex: 0 1 90%;
+    background-color: #fff;
+    width: auto;
+    padding: 0;
   }
 `
 
@@ -95,9 +116,26 @@ export const NavLink = styled.a`
   text-decoration: none;
   font-weight: lighter;
   text-align: center;
+  width: 100px;
+  padding: 15px 0;
+  font-size: 20px;
+
+  /* This nth-child create border bottom except last one */
+  @media screen and (max-width: 768px) {
+    &:nth-child(-n + 1) {
+      border: none;
+    }
+
+    &:nth-last-child(n + 3) {
+      border-bottom: 1px solid;
+    }
+  }
 
   @media screen and (min-width: 769px) {
-    margin: 5px 10px;
+    font-size: 16px;
+    padding: 0;
+    margin: 5px 20px;
+    width: auto;
   }
 
   @media screen and (min-width: 1025px) {
@@ -109,11 +147,19 @@ export const LoginButton = styled.a`
   width: 32px;
   height: 32px;
   margin: 0 0 0 auto;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%; */
+  display: none;
 
   svg {
     color: #ffba00;
+  }
+
+  @media screen and (min-width: 769px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
