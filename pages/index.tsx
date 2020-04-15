@@ -57,7 +57,7 @@ const HomePage: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
 
       <Blog
         style={css`
-          margin-bottom: 60px;
+          margin: 60px 0;
         `}
       />
     </Layout>

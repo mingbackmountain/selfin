@@ -12,13 +12,20 @@ export const BlogSection = styled.section`
     align-items: center;
   }
 
-  > .cards {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+  .top-section {
+    display: flex;
+    justify-content: space-between;
   }
 
-  > .all-blog-button {
+  > .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    grid-gap: 20px;
+    overflow: scroll;
+  }
+
+  .all-blog-button {
+    transform: translateY(20px);
     display: none;
     font-size: 14px;
     font-weight: 500;
@@ -36,9 +43,10 @@ export const BlogSection = styled.section`
       grid-gap: 20px;
     }
 
-    > .all-blog-button {
+    .all-blog-button {
       display: block;
       margin: 0px 0px 10px;
+      transform: translateY(50px);
 
       &.mobile {
         display: none;

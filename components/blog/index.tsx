@@ -1,7 +1,9 @@
+import { css } from "@emotion/core"
+
 import { BlogCard } from "./card"
 import { TitleWithYellowLine } from "../section-title/index"
 
-import { Container } from "../../styles/container"
+import { PagePadding } from "../../styles/container"
 import { BlogSection } from "./styles/blog"
 
 import { useMockBlogData } from "./utils/hooks-get-mock-data"
@@ -12,18 +14,27 @@ export const Blog: React.FC<CSSProps> = ({ style }) => {
   const data = useMockBlogData()
 
   return (
-    <Container>
-      <BlogSection css={style}>
-        <TitleWithYellowLine title="กระดานความรู้" />
+    <BlogSection
+      css={css`
+        ${PagePadding()}
+        ${style}
+      `}
+    >
+      <div className="top-section">
+        <TitleWithYellowLine
+          title="กระดานความรู้"
+          style={css`
+            margin-bottom: 30px;
+          `}
+        />
 
         <div className="all-blog-button">ดูทั้งหมด ></div>
+        <div className="all-blog-button mobile">ดูทั้งหมด >></div>
+      </div>
 
-        <div className="cards">
-          {data && data.map(blog => <BlogCard key={blog.title} blog={blog} />)}
-        </div>
-
-        <div className="all-blog-button mobile">ดูทั้งหมด ></div>
-      </BlogSection>
-    </Container>
+      <div className="cards">
+        {data && data.map(blog => <BlogCard key={blog.title} blog={blog} />)}
+      </div>
+    </BlogSection>
   )
 }
