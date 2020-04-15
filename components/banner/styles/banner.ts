@@ -19,6 +19,13 @@ export const BannerContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 426px) {
+      top: 100px;
+      left: 30px;
+      font-size: 32px;
+      width: 600px;
+    }
   }
 
   > .banner {
