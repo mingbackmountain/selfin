@@ -37,6 +37,10 @@ export const NavbarContainer = styled.div`
   @media screen and (min-width: 769px) {
     padding: 0;
 
+    > div {
+      flex-flow: nowrap;
+    }
+
     .hamburger {
       flex: 0 1 50%;
       display: none;
@@ -89,9 +93,16 @@ export const NavItem = styled.div<NavItemOpenProps>`
 export const NavLink = styled.a`
   color: #461313;
   text-decoration: none;
-  margin: 5px calc(45px / 2);
   font-weight: lighter;
   text-align: center;
+
+  @media screen and (min-width: 769px) {
+    margin: 5px 10px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    margin: 5px calc(45px / 2);
+  }
 `
 
 export const LoginButton = styled.a`
