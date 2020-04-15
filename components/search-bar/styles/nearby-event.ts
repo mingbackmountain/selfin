@@ -57,4 +57,10 @@ export const SearchButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 426px) {
+    width: 150px;
+    height: 48px;
+    font-size: 16px;
+  }
 `

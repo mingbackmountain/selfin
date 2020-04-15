@@ -65,6 +65,12 @@ export const QuestionContainer = styled.div`
     font-weight: 300;
     margin: 0;
   }
+
+  @media screen and (min-width: 426px) {
+    h2 {
+      font-size: 20px;
+    }
+  }
 `
 
 export const SelectTab = styled.select`
@@ -76,4 +82,8 @@ export const SelectTab = styled.select`
   border: none;
   padding: 4px 0;
   text-align-last: center;
+
+  @media screen and (min-width: 426px) {
+    font-size: 16px;
+  }
 `
