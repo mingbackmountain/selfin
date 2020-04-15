@@ -29,6 +29,10 @@ export function PagePadding(sizes?: any): any {
       return css`
         padding: ${padding.top} 20px ${padding.bottom};
 
+        @media screen and (min-width: 426px) {
+          padding: ${padding.top} 40px ${padding.bottom};
+        }
+
         @media screen and (min-width: 1024px) {
           padding: ${padding.top} 120px ${padding.bottom};
         }
@@ -40,6 +44,10 @@ export function PagePadding(sizes?: any): any {
     return css`
       padding: ${padding.topAndBottom} 20px;
 
+      @media screen and (min-width: 426px) {
+        padding: ${padding.topAndBottom} 40px;
+      }
+
       @media screen and (min-width: 1024px) {
         padding: ${padding.topAndBottom} 120px;
       }
@@ -48,6 +56,10 @@ export function PagePadding(sizes?: any): any {
 
   return css`
     padding: 0 20px;
+
+    @media screen and (min-width: 426px) {
+      padding: 0 40px;
+    }
 
     @media screen and (min-width: 1024px) {
       padding: 0 120px;
