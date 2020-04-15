@@ -5,6 +5,7 @@ import { TitleWithYellowLine } from "../section-title"
 
 import { PagePadding } from "../../styles/container"
 import {
+  MobileContainer,
   NearbyFormContainer,
   DropdownForm,
   Button,
@@ -19,7 +20,7 @@ export const NearbyEventForm: React.FC = () => {
   return (
     <NearbyFormContainer
       css={css`
-        ${PagePadding({ topAndBottom: 10 })} margin: 0 120px;
+        margin: 0 60px;
       `}
     >
       <h1>ค้นหากิจกรรมที่ใกล้คุณ</h1>
@@ -52,7 +53,7 @@ export const MobileNearbyEventForm = () => {
   const { eventTypeOption, stateOption, monthOption } = useDropdownData()
 
   return (
-    <NearbyFormContainer css={PagePadding()}>
+    <MobileContainer css={PagePadding()}>
       <TitleWithYellowLine
         title="ค้นหากิจกรรมที่ใกล้คุณ"
         style={css`
@@ -87,6 +88,6 @@ export const MobileNearbyEventForm = () => {
       >
         ค้นหากิจกรรม
       </SearchButton>
-    </NearbyFormContainer>
+    </MobileContainer>
   )
 }

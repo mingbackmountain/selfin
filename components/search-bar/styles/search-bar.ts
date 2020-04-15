@@ -37,8 +37,9 @@ export const Select = styled.div<SelectState>`
     width: 100%;
     display: ${props => (props.isOpen ? `block` : `none`)};
     position: absolute;
-    left: 50px;
-    bottom: -40px;
+    left: 50%;
+    bottom: -100%;
+    transform: translate(-50%, -100%);
     z-index: 1;
     list-style-type: none;
     padding: 0;
@@ -49,10 +50,6 @@ export const Select = styled.div<SelectState>`
       padding: 5px 10px;
       border: 1px solid #b3b3b3;
     }
-  }
-
-  @media screen and (min-width: 1100px) {
-    height: 55px;
   }
 `
 

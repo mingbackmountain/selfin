@@ -73,7 +73,7 @@ export function PagePadding(sizes?: any): any {
       padding: 0 60px;
     }
 
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1441px) {
       padding: 0 120px;
     }
   `
