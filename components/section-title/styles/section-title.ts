@@ -16,7 +16,7 @@ export const Title = styled.div`
 
   @media screen and (min-width: 769px) {
     h1 {
-      font-size: 2rem;
+      font-size: 26px;
     }
   }
 `
