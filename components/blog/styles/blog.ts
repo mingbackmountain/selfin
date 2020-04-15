@@ -37,6 +37,12 @@ export const BlogSection = styled.section`
     }
   }
 
+  @media screen and (min-width: 426px) {
+    .cards {
+      grid-template-columns: repeat(3, 350px);
+    }
+  }
+
   @media screen and (min-width: 900px) {
     > .cards {
       grid-template-columns: repeat(3, 1fr);
