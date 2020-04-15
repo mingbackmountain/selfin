@@ -11,7 +11,7 @@ export const Info: React.FC<InfoContainerProps & CSSProps> = ({
   style,
 }) => (
   <InfoContainer usingBackground={usingBackground} css={style}>
-    <h1>จองกิจกรรมให้ลูกง่ายๆ</h1>
+    <h1 className="title">จองกิจกรรมให้ลูกง่ายๆ</h1>
     <WrapContainer>
       <Card>
         <img src="/images/list.png" />

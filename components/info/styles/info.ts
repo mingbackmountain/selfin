@@ -10,21 +10,21 @@ export const InfoContainer = styled.div<InfoContainerProps>`
       : `background: #fff;`}
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
 
-  h1 {
+  .title {
     font-size: 16px;
     font-weight: 600;
     width: 100%;
     text-align: center;
-  }
 
-  @media screen and (min-width: 769px) {
-    h1 {
-      font-size: 24px;
+    @media screen and (min-width: 426px) {
+      font-size: 20px;
     }
-  }
 
-  @media screen and (min-width: 1025px) {
-    h1 {
+    @media screen and (min-width: 729px) {
+      font-size: 28px;
+    }
+
+    @media screen and (min-width: 1441px) {
       font-size: 32px;
     }
   }
@@ -66,6 +66,10 @@ export const Card = styled.div`
 
   > h1 {
     margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
   }
 
   > p {
@@ -85,15 +89,23 @@ export const Card = styled.div`
       height: 110px;
     }
 
+    > h1 {
+      font-size: 24px;
+    }
+
     > p {
       font-size: 16px;
     }
   }
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1441px) {
     > img {
       width: 220px;
       height: 220px;
+    }
+
+    > h1 {
+      font-size: 32px;
     }
 
     > p {
