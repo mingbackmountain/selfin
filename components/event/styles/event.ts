@@ -17,13 +17,20 @@ export const EventContainer = styled.div`
     padding-bottom: 10px;
   }
 
-  > .all-event-button {
+  .all-event-button {
     display: none;
+    transform: translateY(20px);
 
     &.mobile {
       display: block;
       text-align: right;
       margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 426px) {
+    .cards {
+      grid-template-columns: repeat(4, 40%);
     }
   }
 

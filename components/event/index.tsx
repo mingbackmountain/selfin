@@ -17,14 +17,21 @@ export const Events: React.FC<EventTypeProps> = ({ text }) => {
 
   return (
     <EventContainer css={PagePadding()}>
-      <TitleWithYellowLine
-        style={css`
-          margin-bottom: 30px;
+      <div
+        css={css`
+          display: flex;
+          justify-content: space-between;
         `}
-        title={text}
-      />
+      >
+        <TitleWithYellowLine
+          style={css`
+            margin-bottom: 30px;
+          `}
+          title={text}
+        />
 
-      <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด >></div>
+        <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด >></div>
+      </div>
 
       <div className="cards">
         {data &&
