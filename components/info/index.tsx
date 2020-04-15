@@ -68,7 +68,7 @@ export const MobileInfo: React.FC<InfoContainerProps & CSSProps> = ({
       />
     </div>
     <WrapContainer>
-      <Card>
+      <Card className="mobile">
         <img src="/images/placeholder.png" />
         <p>ค้นหากิจกรรมที่ใกล้ที่สุด</p>
       </Card>

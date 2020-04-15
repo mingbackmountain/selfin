@@ -46,6 +46,10 @@ export const WrapContainer = styled.div`
     margin-top: 50px;
     padding: 0 60px;
     grid-gap: 120px;
+
+    .mobile {
+      display: none;
+    }
   }
 `
 
