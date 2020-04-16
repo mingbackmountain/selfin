@@ -13,14 +13,16 @@ import {
 } from "./styles/nearby-event"
 
 import { useDropdownData } from "../../utils/hooks-dropdown"
+import { CSSProps } from "../layout/types"
 
-export const NearbyEventForm: React.FC = () => {
+export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
   const { eventTypeOption, stateOption, monthOption } = useDropdownData()
 
   return (
     <NearbyFormContainer
       css={css`
         margin: 0 60px;
+        ${style}
       `}
     >
       <h1>ค้นหากิจกรรมที่ใกล้คุณ</h1>
@@ -49,11 +51,16 @@ export const NearbyEventForm: React.FC = () => {
   )
 }
 
-export const MobileNearbyEventForm = () => {
+export const MobileNearbyEventForm: React.FC<CSSProps> = ({ style }) => {
   const { eventTypeOption, stateOption, monthOption } = useDropdownData()
 
   return (
-    <MobileContainer css={PagePadding()}>
+    <MobileContainer
+      css={css`
+        ${PagePadding()}
+        ${style}
+      `}
+    >
       <TitleWithYellowLine
         title="ค้นหากิจกรรมที่ใกล้คุณ"
         style={css`
