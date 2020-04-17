@@ -24,5 +24,18 @@ export const Title = styled.div`
 export const Subtitle = styled(Title)`
   h2 {
     margin: 0;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 426px) {
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    h2 {
+      font-size: 20px;
+    }
   }
 `

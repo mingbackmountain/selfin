@@ -1,12 +1,18 @@
+import { css } from "@emotion/core"
+
+import { TitleWithYellowLine } from "../section-title"
+
 import {
   NameContainer,
   PlaceWithDescription,
   Logo,
   ReservationContainer,
+  MobileNameContainer,
 } from "./styles/name-section"
+import { PagePadding } from "../../styles/container"
 
 export const NameSection = () => (
-  <NameContainer>
+  <NameContainer css={PagePadding({ topAndBottom: 20 })}>
     <div>
       <h1>TOMOKO ฝึกปัญญาพัฒนาสมอง (Education)</h1>
       <PlaceWithDescription>
@@ -34,3 +40,22 @@ export const NameSection = () => (
     </ReservationContainer>
   </NameContainer>
 )
+
+export const MobileNameSection = () => {
+  return (
+    <MobileNameContainer css={PagePadding()}>
+      <TitleWithYellowLine
+        title="TOMOKO ฝึกปัญญาพัฒนาสมอง"
+        style={css`
+          width: 100%;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+        `}
+      />
+      <p>ประเภทกิจกรรม : การใช้ความคิดและสมาธิ</p>
+      <p>วันเวลา : 2 พฤศจิกายน 2563 (09.00 น.-16.00 น.)</p>
+      <p>สถานที่ : Tomoko Center ราชดำริ</p>
+    </MobileNameContainer>
+  )
+}

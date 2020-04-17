@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
 
 export const EventContainer = styled.div`
-  margin: 45px auto;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
 
   > h1 {
