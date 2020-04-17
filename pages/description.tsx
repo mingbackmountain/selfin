@@ -41,24 +41,49 @@ const Description: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
         `}
       />
 
-      {/* <div
+      <div
         css={css`
           background: #6ace9e;
           box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.16);
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          transform: translateY(9%);
+
+          @media screen and (min-width: 769px) {
+            display: none;
+          }
+
+          button {
+            margin: 30px 0;
+            padding: 5px 50px;
+            font-size: 20px;
+            font-weight: 300;
+            background-color: #f23318;
+            border: transparent;
+            border-radius: 40px;
+            color: #fff;
+          }
         `}
       >
         <SectionTitle
           style={css`
-            width: 100%;
             display: flex;
             flex-flow: column;
             align-items: center;
+            color: #fff;
+
+            div {
+              background: #ffba00;
+            }
           `}
           title="บัตรเข้าร่วมกิจกรรม"
         />
 
-        <button>จองตอนนี้</button>
-      </div> */}
+        <button>จองเลย</button>
+      </div>
     </Layout>
   )
 }

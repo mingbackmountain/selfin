@@ -28,7 +28,7 @@ export const Logo = styled.div`
 
 export const ReservationContainer = styled.div`
   transform: translateY(50px);
-  z-index: 2;
+  z-index: 1;
   background: #fff;
   display: flex;
   flex-flow: column;
