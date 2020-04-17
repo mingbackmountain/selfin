@@ -3,7 +3,6 @@ import styled from "@emotion/styled"
 export const NameContainer = styled.section`
   display: flex;
   justify-content: space-between;
-  padding: 0 120px 30px;
 `
 
 export const PlaceWithDescription = styled.div`
@@ -29,7 +28,7 @@ export const Logo = styled.div`
 
 export const ReservationContainer = styled.div`
   transform: translateY(50px);
-  z-index: 2;
+  z-index: 1;
   background: #fff;
   display: flex;
   flex-flow: column;
@@ -42,6 +41,7 @@ export const ReservationContainer = styled.div`
   h1 {
     color: #ffc626;
     margin: 0;
+    text-align: center;
   }
 
   .price {
@@ -66,5 +66,11 @@ export const ReservationContainer = styled.div`
     border: transparent;
     border-radius: 40px;
     color: #fff;
+  }
+`
+
+export const MobileNameContainer = styled.div`
+  p {
+    font-size: 15px;
   }
 `

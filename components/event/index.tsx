@@ -56,7 +56,7 @@ export const CustomEvent: React.FC<EventTypeProps & CSSProps> = ({
       <SectionTitle
         title={text}
         style={css`
-          margin-bottom: 30px;
+          margin-bottom: 10px;
         `}
       />
 

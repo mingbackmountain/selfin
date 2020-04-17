@@ -37,7 +37,7 @@ export function PagePadding(sizes?: any): any {
           padding: ${padding.top} 60px ${padding.bottom};
         }
 
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 1441px) {
           padding: ${padding.top} 120px ${padding.bottom};
         }
       `
@@ -56,7 +56,7 @@ export function PagePadding(sizes?: any): any {
         padding: ${padding.topAndBottom} 60px;
       }
 
-      @media screen and (min-width: 1025px) {
+      @media screen and (min-width: 1441px) {
         padding: ${padding.topAndBottom} 120px;
       }
     `
