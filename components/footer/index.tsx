@@ -1,6 +1,5 @@
+import { useRouter } from "next/router"
 import styled from "@emotion/styled"
-
-import Wavy from "../../public/svg/footer.svg"
 
 import { PagePadding } from "../../styles/container"
 import { FooterContainer, LeftSection, RightSection } from "./styles/footer"
@@ -80,12 +79,20 @@ const MobileFooter = styled.div`
 `
 
 export const Footer: React.FC = () => {
+  const router = useRouter()
+
   return (
     <MainFooter>
       <MobileFooter className="mobile">
         <div className="svg">
           <h1>ติดต่อเรา</h1>
-          <img src="/svg/footer.svg" />
+          <img
+            src={
+              router.pathname === "/description"
+                ? "/svg/ticket.svg"
+                : "/svg/footer.svg"
+            }
+          />
         </div>
         <div className="contact" css={PagePadding({ topAndBottom: 20 })}>
           <p>

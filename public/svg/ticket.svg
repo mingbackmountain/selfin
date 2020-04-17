@@ -1,1 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="192" viewBox="0 0 375 192"><defs><style>.a{clip-path:url(#d);}.b{fill:#ffba00;}.c{fill:#6ace9e;}.d{filter:url(#a);}</style><filter id="a" x="-15" y="-6" width="405" height="211.2" filterUnits="userSpaceOnUse"><feOffset dy="-2" input="SourceAlpha"/><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-opacity="0.161"/><feComposite operator="in" in2="b"/><feComposite in="SourceGraphic"/></filter><clipPath id="d"><rect width="375" height="192"/></clipPath></defs><g id="c" class="a"><rect class="c" width="375" height="192"/><g class="d" transform="matrix(1, 0, 0, 1, 0, 0)"><path class="b" d="M2365,7448.088c-23.083-9.635-49.318-20.771-84.991-8.59-89.174,30.457-114.005-32.546-169.071-51.5S1990,7425.646,1990,7425.646v139.675h375Z" transform="translate(-1990 -7373.12)"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="325" height="79" viewBox="0 0 325 79">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-ticket);
+      }
+
+      .cls-2 {
+        fill: #ffba00;
+      }
+
+      .cls-3 {
+        fill: #6ace9e;
+      }
+
+      .cls-4 {
+        filter: url(#Path_278);
+      }
+    </style>
+    <filter id="Path_278" x="-15" y="-4.92" width="355" height="187.041" filterUnits="userSpaceOnUse">
+      <feOffset dy="-2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-ticket">
+      <rect width="325" height="79"/>
+    </clipPath>
+  </defs>
+  <g id="ticket" class="cls-1">
+    <rect class="cls-3" width="325" height="79"/>
+    <g class="cls-4" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="Path_278-2" data-name="Path 278" class="cls-2" d="M2315,7439.559c-20.005-8.35-42.742-18-73.659-7.444-77.284,26.4-98.8-28.207-146.529-44.63S1990,7420.109,1990,7420.109v121.052h325Z" transform="translate(-1990 -7372.04)"/>
+    </g>
+  </g>
+</svg>
