@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 import { Select, SelectTab, QuestionContainer } from "./styles/search-bar"
 
 import { DropdownProps } from "./types"
@@ -28,6 +30,8 @@ interface SelectBarProps {
   title: string
   questionDisplay: string
   options: (number | string)[]
+  value: string
+  onClick: Dispatch<SetStateAction<string>>
 }
 
 export const SelectBar: React.FC<SelectBarProps & CSSProps> = ({
@@ -35,13 +39,17 @@ export const SelectBar: React.FC<SelectBarProps & CSSProps> = ({
   questionDisplay,
   options,
   style,
+  value,
+  onClick,
 }) => (
   <QuestionContainer css={style}>
     <h2>{title}</h2>
-    <SelectTab>
-      <option>{questionDisplay}</option>
+    <SelectTab value={value} onChange={e => onClick(e.target.value)}>
+      <option value="">{questionDisplay}</option>
       {options.map(option => (
-        <option key={option}>{option}</option>
+        <option value={option} key={option}>
+          {option}
+        </option>
       ))}
     </SelectTab>
   </QuestionContainer>

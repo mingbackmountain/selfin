@@ -13,7 +13,10 @@ import {
   SearchButton,
 } from "./styles/nearby-event"
 
-import { useDropdownData } from "../../utils/hooks-dropdown"
+import {
+  useDropdownData,
+  useMobileDropdownData,
+} from "../../utils/hooks-dropdown"
 import { useSearchOption } from "../../utils/hooks-get-mock-event"
 
 import { CSSProps } from "../layout/types"
@@ -71,6 +74,8 @@ export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
 
 export const MobileNearbyEventForm: React.FC<CSSProps> = ({ style }) => {
   const { eventType, district, month } = useSearchOption()
+  const { data, method } = useMobileDropdownData()
+  const router = useRouter()
 
   return (
     <MobileContainer
@@ -92,24 +97,36 @@ export const MobileNearbyEventForm: React.FC<CSSProps> = ({ style }) => {
         title="ประเภทกิจกรรม"
         questionDisplay="คลิกเพื่อเลือกประเภทกิจกรรม"
         options={eventType}
+        value={data.eventType}
+        onClick={method.eventType}
       />
 
       <SelectBar
         title="จังหวัด"
         questionDisplay="คลิกเพื่อเลือกจังหวัด"
         options={district}
+        value={data.district}
+        onClick={method.district}
       />
 
       <SelectBar
         title="เดือน"
         questionDisplay="คลิกเพื่อเลือกเดือน"
         options={month}
+        value={data.month}
+        onClick={method.month}
       />
 
       <SearchButton
         css={css`
           margin-top: 20px;
         `}
+        onClick={() =>
+          router.push({
+            pathname: "/search-result",
+            query: data,
+          })
+        }
       >
         ค้นหากิจกรรม
       </SearchButton>

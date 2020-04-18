@@ -68,3 +68,24 @@ export function useDropdownData() {
     monthOption,
   }
 }
+
+export function useMobileDropdownData() {
+  const { eventType, district, month } = useSearchOption()
+
+  const eventTypeValue = useValue()
+  const districtValue = useValue()
+  const monthValue = useValue()
+
+  return {
+    data: {
+      eventType: eventTypeValue.value,
+      district: districtValue.value,
+      month: monthValue.value,
+    },
+    method: {
+      eventType: eventTypeValue.setValue,
+      district: districtValue.setValue,
+      month: monthValue.setValue,
+    },
+  }
+}
