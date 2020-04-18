@@ -70,8 +70,6 @@ export function useDropdownData() {
 }
 
 export function useMobileDropdownData() {
-  const { eventType, district, month } = useSearchOption()
-
   const eventTypeValue = useValue()
   const districtValue = useValue()
   const monthValue = useValue()
