@@ -1,68 +1,89 @@
 import { useOpenState } from "./hooks-open-state"
 import { useValue } from "./hooks-select-value"
+import { useSearchOption } from "./hooks-get-mock-event"
 
 import { DropdownProps } from "../components/search-bar/types"
 
 export function useDropdownData() {
-  const opt1_openState = useOpenState()
-  const opt1_value = useValue()
+  const { eventType, district, month } = useSearchOption()
 
-  const opt2_openState = useOpenState()
-  const opt2_value = useValue()
+  const eventTypeOptionOpenState = useOpenState()
+  const eventTypeValue = useValue()
 
-  const opt3_openState = useOpenState()
-  const opt3_value = useValue()
+  const districtOptionOpenState = useOpenState()
+  const districtValue = useValue()
 
-  const dropdownDataList: DropdownProps[] = [
-    {
-      options: {
-        width: 500,
-        isOpen: opt1_openState.isOpen,
-        onClick: () => opt1_openState.setOpenState(!opt1_openState.isOpen),
-        value: opt1_value.value,
-        setValue: opt1_value.setValue,
-      },
-      dropdownData: {
-        placeHolder: "ประเภทกิจกรรม",
-        values: [{ test: "test" }],
-      },
+  const monthOpenState = useOpenState()
+  const monthValue = useValue()
+
+  const eventTypeOption: DropdownProps = {
+    options: {
+      isOpen: eventTypeOptionOpenState.isOpen,
+      onClick: () =>
+        eventTypeOptionOpenState.setOpenState(!eventTypeOptionOpenState.isOpen),
+      value: eventTypeValue.value,
+      setValue: (key: string) => eventTypeValue.setValue(key),
     },
-    {
-      options: {
-        width: 300,
-        isOpen: opt2_openState.isOpen,
-        onClick: () => opt2_openState.setOpenState(!opt2_openState.isOpen),
-        value: opt2_value.value,
-        setValue: opt2_value.setValue,
-      },
-      dropdownData: {
-        placeHolder: "จังหวัด",
-        values: [{ bkk: "กรุงเทพมหานคร" }, { cnx: "เชียงใหม่" }],
-      },
+    dropdownData: {
+      placeHolder: "ประเภทกิจกรรม",
+      values: eventType,
     },
-    {
-      options: {
-        width: 300,
-        isOpen: opt3_openState.isOpen,
-        onClick: () => opt3_openState.setOpenState(!opt3_openState.isOpen),
-        value: opt3_value.value,
-        setValue: opt3_value.setValue,
-      },
-      dropdownData: {
-        placeHolder: "เดือน",
-        values: [{ jan: "มกราคม" }, { feb: "กุมภาพันธ์" }],
-      },
+  }
+
+  const districtOption: DropdownProps = {
+    options: {
+      isOpen: districtOptionOpenState.isOpen,
+      onClick: () =>
+        districtOptionOpenState.setOpenState(!districtOptionOpenState.isOpen),
+      value: districtValue.value,
+      setValue: (key: string) => districtValue.setValue(key),
     },
-  ]
+    dropdownData: {
+      placeHolder: "ประเภทกิจกรรม",
+      values: district,
+    },
+  }
+
+  const monthOption: DropdownProps = {
+    options: {
+      isOpen: monthOpenState.isOpen,
+      onClick: () => monthOpenState.setOpenState(!monthOpenState.isOpen),
+      value: monthValue.value,
+      setValue: (key: string) => monthValue.setValue(key),
+    },
+    dropdownData: {
+      placeHolder: "ประเภทกิจกรรม",
+      values: month,
+    },
+  }
 
   return {
     data: {
-      eventType: opt1_value,
-      state: opt2_value,
-      month: opt3_value,
+      eventType: eventTypeValue.value,
+      district: districtValue.value,
+      month: monthValue.value,
     },
-    eventTypeOption: dropdownDataList[0],
-    stateOption: dropdownDataList[1],
-    monthOption: dropdownDataList[2],
+    eventTypeOption,
+    districtOption,
+    monthOption,
+  }
+}
+
+export function useMobileDropdownData() {
+  const eventTypeValue = useValue()
+  const districtValue = useValue()
+  const monthValue = useValue()
+
+  return {
+    data: {
+      eventType: eventTypeValue.value,
+      district: districtValue.value,
+      month: monthValue.value,
+    },
+    method: {
+      eventType: eventTypeValue.setValue,
+      district: districtValue.setValue,
+      month: monthValue.setValue,
+    },
   }
 }

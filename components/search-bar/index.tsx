@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import { useRouter } from "next/router"
 
 import { CustomDropdown, SelectBar } from "./search-bar"
 import { TitleWithYellowLine } from "../section-title"
@@ -12,11 +13,22 @@ import {
   SearchButton,
 } from "./styles/nearby-event"
 
-import { useDropdownData } from "../../utils/hooks-dropdown"
+import {
+  useDropdownData,
+  useMobileDropdownData,
+} from "../../utils/hooks-dropdown"
+import { useSearchOption } from "../../utils/hooks-get-mock-event"
+
 import { CSSProps } from "../layout/types"
 
 export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
-  const { eventTypeOption, stateOption, monthOption } = useDropdownData()
+  const {
+    data,
+    eventTypeOption,
+    districtOption,
+    monthOption,
+  } = useDropdownData()
+  const router = useRouter()
 
   return (
     <NearbyFormContainer
@@ -36,8 +48,8 @@ export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
 
         {/* state */}
         <CustomDropdown
-          options={stateOption.options}
-          dropdownData={stateOption.dropdownData}
+          options={districtOption.options}
+          dropdownData={districtOption.dropdownData}
         />
 
         {/* month */}
@@ -45,14 +57,25 @@ export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
           options={monthOption.options}
           dropdownData={monthOption.dropdownData}
         />
-        <Button>ค้นหา</Button>
+        <Button
+          onClick={() =>
+            router.push({
+              pathname: "/search-result",
+              query: data,
+            })
+          }
+        >
+          ค้นหา
+        </Button>
       </DropdownForm>
     </NearbyFormContainer>
   )
 }
 
 export const MobileNearbyEventForm: React.FC<CSSProps> = ({ style }) => {
-  const { eventTypeOption, stateOption, monthOption } = useDropdownData()
+  const { eventType, district, month } = useSearchOption()
+  const { data, method } = useMobileDropdownData()
+  const router = useRouter()
 
   return (
     <MobileContainer
@@ -73,25 +96,37 @@ export const MobileNearbyEventForm: React.FC<CSSProps> = ({ style }) => {
       <SelectBar
         title="ประเภทกิจกรรม"
         questionDisplay="คลิกเพื่อเลือกประเภทกิจกรรม"
-        options={[1, 2, 3]}
+        options={eventType}
+        value={data.eventType}
+        onClick={method.eventType}
       />
 
       <SelectBar
         title="จังหวัด"
         questionDisplay="คลิกเพื่อเลือกจังหวัด"
-        options={[1, 2, 3]}
+        options={district}
+        value={data.district}
+        onClick={method.district}
       />
 
       <SelectBar
         title="เดือน"
         questionDisplay="คลิกเพื่อเลือกเดือน"
-        options={[1, 2, 3]}
+        options={month}
+        value={data.month}
+        onClick={method.month}
       />
 
       <SearchButton
         css={css`
           margin-top: 20px;
         `}
+        onClick={() =>
+          router.push({
+            pathname: "/search-result",
+            query: data,
+          })
+        }
       >
         ค้นหากิจกรรม
       </SearchButton>

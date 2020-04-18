@@ -14,6 +14,7 @@ export const EventContainer = styled.div`
     grid-template-columns: repeat(4, 250px);
     overflow: scroll;
     padding-bottom: 10px;
+    cursor: pointer;
   }
 
   .all-event-button {

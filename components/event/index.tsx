@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import Link from "next/link"
 
 import { EventCard } from "./card"
 import { TitleWithYellowLine } from "../section-title/index"
@@ -7,7 +8,7 @@ import { SectionTitle } from "../section-title"
 import { PagePadding } from "../../styles/container"
 import { EventContainer } from "./styles/event"
 
-import { useMockEventData } from "./utils/hooks-get-mock-data"
+import { useMockEventData } from "../../utils/hooks-get-mock-event"
 
 import { EventTypeProps } from "./types"
 import { CSSProps } from "../layout/types"
@@ -36,7 +37,15 @@ export const Events: React.FC<EventTypeProps> = ({ text }) => {
       <div className="cards">
         {data &&
           data.map((event, index) => (
-            <EventCard key={`${event.name}${index}`} event={event} />
+            <Link
+              key={`${event.name}${index}`}
+              href="/event/[id]"
+              as={`/event/${event.id}`}
+            >
+              <div>
+                <EventCard event={event} />
+              </div>
+            </Link>
           ))}
       </div>
 
@@ -63,7 +72,15 @@ export const CustomEvent: React.FC<EventTypeProps & CSSProps> = ({
       <div className="cards">
         {data &&
           data.map((event, index) => (
-            <EventCard key={`${event.name}${index}`} event={event} />
+            <Link
+              key={`${event.name}${index}`}
+              href="/event/[id]"
+              as={`/event/${event.id}`}
+            >
+              <div>
+                <EventCard event={event} />
+              </div>
+            </Link>
           ))}
       </div>
     </EventContainer>

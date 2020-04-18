@@ -6,7 +6,7 @@ import { TitleWithYellowLine } from "../section-title/index"
 import { PagePadding } from "../../styles/container"
 import { BlogSection } from "./styles/blog"
 
-import { useMockBlogData } from "./utils/hooks-get-mock-data"
+import { useMockBlogData } from "../../utils/hooks-get-mock-blog"
 
 import { CSSProps } from "../layout/types"
 

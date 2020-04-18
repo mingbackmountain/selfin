@@ -1,5 +1,6 @@
 import { NextPage } from "next"
 import { css } from "@emotion/core"
+import Axios from "axios"
 
 import { Layout } from "../components/layout"
 import { Banner } from "../components/banner"
@@ -10,7 +11,12 @@ import {
 import { Result } from "../components/result"
 import { Info } from "../components/info"
 
-const SearchResult: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
+import { ResponseFromServer, Event } from "../components/event/types"
+
+const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
+  isMobile,
+  result,
+}) => {
   return (
     <Layout>
       <Banner
@@ -32,7 +38,7 @@ const SearchResult: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
         <NearbyEventForm />
       )}
 
-      <Result isMobile={isMobile} />
+      <Result result={result} isMobile={isMobile} />
 
       <Info
         usingBackground={false}
@@ -66,7 +72,7 @@ const SearchResult: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
   )
 }
 
-SearchResult.getInitialProps = ctx => {
+SearchResult.getInitialProps = async ctx => {
   const isMobile = (ctx?.req?.headers["user-agent"]
     ? ctx.req.headers["user-agent"]
     : navigator.userAgent
@@ -74,7 +80,23 @@ SearchResult.getInitialProps = ctx => {
     ? true
     : false
 
-  return { isMobile }
+  const config = ctx.req ? { baseURL: "http://localhost:3000" } : {}
+
+  const { data: response } = await Axios.get<ResponseFromServer>(
+    "/api/event",
+    config
+  )
+
+  const query = ctx.query
+
+  const result = response.data.filter(
+    event =>
+      event.info.type.includes(query.eventType as string) ||
+      event.info.addressCode === query.district ||
+      event.info.month === query.month
+  )
+
+  return { isMobile, result }
 }
 
 export default SearchResult

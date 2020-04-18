@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 import { Select, SelectTab, QuestionContainer } from "./styles/search-bar"
 
 import { DropdownProps } from "./types"
@@ -8,26 +10,17 @@ export const CustomDropdown: React.FC<DropdownProps> = ({
   dropdownData,
 }) => {
   return (
-    <Select
-      style={{ width: `${options.width}px` }}
-      isOpen={options.isOpen}
-      onClick={options.onClick}
-    >
+    <Select isOpen={options.isOpen} onClick={options.onClick}>
       {dropdownData.placeHolder}
       <br />
       <span>{options.value}</span>
       <ul>
         {/* @todo: hard to understand, need to refactor */}
-        {dropdownData.values.map(data => {
-          const keys = Object.keys(data)
-          const objectKey = keys[0]
-
-          return (
-            <li key={objectKey} onClick={() => options.setValue(objectKey)}>
-              {data[objectKey]}
-            </li>
-          )
-        })}
+        {dropdownData.values.map(data => (
+          <li key={data} onClick={() => options.setValue(data)}>
+            {data}
+          </li>
+        ))}
       </ul>
     </Select>
   )
@@ -37,6 +30,8 @@ interface SelectBarProps {
   title: string
   questionDisplay: string
   options: (number | string)[]
+  value: string
+  onClick: Dispatch<SetStateAction<string>>
 }
 
 export const SelectBar: React.FC<SelectBarProps & CSSProps> = ({
@@ -44,13 +39,17 @@ export const SelectBar: React.FC<SelectBarProps & CSSProps> = ({
   questionDisplay,
   options,
   style,
+  value,
+  onClick,
 }) => (
   <QuestionContainer css={style}>
     <h2>{title}</h2>
-    <SelectTab>
-      <option>{questionDisplay}</option>
+    <SelectTab value={value} onChange={e => onClick(e.target.value)}>
+      <option value="">{questionDisplay}</option>
       {options.map(option => (
-        <option key={option}>{option}</option>
+        <option value={option} key={option}>
+          {option}
+        </option>
       ))}
     </SelectTab>
   </QuestionContainer>

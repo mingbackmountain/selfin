@@ -11,15 +11,24 @@ import {
 } from "./styles/name-section"
 import { PagePadding } from "../../styles/container"
 
-export const NameSection = () => (
+interface NameProps {
+  event: {
+    name: string
+    date: string
+    location: string
+    price: number
+  }
+}
+
+export const NameSection: React.FC<NameProps> = ({ event }) => (
   <NameContainer css={PagePadding({ topAndBottom: 20 })}>
     <div>
-      <h1>TOMOKO ฝึกปัญญาพัฒนาสมอง (Education)</h1>
+      <h1>{event.name}</h1>
       <PlaceWithDescription>
         <Logo>logo</Logo>
         <div>
-          <p>วันเวลา : 2 พฤศจิกายน 2562 (09.00 น. -16.00 น.)</p>
-          <p>สถานที่ : TOMOKO CENTER ราชดำริ</p>
+          <p>วันเวลา : {event.date}</p>
+          <p>สถานที่ : {event.location}</p>
           <p className="warning">กิจกรรมนี้เหมาะสำหรับเด็กอายุ 7 ปีขึ้นไป</p>
         </div>
       </PlaceWithDescription>
@@ -28,7 +37,7 @@ export const NameSection = () => (
       <h1>บัตรเข้าร่วมกิจกรรม</h1>
       <div>
         <div className="price">
-          ฿690 X{" "}
+          ฿{event.price} X{" "}
           <select>
             <option>1</option>
             <option>2</option>
@@ -41,11 +50,11 @@ export const NameSection = () => (
   </NameContainer>
 )
 
-export const MobileNameSection = () => {
+export const MobileNameSection: React.FC<NameProps> = ({ event }) => {
   return (
     <MobileNameContainer css={PagePadding()}>
       <TitleWithYellowLine
-        title="TOMOKO ฝึกปัญญาพัฒนาสมอง"
+        title={event.name}
         style={css`
           width: 100%;
           display: flex;
@@ -54,8 +63,8 @@ export const MobileNameSection = () => {
         `}
       />
       <p>ประเภทกิจกรรม : การใช้ความคิดและสมาธิ</p>
-      <p>วันเวลา : 2 พฤศจิกายน 2563 (09.00 น.-16.00 น.)</p>
-      <p>สถานที่ : Tomoko Center ราชดำริ</p>
+      <p>วันเวลา : {event.date}</p>
+      <p>สถานที่ : {event.location}</p>
     </MobileNameContainer>
   )
 }

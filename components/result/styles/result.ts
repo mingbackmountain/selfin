@@ -89,11 +89,16 @@ export const Card = styled.div`
     justify-content: center;
 
     button {
+      cursor: pointer;
       border-radius: 40px;
       background-color: #50bf8a;
       font-size: 24px;
       color: #fff;
       width: 200px;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 `
