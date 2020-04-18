@@ -1,4 +1,5 @@
 import { css } from "@emotion/core"
+import Link from "next/link"
 
 import { SectionTitle } from "../section-title"
 import { EventCard } from "./event"
@@ -39,7 +40,15 @@ export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
         <CardContainer item={result.length}>
           {result.map(event =>
             isMobile ? (
-              <MobileEventCard key={event.name} event={event} />
+              <Link
+                key={event.name}
+                href="/event/[id]"
+                as={`/event/${event.id}`}
+              >
+                <div>
+                  <MobileEventCard event={event} />
+                </div>
+              </Link>
             ) : (
               <EventCard key={event.name} event={event} />
             )

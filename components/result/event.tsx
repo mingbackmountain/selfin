@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { Card } from "./styles/result"
 
 import { EventProps } from "./types/"
@@ -21,7 +23,9 @@ export const EventCard: React.FC<EventProps> = ({ event }) => {
           {event.time}
         </p>
         <div className="button-container">
-          <button>{event.price} บาท</button>
+          <Link href="/event/[id]" as={`/event/${event.id}`}>
+            <button>{event.price} บาท</button>
+          </Link>
         </div>
       </div>
     </Card>

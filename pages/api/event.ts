@@ -12,6 +12,7 @@ const DEC = "december"
 
 const mockData = [
   {
+    id: "1",
     img: "/images/s-1450016.png",
     name: "Tomoko",
     place: "Tomato Improvement Center",
@@ -25,6 +26,7 @@ const mockData = [
     },
   },
   {
+    id: "2",
     img: "/images/36044.png",
     name: "Mindful Spark ",
     place: "Parkchong-Nakhonratchasima",
@@ -38,6 +40,7 @@ const mockData = [
     },
   },
   {
+    id: "3",
     img: "/images/s-1450014.png",
     name: "ฟาร์มนี้มีฝัน",
     place: "Parkchong-Nakhonratchasima",
@@ -51,6 +54,7 @@ const mockData = [
     },
   },
   {
+    id: "4",
     img: "/images/s-1450016.png",
     name: "Tomoko 2",
     place: "Tomato Improvement Center",

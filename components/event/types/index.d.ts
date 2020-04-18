@@ -1,4 +1,5 @@
 export interface Event {
+  id: string
   img: string
   name: string
   place: string
