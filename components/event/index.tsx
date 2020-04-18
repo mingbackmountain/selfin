@@ -7,7 +7,7 @@ import { SectionTitle } from "../section-title"
 import { PagePadding } from "../../styles/container"
 import { EventContainer } from "./styles/event"
 
-import { useMockEventData } from "./utils/hooks-get-mock-data"
+import { useMockEventData } from "../../utils/hooks-get-mock-event"
 
 import { EventTypeProps } from "./types"
 import { CSSProps } from "../layout/types"

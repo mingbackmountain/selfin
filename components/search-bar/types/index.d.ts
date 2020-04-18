@@ -1,15 +1,18 @@
 export interface DropdownProps {
-  options: {
-    width: number
-    isOpen: boolean
-    onClick: () => void
-    value: string
-    setValue: (key: string) => void
-  }
-  dropdownData: {
-    placeHolder: string
-    values: { [key: string]: string }[]
-  }
+  options: DropdownFunction
+  dropdownData: DropdownData
+}
+
+export interface DropdownFunction {
+  isOpen: boolean
+  onClick: () => void
+  value: string
+  setValue: (value: string) => void
+}
+
+export interface DropdownData {
+  placeHolder: string
+  values: string[]
 }
 
 export interface SelectState {
