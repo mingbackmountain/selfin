@@ -8,16 +8,15 @@ import { Pagination } from "../../styles/pagination"
 import { Container, CardContainer, Navigation } from "./styles/result"
 import { PagePadding } from "../../styles/container"
 
-import { useMockEventData } from "../../utils/hooks-get-mock-event"
+import { Event } from "../event/types"
 
 interface ResultProps {
   isMobile: boolean
+  result: Event[]
 }
 
-export const Result: React.FC<ResultProps> = ({ isMobile }) => {
-  const mockData = useMockEventData()
-
-  return mockData ? (
+export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
+  return (
     <Container>
       <SectionTitle
         title="ผลการค้นหา"
@@ -37,8 +36,8 @@ export const Result: React.FC<ResultProps> = ({ isMobile }) => {
           <img src="/svg/left.svg" alt="left" />
         </div>
 
-        <CardContainer item={mockData.length}>
-          {mockData.map(event =>
+        <CardContainer item={result.length}>
+          {result.map(event =>
             isMobile ? (
               <MobileEventCard key={event.name} event={event} />
             ) : (
@@ -69,7 +68,5 @@ export const Result: React.FC<ResultProps> = ({ isMobile }) => {
         </div>
       </Navigation>
     </Container>
-  ) : (
-    <div>loading</div>
   )
 }

@@ -1,7 +1,6 @@
 import { NextPage } from "next"
 import { css } from "@emotion/core"
 import Axios from "axios"
-import { ParsedUrlQuery } from "querystring"
 
 import { Layout } from "../components/layout"
 import { Banner } from "../components/banner"
@@ -18,8 +17,6 @@ const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
   isMobile,
   result,
 }) => {
-  console.log(result)
-
   return (
     <Layout>
       <Banner
@@ -41,7 +38,7 @@ const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
         <NearbyEventForm />
       )}
 
-      <Result isMobile={isMobile} />
+      <Result result={result} isMobile={isMobile} />
 
       <Info
         usingBackground={false}
@@ -90,8 +87,6 @@ SearchResult.getInitialProps = async ctx => {
     config
   )
 
-  console.log(response)
-
   const query = ctx.query
 
   const result = response.data.filter(
@@ -101,7 +96,7 @@ SearchResult.getInitialProps = async ctx => {
       event.info.month === query.month
   )
 
-  return { isMobile: false, result }
+  return { isMobile, result }
 }
 
 export default SearchResult

@@ -27,8 +27,6 @@ export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
   } = useDropdownData()
   const router = useRouter()
 
-  console.log(data)
-
   return (
     <NearbyFormContainer
       css={css`

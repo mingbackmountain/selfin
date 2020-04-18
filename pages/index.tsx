@@ -72,7 +72,7 @@ HomePage.getInitialProps = ctx => {
     ? true
     : false
 
-  return { isMobile: false }
+  return { isMobile }
 }
 
 export default HomePage
