@@ -55,6 +55,7 @@ export const Card = styled.div`
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 30px;
+  padding-bottom: 20px;
 
   @media screen and (min-width: 426px) {
     flex: 0 0 calc(100% / 4);
@@ -78,23 +79,37 @@ export const Card = styled.div`
 
   > .event-description {
     padding: 20px 40px;
+
+    section.name {
+      height: 250px;
+
+      p.excerpt {
+        overflow: hidden;
+      }
+    }
+
+    section.location-info {
+      height: 200px;
+
+      p.location {
+        display: flex;
+        align-items: center;
+
+        img {
+          align-self: flex-start;
+          width: 19px;
+          height: 19px;
+          margin-right: 30px;
+          margin-top: 5px;
+        }
+      }
+    }
   }
 
   h1 {
     margin: 0;
     font-size: 24px;
     text-align: center;
-  }
-
-  p {
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 19px;
-      height: 19px;
-      margin-right: 30px;
-    }
   }
 
   .button-container {
