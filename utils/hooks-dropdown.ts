@@ -39,7 +39,7 @@ export function useDropdownData() {
       setValue: (key: string) => districtValue.setValue(key),
     },
     dropdownData: {
-      placeHolder: "ประเภทกิจกรรม",
+      placeHolder: "จังหวัด",
       values: district,
     },
   }
@@ -52,7 +52,7 @@ export function useDropdownData() {
       setValue: (key: string) => monthValue.setValue(key),
     },
     dropdownData: {
-      placeHolder: "ประเภทกิจกรรม",
+      placeHolder: "เดือน",
       values: month,
     },
   }
