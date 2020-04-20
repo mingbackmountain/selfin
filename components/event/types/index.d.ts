@@ -3,9 +3,11 @@ export interface Event {
   img: string
   name: string
   place: string
+  excerpt: string
   description: string
   time: string
   price: number
+  tel: string
   info: SearchInfo
 }
 
