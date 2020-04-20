@@ -34,7 +34,7 @@ export const CardContainer = styled.div<Item>`
   padding: 20px;
 
   @media screen and (min-width: 426px) {
-    grid-template-columns: repeat(${props => props.item}, 280px);
+    display: flex;
     overflow: scroll;
     margin: auto 50px;
     padding: 20px 10px;
@@ -42,11 +42,9 @@ export const CardContainer = styled.div<Item>`
 
   @media screen and (min-width: 1025px) {
     margin: 20px 50px;
-    grid-template-columns: repeat(${props => props.item}, 1fr);
   }
 
   @media screen and (min-width: 1441px) {
-    grid-template-columns: repeat(${props => props.item}, 300px);
     margin: 20px auto;
   }
 `
@@ -57,6 +55,22 @@ export const Card = styled.div`
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 30px;
+
+  @media screen and (min-width: 426px) {
+    flex: 0 0 calc(100% / 4);
+
+    &:nth-child(-n + 1) {
+      margin: 0;
+    }
+
+    &:nth-last-child(n + 1) {
+      margin: 0 10px;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    flex: 0 0 300px;
+  }
 
   > img {
     width: 100%;

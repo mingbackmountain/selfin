@@ -45,7 +45,21 @@ export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
                 href="/event/[id]"
                 as={`/event/${event.id}`}
               >
-                <div>
+                <div
+                  css={css`
+                    @media screen and (min-width: 426px) {
+                      flex: 0 0 calc(100% / 4);
+
+                      &:nth-child(-n + 1) {
+                        margin: 0;
+                      }
+
+                      &:nth-last-child(n + 1) {
+                        margin: 0 10px;
+                      }
+                    }
+                  `}
+                >
                   <MobileEventCard event={event} />
                 </div>
               </Link>

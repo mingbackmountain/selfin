@@ -36,7 +36,7 @@ export const Events: React.FC<EventTypeProps> = ({ text }) => {
 
       <div className="cards">
         {data &&
-          data.map((event, index) => (
+          data.slice(0, 4).map((event, index) => (
             <Link
               key={`${event.name}${index}`}
               href="/event/[id]"
