@@ -34,16 +34,7 @@ export const NameSection: React.FC<NameProps> = ({ event }) => (
     </div>
     <ReservationContainer>
       <h1>บัตรเข้าร่วมกิจกรรม</h1>
-      <div>
-        <div className="price">
-          ฿{event.price} X{" "}
-          <select>
-            <option>1</option>
-            <option>2</option>
-          </select>
-        </div>
-      </div>
-      <div className="ticket-left">12 ที่นั่งเหลืออยู่</div>
+
       <button>จองตอนนี้</button>
     </ReservationContainer>
   </NameContainer>
