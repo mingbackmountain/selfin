@@ -48,7 +48,7 @@ export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
                 <div
                   css={css`
                     @media screen and (min-width: 426px) {
-                      flex: 0 0 calc(100% / 4);
+                      flex: 0 0 300px;
 
                       &:nth-child(-n + 1) {
                         margin: 0;

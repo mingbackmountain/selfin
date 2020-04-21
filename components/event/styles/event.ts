@@ -62,6 +62,11 @@ export const EventCardContainer = styled.div`
   box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.16);
   word-break: break-word;
   overflow-wrap: break-word;
+  position: relative;
+
+  section.event-info {
+    margin-bottom: 50px;
+  }
 
   > img {
     width: 100%;
@@ -79,6 +84,12 @@ export const EventCardContainer = styled.div`
   }
 
   @media screen and (min-width: 426px) {
+    height: 400px;
+
+    section.event-info {
+      height: 150px;
+    }
+
     h2 {
       font-size: 18px;
     }
@@ -90,6 +101,7 @@ export const EventCardContainer = styled.div`
 
   @media screen and (min-width: 769px) {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+    height: 450px;
 
     h2 {
       font-size: 20px;
@@ -106,6 +118,9 @@ export const Price = styled.div`
   font-size: 15px;
   font-weight: 700;
   text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 
   > span {
     margin-right: 20px;
@@ -124,7 +139,9 @@ export const EventInfoText = styled.p`
   align-items: center;
 
   > img {
+    align-self: flex-start;
     width: 13px;
     margin-right: 10px;
+    margin-top: 5px;
   }
 `
