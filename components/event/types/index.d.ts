@@ -14,7 +14,6 @@ export interface Event {
 export interface SearchInfo {
   addressCode: string
   type: string[]
-  month: string
 }
 
 export interface EventInfoProps {

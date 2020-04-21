@@ -6,22 +6,29 @@ import EkachaiHospitalMarkdown from "../../events-info/03.md"
 import LandlabMarkdown from "../../events-info/05.md"
 import TaitonmaiMarkdown from "../../events-info/06.md"
 import FarmSanookMarkdown from "../../events-info/07.md"
+import KidJourney from "../../events-info/08.md"
+import DreamFarm from "../../events-info/09.md"
+import PlayAcademy from "../../events-info/10.md"
+import LenNokBaan from "../../events-info/11.md"
+import KIDative from "../../events-info/12.md"
+import MeaningKids from "../../events-info/13.md"
+import ATF from "../../events-info/14.md"
 import DalPlayhouseMarkdown from "../../events-info/15.md"
+
+import { Event } from "../../components/event/types"
 
 const ACTIVITY = "activity"
 const LEARNING = "learning"
 const MENTAL = "mental"
 
+const TEST = "test"
+
 const BKK = "bangkok"
-const NAKHONRAT = "nakhonratchasima"
-const SINGHABURI = "singhaburi"
 const NONTHABURI = "nontraburi"
 const SAMUTSAKORN = "samutsakorn"
 const PATHUMTANI = "pathumtani"
 
-const APL = "april"
-
-const mockData = [
+const mockData: Event[] = [
   {
     id: "01",
     img: "/images/s-1450016.png",
@@ -35,7 +42,6 @@ const mockData = [
     info: {
       addressCode: BKK,
       type: [ACTIVITY, LEARNING],
-      month: APL,
     },
   },
   {
@@ -52,7 +58,6 @@ const mockData = [
     info: {
       addressCode: NONTHABURI,
       type: [LEARNING],
-      month: APL,
     },
   },
   {
@@ -68,7 +73,22 @@ const mockData = [
     info: {
       addressCode: SAMUTSAKORN,
       type: [MENTAL],
-      month: APL,
+    },
+  },
+  {
+    id: "04",
+    img: "/images/s-1450016.png",
+    name: "Mindful Spark",
+    place: "-",
+    excerpt: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
+    description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
+    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam`,
+    time: `-`,
+    price: 0,
+    tel: "098 765 4321",
+    info: {
+      addressCode: TEST,
+      type: [TEST],
     },
   },
   {
@@ -85,7 +105,6 @@ const mockData = [
     info: {
       addressCode: NONTHABURI,
       type: [LEARNING, ACTIVITY],
-      month: APL,
     },
   },
   {
@@ -101,7 +120,6 @@ const mockData = [
     info: {
       addressCode: BKK,
       type: [LEARNING, ACTIVITY],
-      month: APL,
     },
   },
   {
@@ -117,7 +135,21 @@ const mockData = [
     info: {
       addressCode: PATHUMTANI,
       type: [ACTIVITY],
-      month: APL,
+    },
+  },
+  {
+    id: "08",
+    img: "/images/s-1450016.png",
+    name: "Kids’ Journey",
+    place: "-",
+    excerpt: `Kids’ Journey (คิดส์ เจอร์นีย์) เป็นสนามเรียนรู้สำหรับเด็กอายุ 7 – 12 ปี และครอบครัว เราจะพาคุณพ่อคุณแม่ทุกท่านไปรู้จักกับกิจกรรมสร้างสรรค์สำหรับเด็กๆ ที่จะทำให้ทุกเวลานอกห้องเรียน เป็นช่วงเวลาแห่งการทดลอง ภายใต้แนวคิด “ยิ่งลองเร็ว ยิ่งรู้เร็ว” สนับสนุนให้น้องๆ ได้ลองทุกประสบการณ์`,
+    description: KidJourney,
+    time: `-`,
+    price: 0,
+    tel: "0628587114 (พี่ฝ้าย) ,0992134664 (พี่ท็อป)",
+    info: {
+      addressCode: TEST,
+      type: [TEST],
     },
   },
   {
@@ -133,7 +165,6 @@ const mockData = [
     info: {
       addressCode: BKK,
       type: [LEARNING, ACTIVITY],
-      month: APL,
     },
   },
 ]
