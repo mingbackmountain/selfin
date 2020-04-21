@@ -2,6 +2,7 @@ import styled from "@emotion/styled"
 
 export const Title = styled.div`
   width: fit-content;
+  font-weight: 600;
 
   h1 {
     font-size: 20px;
