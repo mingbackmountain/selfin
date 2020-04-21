@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
           <h1>ติดต่อเรา</h1>
           <img
             src={
-              router.pathname === "/description"
+              router.pathname === "/event/[id]"
                 ? "/svg/ticket.svg"
                 : "/svg/footer.svg"
             }
