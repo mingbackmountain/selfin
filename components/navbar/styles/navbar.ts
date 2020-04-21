@@ -112,7 +112,7 @@ export const NavItem = styled.div<NavItemOpenProps>`
 `
 
 export const NavLink = styled.a`
-  color: #461313;
+  color: #000;
   text-decoration: none;
   font-weight: lighter;
   text-align: center;
