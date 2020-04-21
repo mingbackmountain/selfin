@@ -22,18 +22,17 @@ import { useSearchOption } from "../../utils/hooks-get-mock-event"
 import { CSSProps } from "../layout/types"
 
 export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
-  const {
-    data,
-    eventTypeOption,
-    districtOption,
-    monthOption,
-  } = useDropdownData()
+  const { data, eventTypeOption, districtOption } = useDropdownData()
   const router = useRouter()
 
   return (
     <NearbyFormContainer
       css={css`
-        margin: 0 60px;
+        margin: 0 60px 40px;
+
+        @media screen and (min-width: 1025px) {
+          margin: 0 60px;
+        }
         ${style}
       `}
     >
@@ -52,11 +51,6 @@ export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
           dropdownData={districtOption.dropdownData}
         />
 
-        {/* month */}
-        <CustomDropdown
-          options={monthOption.options}
-          dropdownData={monthOption.dropdownData}
-        />
         <Button
           onClick={() =>
             router.push({
@@ -73,7 +67,7 @@ export const NearbyEventForm: React.FC<CSSProps> = ({ style }) => {
 }
 
 export const MobileNearbyEventForm: React.FC<CSSProps> = ({ style }) => {
-  const { eventType, district, month } = useSearchOption()
+  const { eventType, district } = useSearchOption()
   const { data, method } = useMobileDropdownData()
   const router = useRouter()
 
@@ -107,14 +101,6 @@ export const MobileNearbyEventForm: React.FC<CSSProps> = ({ style }) => {
         options={district}
         value={data.district}
         onClick={method.district}
-      />
-
-      <SelectBar
-        title="เดือน"
-        questionDisplay="คลิกเพื่อเลือกเดือน"
-        options={month}
-        value={data.month}
-        onClick={method.month}
       />
 
       <SearchButton

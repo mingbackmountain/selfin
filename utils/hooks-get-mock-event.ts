@@ -20,13 +20,11 @@ export function useMockEventData() {
 interface AvailableSearchOption {
   eventType: string[]
   district: string[]
-  month: string[]
 }
 
 export interface SearchOption {
   eventType: string
   district: string
-  month: string
 }
 
 export function useSearchOption(): AvailableSearchOption {
@@ -36,18 +34,15 @@ export function useSearchOption(): AvailableSearchOption {
     // using Set to get the unique option
     const eventType = [...new Set(data.flatMap(item => item.info.type))]
     const district = [...new Set(data.map(item => item.info.addressCode))]
-    const month = [...new Set(data.map(item => item.info.month))]
 
     return {
       eventType,
       district,
-      month,
     }
   }
 
   return {
     eventType: [],
     district: [],
-    month: [],
   }
 }

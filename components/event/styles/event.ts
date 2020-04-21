@@ -49,6 +49,7 @@ export const EventCardContainer = styled.div`
   word-break: break-word;
   overflow-wrap: break-word;
   position: relative;
+  z-index: 0;
 
   section.event-info {
     margin-bottom: 50px;

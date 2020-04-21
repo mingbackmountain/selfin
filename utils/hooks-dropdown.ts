@@ -5,16 +5,13 @@ import { useSearchOption } from "./hooks-get-mock-event"
 import { DropdownProps } from "../components/search-bar/types"
 
 export function useDropdownData() {
-  const { eventType, district, month } = useSearchOption()
+  const { eventType, district } = useSearchOption()
 
   const eventTypeOptionOpenState = useOpenState()
   const eventTypeValue = useValue()
 
   const districtOptionOpenState = useOpenState()
   const districtValue = useValue()
-
-  const monthOpenState = useOpenState()
-  const monthValue = useValue()
 
   const eventTypeOption: DropdownProps = {
     options: {
@@ -44,46 +41,28 @@ export function useDropdownData() {
     },
   }
 
-  const monthOption: DropdownProps = {
-    options: {
-      isOpen: monthOpenState.isOpen,
-      onClick: () => monthOpenState.setOpenState(!monthOpenState.isOpen),
-      value: monthValue.value,
-      setValue: (key: string) => monthValue.setValue(key),
-    },
-    dropdownData: {
-      placeHolder: "เดือน",
-      values: month,
-    },
-  }
-
   return {
     data: {
       eventType: eventTypeValue.value,
       district: districtValue.value,
-      month: monthValue.value,
     },
     eventTypeOption,
     districtOption,
-    monthOption,
   }
 }
 
 export function useMobileDropdownData() {
   const eventTypeValue = useValue()
   const districtValue = useValue()
-  const monthValue = useValue()
 
   return {
     data: {
       eventType: eventTypeValue.value,
       district: districtValue.value,
-      month: monthValue.value,
     },
     method: {
       eventType: eventTypeValue.setValue,
       district: districtValue.setValue,
-      month: monthValue.setValue,
     },
   }
 }

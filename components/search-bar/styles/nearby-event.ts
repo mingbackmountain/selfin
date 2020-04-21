@@ -8,9 +8,16 @@ export const NearbyFormContainer = styled.div`
 
   @media screen and (min-width: 1025px) {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
-    border-radius: 25px;
+    border-radius: 55px;
     background-color: #ffffff;
     transform: translateY(-45%);
+    margin-bottom: 0;
+
+    h1 {
+      width: 100%;
+      padding-left: 70px;
+      font-weight: 600;
+    }
   }
 `
 
@@ -27,26 +34,24 @@ export const DropdownForm = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 
   @media screen and (min-width: 1025px) {
-    width: 100%;
-    padding: 0 20px 20px;
+    padding: 0 70px 20px;
     display: grid;
-    grid-template-columns: repeat(4, 22.5%);
-    grid-gap: 3.33%;
+    grid-template-columns: 40% 40% 18.5%;
+    grid-gap: 10px;
   }
 `
 
 export const Button = styled.button`
-  width: 200px;
-  height: 50px;
+  width: 100%;
   border-radius: 19px;
   color: white;
-  background-color: #f23318;
+  background-color: #fe2000;
   font-size: 28px;
-  font-weight: 600;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
-  margin-top: 20px;
 `
 
 export const SearchButton = styled.div`
