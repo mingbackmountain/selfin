@@ -9,9 +9,7 @@ export const EventContainer = styled.div`
   }
 
   > .cards {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4, 250px);
+    display: flex;
     overflow: scroll;
     padding-bottom: 10px;
     cursor: pointer;
@@ -28,12 +26,6 @@ export const EventContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 426px) {
-    .cards {
-      gap: 20px;
-    }
-  }
-
   @media screen and (min-width: 769px) {
     .all-event-button {
       display: block;
@@ -45,12 +37,6 @@ export const EventContainer = styled.div`
       &.mobile {
         display: none;
       }
-    }
-  }
-
-  @media screen and (min-width: 1025px) {
-    > .cards {
-      grid-template-columns: repeat(4, 1fr);
     }
   }
 `

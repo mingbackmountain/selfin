@@ -77,7 +77,23 @@ export const CustomEvent: React.FC<EventTypeProps & CSSProps> = ({
               href="/event/[id]"
               as={`/event/${event.id}`}
             >
-              <div>
+              <div
+                css={css`
+                  flex: 0 0 300px;
+
+                  @media screen and (min-width: 769px) {
+                    flex: 0 0 300px;
+
+                    &:nth-child(-n + 1) {
+                      margin: 0;
+                    }
+
+                    &:nth-last-child(n + 1) {
+                      margin: 0 10px;
+                    }
+                  }
+                `}
+              >
                 <EventCard event={event} />
               </div>
             </Link>
