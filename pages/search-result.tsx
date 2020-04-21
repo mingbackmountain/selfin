@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import Head from "next/head"
 import { css } from "@emotion/core"
 import Axios from "axios"
 
@@ -19,6 +20,10 @@ const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
 }) => {
   return (
     <Layout>
+      <Head>
+        <title>Selfin | Search Result</title>
+      </Head>
+
       <Banner
         style={css`
           @media screen and (max-width: 768px) {
@@ -92,8 +97,7 @@ SearchResult.getInitialProps = async ctx => {
   const result = response.data.filter(
     event =>
       event.info.type.includes(query.eventType as string) ||
-      event.info.addressCode === query.district ||
-      event.info.month === query.month
+      event.info.addressCode === query.district
   )
 
   return { isMobile, result }

@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import Head from "next/head"
 import { css } from "@emotion/core"
 import Axios from "axios"
 import Showdown from "showdown"
@@ -22,6 +23,10 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
 
   return event ? (
     <Layout>
+      <Head>
+        <title>Selfin | {event.name}</title>
+      </Head>
+
       {isMobile ? (
         <>
           <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />

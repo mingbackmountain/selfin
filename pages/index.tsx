@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import Head from "next/head"
 import { css } from "@emotion/core"
 
 import { Layout } from "../components/layout"
@@ -15,6 +16,10 @@ import { Blog } from "../components/blog"
 const HomePage: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
   return (
     <Layout>
+      <Head>
+        <title>Selfin</title>
+      </Head>
+
       {isMobile ? (
         <>
           <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
