@@ -29,7 +29,6 @@ export const NameSection: React.FC<NameProps> = ({ event }) => (
         <div>
           <p>วันเวลา : {event.date}</p>
           <p>สถานที่ : {event.location}</p>
-          <p className="warning">กิจกรรมนี้เหมาะสำหรับเด็กอายุ 7 ปีขึ้นไป</p>
         </div>
       </PlaceWithDescription>
     </div>
