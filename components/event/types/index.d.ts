@@ -6,7 +6,6 @@ export interface Event {
   excerpt: string
   description: string
   time: string
-  price: number
   tel: string
   info: SearchInfo
 }

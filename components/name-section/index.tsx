@@ -16,7 +16,6 @@ interface NameProps {
     name: string
     date: string
     location: string
-    price: number
   }
 }
 

@@ -35,7 +35,6 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
               name: event.name,
               date: event.time,
               location: event.place,
-              price: event.price,
             }}
           />
         </>
@@ -47,7 +46,6 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
               name: event.name,
               date: event.time,
               location: event.place,
-              price: event.price,
             }}
           />
         </>
