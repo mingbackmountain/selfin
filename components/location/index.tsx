@@ -43,7 +43,7 @@ export const Location = () => (
         <FontAwesomeIcon icon={faFacebook} size="lg" />
         <a
           css={css`
-            color: #ffc626;
+            color: #ffba00;
             text-decoration: none;
           `}
           href="https://www.facebook.com/contact.selfin/"

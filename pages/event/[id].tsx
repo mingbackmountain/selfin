@@ -87,7 +87,7 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
             padding: 5px 50px;
             font-size: 20px;
             font-weight: 300;
-            background-color: #f23318;
+            background-color: #fe2000;
             border: transparent;
             border-radius: 40px;
 

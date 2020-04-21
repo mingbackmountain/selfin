@@ -26,7 +26,7 @@ export const DescriptionContainer = styled.div`
 
   @media screen and (min-width: 769px) {
     padding: 20px 0 50px;
-    background-color: #ffc626;
+    background-color: #ffba00;
 
     .description {
       p {

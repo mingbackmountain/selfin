@@ -13,7 +13,7 @@ export const PlaceWithDescription = styled.div`
   }
 
   p.warning {
-    color: #f23318;
+    color: #fe2000;
     font-size: 12px;
   }
 `
@@ -39,7 +39,7 @@ export const ReservationContainer = styled.div`
   border-radius: 20px;
 
   h1 {
-    color: #ffc626;
+    color: #ffba00;
     margin: 0;
     text-align: center;
   }
@@ -62,7 +62,7 @@ export const ReservationContainer = styled.div`
   button {
     padding: 5px 15px;
     font-size: 18px;
-    background-color: #f23318;
+    background-color: #fe2000;
     border: transparent;
     border-radius: 40px;
 

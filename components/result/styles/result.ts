@@ -120,7 +120,7 @@ export const Card = styled.div`
     button {
       cursor: pointer;
       border-radius: 40px;
-      background-color: #50bf8a;
+      background-color: #6ace9e;
       font-size: 24px;
       color: #fff;
       width: 200px;

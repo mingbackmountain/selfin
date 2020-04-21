@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 
 export const Container = styled.div`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
-  background: #ffc626;
+  background: #ffba00;
   margin-top: 60px;
   display: none;
 
@@ -71,7 +71,7 @@ export const RightSection = styled.div`
   min-height: 450px;
   background-color: #fff;
   border-radius: 10px;
-  color: #ffc626;
+  color: #ffba00;
   box-sizing: border-box;
 
   p {

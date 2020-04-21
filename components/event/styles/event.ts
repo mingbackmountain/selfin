@@ -65,7 +65,7 @@ export const EventCardContainer = styled.div`
 
   h2 {
     font-size: 15px;
-    color: #50bf8a;
+    color: #6ace9e;
     margin: 10px 20px;
   }
 
@@ -100,7 +100,7 @@ export const EventCardContainer = styled.div`
 `
 
 export const Price = styled.div`
-  color: #50bf8a;
+  color: #6ace9e;
   font-size: 15px;
   font-weight: 700;
   text-align: right;
