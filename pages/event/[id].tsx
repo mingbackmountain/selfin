@@ -92,7 +92,11 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
             background-color: #f23318;
             border: transparent;
             border-radius: 40px;
-            color: #fff;
+
+            a {
+              color: #fff;
+              text-decoration: none;
+            }
           }
         `}
       >
@@ -110,7 +114,9 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
           title="บัตรเข้าร่วมกิจกรรม"
         />
 
-        <button>จองเลย</button>
+        <button>
+          <a href="https://www.facebook.com/contact.selfin/">จองตอนนี้</a>
+        </button>
       </div>
     </Layout>
   ) : (

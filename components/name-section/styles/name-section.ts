@@ -65,7 +65,11 @@ export const ReservationContainer = styled.div`
     background-color: #f23318;
     border: transparent;
     border-radius: 40px;
-    color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 `
 
