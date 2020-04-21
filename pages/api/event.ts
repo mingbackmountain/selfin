@@ -14,21 +14,28 @@ import KIDative from "../../events-info/12.md"
 import MeaningKids from "../../events-info/13.md"
 import ATF from "../../events-info/14.md"
 import DalPlayhouseMarkdown from "../../events-info/15.md"
+import ALittleSomething from "../../events-info/16.md"
 
 import { Event } from "../../components/event/types"
 
-const ACTIVITY = "activity"
-const LEARNING = "learning"
-const MENTAL = "mental"
+const ARTMUSIC = "ศิลปะและดนตรี"
+const SPORT = "กีฬา"
+const THERAPY = "กิจกรรมบำบัด"
+const WORKSHOP = "เวิร์คช็อพ และ คลาสเรียนสร้างสรรค์"
+const CAMPING = "ค่ายการเรียนรู้"
+const COVID = "กิจกรรมช่วงโควิด"
+const COMMUNITY = "คอมมูนิตี้"
 
-const TEST = "test"
-
-const BKK = "bangkok"
-const NONTHABURI = "nontraburi"
-const SAMUTSAKORN = "samutsakorn"
-const PATHUMTANI = "pathumtani"
+const BKK = "กรุงเทพ"
+const NONTHABURI = "นนทบุรี"
+const SAMUTSAKORN = "สมุทรสาคร"
+const PATHUMTANI = "ปทุมธานี"
+const SARABURI = "สระบุรี"
+const NAKHONPATHOM = "นครปฐม"
+const UNKNOWN = "ไม่ระบุ"
 
 const mockData: Event[] = [
+  // Mostly focus
   {
     id: "01",
     img: "/images/s-1450016.png",
@@ -37,11 +44,10 @@ const mockData: Event[] = [
     excerpt: `W Academy โรงเรียนการเงินสำหรับเด็กโดยทีมเอกการเงิน BBA ธรรมศาสตร์ เน้นการเรียนการสอนที่เข้าใจในธรรมชาติของเด็ก ผ่านการเรียนรู้ในรูปแบบ "play-based learning" เพื่อให้เด็กได้ลงมือทำมากกว่าการท่องจำในห้องเรียน`,
     description: WAcademyMarkdown,
     time: "9.00 - 16.00 (ขึ้นอยู่กับกิจกรรม)",
-    price: 690,
     tel: "092 478 7936 หรือ 063 421 4765",
     info: {
       addressCode: BKK,
-      type: [ACTIVITY, LEARNING],
+      type: [WORKSHOP],
     },
   },
   {
@@ -53,13 +59,55 @@ const mockData: Event[] = [
     excerpt: `KnowAre เกิดขึ้นภายใต้ ‘กิจการเพื่อสังคม’ ที่ต้องการทำให้เด็ก ๆ ได้รู้ (Know) ตัวเอง ว่าต้องการจะเป็น (Are) อะไร`,
     description: KnowAreMarkdown,
     time: "ขึ้นอยู่กับกิจกรรม",
-    price: 4900,
     tel: "097-090-8402",
     info: {
       addressCode: NONTHABURI,
-      type: [LEARNING],
+      type: [WORKSHOP, CAMPING],
     },
   },
+  {
+    id: "06",
+    img: "/images/s-1450016.png",
+    name: "Taitonmai",
+    place: "วิชชาลัยในสวนบางมด",
+    excerpt: `ที่อาณาจักร Taitonmai นั้นมีผู้ใหญ่สี่คนอาศัยอยู่ในภารกิจเพื่อสร้างจักรวาลมหัศจรรย์ที่เต็มไปด้วยโลกแฟนตาซีสำหรับเด็ก`,
+    description: TaitonmaiMarkdown,
+    time: "-",
+    tel: "086 979 2625",
+    info: {
+      addressCode: BKK,
+      type: [SPORT, WORKSHOP, CAMPING],
+    },
+  },
+  {
+    id: "07",
+    img: "/images/s-1450014.png",
+    name: "Farm Sanook Kid Camp",
+    place: "อำเภอ คลองหลวง ปทุมธานี",
+    excerpt: `เล่นเพื่อเพิ่มพัฒนาการทางร่างกาย และ จิตใจ เล่นเพื่อปรับตัวให้เข้ากับสังคม เล่นเพื่อให้เกิดการเรียนรู้ เล่นเพื่อพัฒนาสมอง เล่นเพื่อให้ใช้ชีวิตในสังคมได้อย่างมีความสุข`,
+    description: FarmSanookMarkdown,
+    time: "ทุกวันเสาร์ อาทิตย์ และวันหยุดนักขัตฤกษ์ 13:00-15:00 น.",
+    tel: "061 464 1598",
+    info: {
+      addressCode: PATHUMTANI,
+      type: [SPORT, CAMPING],
+    },
+  },
+  {
+    id: "16",
+    img: "/images/36044.png",
+    name: "A little something",
+    place: "Sukhumvit 49 (The Racquet Club) 2nd floor, building 4",
+    excerpt: `เด็กๆจะได้รับความรู้หลากหลายด้านภายใต้แนวความคิด learning by cooking ไม่ว่าจะเป็นความรู้ด้านวิทยาศาสตร์ คณิตศาสตร์​ ศิลปะ ความคิดสร้างสรรค์ และทักษะการสร้างปฏิสัมพันธ์อื่น รวมไปถึงการรู้คุณค่าและความสัมคัญของอาหาร`,
+    description: ALittleSomething,
+    time: "-",
+    tel: "089 142 1108",
+    info: {
+      addressCode: BKK,
+      type: [WORKSHOP, COVID],
+    },
+  },
+  // Not focus with
   {
     id: "03",
     img: "/images/s-1450014.png",
@@ -68,11 +116,10 @@ const mockData: Event[] = [
     excerpt: `โรงพยาบาลเอกชัยจัดตั้งขึ้นโดยกลุ่มแพทย์ที่มีความเชี่ยวชาญและประสบการณ์ เป็นที่เชื่อมั่นของคนในจังหวัดสมุทรสาครและจังหวัดใกล้เคียง ตั้งแต่ปีพ.ศ. 2546`,
     description: EkachaiHospitalMarkdown,
     time: "24 ชั่วโมง",
-    price: 4900,
     tel: "(+66)34 417-999 Hotline 1715",
     info: {
       addressCode: SAMUTSAKORN,
-      type: [MENTAL],
+      type: [THERAPY],
     },
   },
   {
@@ -84,11 +131,10 @@ const mockData: Event[] = [
     description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
     ipsum dolor sit amet, consetetur sadipscing elitr, sed diam`,
     time: `-`,
-    price: 0,
     tel: "098 765 4321",
     info: {
-      addressCode: TEST,
-      type: [TEST],
+      addressCode: UNKNOWN,
+      type: [UNKNOWN],
     },
   },
   {
@@ -100,41 +146,10 @@ const mockData: Event[] = [
     excerpt: `“นำชีวิตมาทดลองที่ห้อง Lab ธรรมชาติ”`,
     time:
       "จัดกิจกรรมเกือบทุกเสาร์-อาทิตย์ (แต่ตอนนี้ยังไม่มีกำหนดเปิดเนื่องจากสถานการณ์โควิด-19)",
-    price: 690,
     tel: "082 461 5987",
     info: {
       addressCode: NONTHABURI,
-      type: [LEARNING, ACTIVITY],
-    },
-  },
-  {
-    id: "06",
-    img: "/images/s-1450016.png",
-    name: "Taitonmai",
-    place: "วิชชาลัยในสวนบางมด",
-    excerpt: `ที่อาณาจักร Taitonmai นั้นมีผู้ใหญ่สี่คนอาศัยอยู่ในภารกิจเพื่อสร้างจักรวาลมหัศจรรย์ที่เต็มไปด้วยโลกแฟนตาซีสำหรับเด็ก`,
-    description: TaitonmaiMarkdown,
-    time: "-",
-    price: 690,
-    tel: "086 979 2625",
-    info: {
-      addressCode: BKK,
-      type: [LEARNING, ACTIVITY],
-    },
-  },
-  {
-    id: "07",
-    img: "/images/s-1450014.png",
-    name: "Farm Sanook Kid Camp",
-    place: "อำเภอ คลองหลวง ปทุมธานี",
-    excerpt: `เล่นเพื่อเพิ่มพัฒนาการทางร่างกาย และ จิตใจ เล่นเพื่อปรับตัวให้เข้ากับสังคม เล่นเพื่อให้เกิดการเรียนรู้ เล่นเพื่อพัฒนาสมอง เล่นเพื่อให้ใช้ชีวิตในสังคมได้อย่างมีความสุข`,
-    description: FarmSanookMarkdown,
-    time: "ทุกวันเสาร์ อาทิตย์ และวันหยุดนักขัตฤกษ์ 13:00-15:00 น.",
-    price: 4900,
-    tel: "061 464 1598",
-    info: {
-      addressCode: PATHUMTANI,
-      type: [ACTIVITY],
+      type: [WORKSHOP],
     },
   },
   {
@@ -145,11 +160,101 @@ const mockData: Event[] = [
     excerpt: `Kids’ Journey (คิดส์ เจอร์นีย์) เป็นสนามเรียนรู้สำหรับเด็กอายุ 7 – 12 ปี และครอบครัว เราจะพาคุณพ่อคุณแม่ทุกท่านไปรู้จักกับกิจกรรมสร้างสรรค์สำหรับเด็กๆ ที่จะทำให้ทุกเวลานอกห้องเรียน เป็นช่วงเวลาแห่งการทดลอง ภายใต้แนวคิด “ยิ่งลองเร็ว ยิ่งรู้เร็ว” สนับสนุนให้น้องๆ ได้ลองทุกประสบการณ์`,
     description: KidJourney,
     time: `-`,
-    price: 0,
     tel: "0628587114 (พี่ฝ้าย) ,0992134664 (พี่ท็อป)",
     info: {
-      addressCode: TEST,
-      type: [TEST],
+      addressCode: BKK,
+      type: [WORKSHOP, CAMPING],
+    },
+  },
+  {
+    id: "09",
+    img: "/images/s-1450016.png",
+    name: "ฟาร์มนี้มีฝัน",
+    place: "สบ.4040 Sap Sanun, Muak Lek District, Saraburi 18220",
+    excerpt: `กิจกรรม Nature Kids Camp ค่ายยุวชน "วิชาชีวิต" 
+    3 วัน 2 คืน กับกิจกรรม ท่ามกลางธรรมชาติ
+    ต้อนรับลมหนาว ให้เด็กๆได้เรียนรู้ "วิชาชีวิต"
+    ทั้งการเพาะปลูก การอยู่รอด และอยู่ร่วมกัน
+    อย่างมีความสุข
+    `,
+    description: DreamFarm,
+    time: "-",
+    tel: "081 826 1908",
+    info: {
+      addressCode: SARABURI,
+      type: [WORKSHOP, CAMPING],
+    },
+  },
+  {
+    id: "10",
+    img: "/images/s-1450016.png",
+    name: "Play Academy",
+    place:
+      "เลขที่ 39 ห้อง B3 โครงการ เดอะ เซอร์เคิล ราชพฤกษ์ Ratchaphruek Rd, Bang Ramat, Taling Chan, Bangkok 10170",
+    excerpt: `Play Academy เป็นสถาบันการศึกษาที่มุ่งเน้นให้เด็กได้เล่นและลงมือทำจริง`,
+    description: PlayAcademy,
+    time: "-",
+    tel: "083 596 5596",
+    info: {
+      addressCode: BKK,
+      type: [WORKSHOP],
+    },
+  },
+  {
+    id: "11",
+    img: "/images/s-1450016.png",
+    name: "เล่นนอกบ้าน Len Nok Baan",
+    place: "-",
+    excerpt: ` เกิดจากกลุ่มเพื่อนๆที่สนใจศึกษาแนวทางเลือกเกี่ยวกับการเสริมสร้างประสบการณ์ สร้างการเรียนรู้ใหม่ๆ ภายใต้การเล่น “นอกห้องเรียน`,
+    description: LenNokBaan,
+    time: "-",
+    tel: "094 265 6692",
+    info: {
+      addressCode: UNKNOWN,
+      type: [ARTMUSIC, SPORT, WORKSHOP, CAMPING],
+    },
+  },
+  {
+    id: "12",
+    img: "/images/s-1450016.png",
+    name: "KIDative: Innovation and Design Lab for Kids",
+    place: "1 ซอย ริมคลองพระโขนง Phra Khanong Nuea, Watthana, Bangkok",
+    excerpt: `ห้องทดลองทางความคิดสำหรับเด็กที่ช่วยกระตุ้นความคิดสร้างสรรค์ เรียบเรียงกระบวนการคิด และค้นหา Passion ของตัวเองให้พบ ผ่านการใช้ Design Thinking`,
+    description: KIDative,
+    time: "-",
+    tel: "063 879 1449",
+    info: {
+      addressCode: BKK,
+      type: [WORKSHOP, COVID],
+    },
+  },
+  {
+    id: "13",
+    img: "/images/s-1450016.png",
+    name: "คลินิกกระตุ้นพัฒนาการเด็ก Meaning-Kids",
+    place: "74/12 Tha Talat, Sam Phran District, Nakhon Pathom 73110",
+    excerpt: `คลินิกกระตุ้นพัฒนาการเด็ก ออทิสติก สมาธิสั้น พัฒนาการช้า เรียนไม่ทันเพื่อน ปรับพฤติกรรม`,
+    description: MeaningKids,
+    time: "-",
+    tel: "090 926 9775",
+    info: {
+      addressCode: NAKHONPATHOM,
+      type: [THERAPY, COVID],
+    },
+  },
+  {
+    id: "14",
+    img: "/images/s-1450016.png",
+    name: "Autistic Thai Foundation มูลนิธิออทิสติกไทย",
+    place:
+      "11 หมู่ 12 Bang Phrom 29 Alley, Bang Phrom, Taling Chan, Bangkok 10170",
+    excerpt: `คลินิกกระตุ้นพัฒนาการเด็ก ออทิสติก สมาธิสั้น พัฒนาการช้า เรียนไม่ทันเพื่อน ปรับพฤติกรรม`,
+    description: ATF,
+    time: "-",
+    tel: "099 454 5395",
+    info: {
+      addressCode: BKK,
+      type: [COMMUNITY],
     },
   },
   {
@@ -160,11 +265,10 @@ const mockData: Event[] = [
     excerpt: `จัดกระบวนการสำหรับบุคคลที่มีความต้องการพิเศษ วางแผน จัดกิจกรรมส่งเสริมพัฒนาการและปรับพฤติกรรม สอนเสริมวิชาการควบคู่กับการฝึกทักษะชีวิต`,
     description: DalPlayhouseMarkdown,
     time: "-",
-    price: 4900,
     tel: "094-9154945",
     info: {
       addressCode: BKK,
-      type: [LEARNING, ACTIVITY],
+      type: [ARTMUSIC, THERAPY, WORKSHOP, COMMUNITY],
     },
   },
 ]
