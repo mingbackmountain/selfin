@@ -29,7 +29,7 @@ export const EventCard: React.FC<EventProps> = ({ event }) => {
       </div>
       <div className="button-container">
         <Link href="/event/[id]" as={`/event/${event.id}`}>
-          <button>{event.price} บาท</button>
+          <button>เรียนรู้เพิ่มเติม</button>
         </Link>
       </div>
     </Card>
