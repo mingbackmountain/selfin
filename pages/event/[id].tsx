@@ -1,7 +1,7 @@
 import { NextPage } from "next"
-import { useRouter } from "next/router"
 import { css } from "@emotion/core"
 import Axios from "axios"
+import Showdown from "showdown"
 
 import { Layout } from "../../components/layout"
 import { Banner, MobileBanner } from "../../components/banner"
@@ -18,6 +18,8 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
   isMobile,
   event,
 }) => {
+  const markdown = new Showdown.Converter()
+
   return event ? (
     <Layout>
       {isMobile ? (
@@ -46,7 +48,7 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
         </>
       )}
 
-      <EventDescription desc={event.description} />
+      <EventDescription desc={markdown.makeHtml(event.description)} />
 
       <Location />
 

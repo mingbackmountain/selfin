@@ -21,6 +21,6 @@ export const EventDescription: React.FC<DescriptionProps> = ({ desc }) => (
       `}
       title="ความน่าสนใจของกิจกรรม"
     />
-    <p>{desc}</p>
+    <div className="description" dangerouslySetInnerHTML={{ __html: desc }} />
   </DescriptionContainer>
 )
