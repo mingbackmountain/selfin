@@ -119,6 +119,7 @@ export const NavLink = styled.a`
   width: 100px;
   padding: 15px 0;
   font-size: 20px;
+  cursor: pointer;
 
   /* This nth-child create border bottom except last one */
   @media screen and (max-width: 768px) {
