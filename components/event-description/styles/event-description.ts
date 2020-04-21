@@ -18,6 +18,10 @@ export const DescriptionContainer = styled.div`
     h2#activity {
       margin-top: 20px;
     }
+
+    img {
+      width: 100%;
+    }
   }
 
   @media screen and (min-width: 769px) {
