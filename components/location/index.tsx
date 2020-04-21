@@ -41,11 +41,19 @@ export const Location = () => (
       />
       <LocationAndTime>
         <FontAwesomeIcon icon={faFacebook} size="lg" />
-        <div>Lorem ipsum</div>
+        <a
+          css={css`
+            color: #ffc626;
+            text-decoration: none;
+          `}
+          href="https://www.facebook.com/contact.selfin/"
+        >
+          ติดต่อเฟสบุ๊ค
+        </a>
       </LocationAndTime>
       <LocationAndTime>
         <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
-        <div>Lorem ipsum</div>
+        <div>098 765 4321</div>
       </LocationAndTime>
     </div>
   </LocationContainer>

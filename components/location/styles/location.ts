@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
 
 export const LocationContainer = styled.div`
+  margin-bottom: 30px;
+
   iframe {
     width: 100%;
     min-height: 300px;
