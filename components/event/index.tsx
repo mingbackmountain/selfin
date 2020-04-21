@@ -57,6 +57,10 @@ export const Events: React.FC<EventTypeProps> = ({ text }) => {
                   @media screen and (min-width: 426px) {
                     flex: 0 0 300px;
                   }
+
+                  @media screen and (min-width: 1441px) {
+                    flex: 0 0 400px;
+                  }
                 `}
               >
                 <EventCard event={event} />
