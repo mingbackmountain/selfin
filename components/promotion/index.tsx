@@ -57,17 +57,17 @@ export const Promotion: React.FC = () => (
       </LeftSection>
 
       <RightSection>
-        <SectionTitle title="Lorem Ipsum" />
+        <SectionTitle title="กิจกรรมสุดพิเศษในช่วง Covid-19" />
 
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet.{" "}
+          เนื่องจากสถานการณ์ระบาดโควิด19 เป็นผลให้ต้องยกเลิกกิจกรรมบางประเภท
+          แต่วันนี้เรามีหลากหลายกิจกรรมเสริมสร้างพัฒนาการที่คุณสามารถทำได้ที่บ้าน
+          หรือPlay From Home กันได้เลย{" "}
         </p>
 
-        <Button>อ่านต่อ</Button>
+        <Link href="/search-result?eventType=กิจกรรมช่วงโควิด">
+          <Button>อ่านต่อ</Button>
+        </Link>
       </RightSection>
     </MainContent>
   </Container>
