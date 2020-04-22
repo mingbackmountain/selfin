@@ -5,6 +5,7 @@ import Axios from "axios"
 import Showdown from "showdown"
 
 import { Layout } from "../../components/layout"
+import { Mobile, Desktop } from "../../components/layout/size"
 import { Banner, MobileBanner } from "../../components/banner"
 import { NameSection, MobileNameSection } from "../../components/name-section"
 import { EventDescription } from "../../components/event-description"
@@ -15,10 +16,7 @@ import { PagePadding } from "../../styles/container"
 
 import { ResponseFromServer, Event } from "../../components/event/types"
 
-const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
-  isMobile,
-  event,
-}) => {
+const EventPage: NextPage<{ event: Event | undefined }> = ({ event }) => {
   const markdown = new Showdown.Converter()
 
   return event ? (
@@ -27,39 +25,39 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
         <title>Selfin | {event.name}</title>
       </Head>
 
-      {isMobile ? (
-        <>
-          <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
-          <MobileNameSection
-            event={{
-              name: event.name,
-              date: event.time,
-              location: event.place,
-              logo: event.logo,
-            }}
-          />
-        </>
-      ) : (
-        <>
-          <Banner
-            imgUrl={event.img}
-            style={css`
-              .banner {
-                max-height: 500px;
-                object-fit: cover;
-              }
-            `}
-          />
-          <NameSection
-            event={{
-              name: event.name,
-              date: event.time,
-              location: event.place,
-              logo: event.logo,
-            }}
-          />
-        </>
-      )}
+      {/* On mobile */}
+      <Mobile>
+        <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
+        <MobileNameSection
+          event={{
+            name: event.name,
+            date: event.time,
+            location: event.place,
+            logo: event.logo,
+          }}
+        />
+      </Mobile>
+
+      {/* On desktop */}
+      <Desktop>
+        <Banner
+          imgUrl={event.img}
+          style={css`
+            .banner {
+              max-height: 500px;
+              object-fit: cover;
+            }
+          `}
+        />
+        <NameSection
+          event={{
+            name: event.name,
+            date: event.time,
+            location: event.place,
+            logo: event.logo,
+          }}
+        />
+      </Desktop>
 
       <EventDescription desc={markdown.makeHtml(event.description)} />
 
@@ -133,13 +131,6 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
 }
 
 EventPage.getInitialProps = async ctx => {
-  const isMobile = (ctx?.req?.headers["user-agent"]
-    ? ctx.req.headers["user-agent"]
-    : navigator.userAgent
-  ).match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i)
-    ? true
-    : false
-
   const config = ctx.req ? { baseURL: "https://selfin.co" } : {}
 
   const { data: response } = await Axios.get<ResponseFromServer>(
@@ -151,7 +142,7 @@ EventPage.getInitialProps = async ctx => {
     event => event.id === (ctx.query.id as string).padStart(2, "0")
   )
 
-  return { isMobile, event }
+  return { event }
 }
 
 export default EventPage

@@ -11,11 +11,10 @@ import { PagePadding } from "../../styles/container"
 import { Event } from "../event/types"
 
 interface ResultProps {
-  isMobile: boolean
   result: Event[]
 }
 
-export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
+export const Result: React.FC<ResultProps> = ({ result }) => {
   return (
     <Container>
       <SectionTitle

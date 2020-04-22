@@ -4,6 +4,7 @@ import { css } from "@emotion/core"
 import Axios from "axios"
 
 import { Layout } from "../components/layout"
+import { Mobile, Desktop } from "../components/layout/size"
 import { Banner } from "../components/banner"
 import {
   NearbyEventForm,
@@ -14,10 +15,7 @@ import { Info } from "../components/info"
 
 import { ResponseFromServer, Event } from "../components/event/types"
 
-const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
-  isMobile,
-  result,
-}) => {
+const SearchResult: NextPage<{ result: Event[] }> = ({ result }) => {
   return (
     <Layout>
       <Head>
@@ -33,17 +31,19 @@ const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
         imgUrl="/images/cover.png"
       />
 
-      {isMobile ? (
+      <Mobile>
         <MobileNearbyEventForm
           style={css`
             margin-top: 100px;
           `}
         />
-      ) : (
-        <NearbyEventForm />
-      )}
+      </Mobile>
 
-      <Result result={result} isMobile={isMobile} />
+      <Desktop>
+        <NearbyEventForm />
+      </Desktop>
+
+      <Result result={result} />
 
       <Info
         usingBackground={false}
@@ -78,13 +78,6 @@ const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
 }
 
 SearchResult.getInitialProps = async ctx => {
-  const isMobile = (ctx?.req?.headers["user-agent"]
-    ? ctx.req.headers["user-agent"]
-    : navigator.userAgent
-  ).match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i)
-    ? true
-    : false
-
   const config = ctx.req ? { baseURL: "https://selfin.co" } : {}
 
   const { data: response } = await Axios.get<ResponseFromServer>(
@@ -100,7 +93,7 @@ SearchResult.getInitialProps = async ctx => {
       event.info.addressCode === query.district
   )
 
-  return { isMobile, result }
+  return { result }
 }
 
 export default SearchResult
