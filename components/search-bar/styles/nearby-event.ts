@@ -52,6 +52,7 @@ export const Button = styled.button`
   background-color: #fe2000;
   font-size: 28px;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
+  cursor: pointer;
 `
 
 export const SearchButton = styled.div`

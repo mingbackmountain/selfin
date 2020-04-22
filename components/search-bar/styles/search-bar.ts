@@ -15,6 +15,7 @@ export const Select = styled.div<SelectState>`
   font-size: 18px;
   width: 100%;
   margin: 5px 0;
+  cursor: pointer;
 
   span {
     font-size: 20px;
