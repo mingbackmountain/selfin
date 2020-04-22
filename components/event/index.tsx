@@ -13,39 +13,66 @@ import { useMockEventData } from "../../utils/hooks-get-mock-event"
 import { EventTypeProps } from "./types"
 import { CSSProps } from "../layout/types"
 
-export const Events: React.FC<EventTypeProps> = ({ text }) => {
+export const Events: React.FC<EventTypeProps & CSSProps> = ({
+  text,
+  style,
+}) => {
   const data = useMockEventData()
 
   return (
-    <EventContainer css={PagePadding()}>
+    <EventContainer
+      css={css`
+        ${PagePadding()}
+        ${style}
+      `}
+    >
       <div
         css={css`
           display: flex;
-          justify-content: space-between;
+          flex-flow: column;
         `}
       >
-        <TitleWithYellowLine
-          style={css`
-            margin-bottom: 30px;
-          `}
-          title={text}
-        />
+        <div>
+          <TitleWithYellowLine
+            style={css`
+              @media screen and (min-width: 769px) {
+                margin-bottom: 20px;
+              }
+            `}
+            title={text}
+          />
+        </div>
 
         <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด >></div>
       </div>
 
       <div className="cards">
         {data &&
-          data.map((event, index) => (
-            <Link
+          data.slice(0, 4).map((event, index) => (
+            <div
               key={`${event.name}${index}`}
-              href="/event/[id]"
-              as={`/event/${event.id}`}
+              css={css`
+                flex: 0 0 100%;
+
+                &:nth-child(-n + 1) {
+                  margin: 0;
+                }
+
+                &:nth-last-child(n + 1) {
+                  margin: 0 10px;
+                }
+
+                @media screen and (min-width: 426px) {
+                  flex: 0 0 300px;
+                }
+
+                @media screen and (min-width: 1441px) {
+                  flex: 0 0 400px;
+                }
+              `}
             >
-              <div>
-                <EventCard event={event} />
-              </div>
-            </Link>
+              <EventCard event={event} />
+            </div>
           ))}
       </div>
 
@@ -77,7 +104,23 @@ export const CustomEvent: React.FC<EventTypeProps & CSSProps> = ({
               href="/event/[id]"
               as={`/event/${event.id}`}
             >
-              <div>
+              <div
+                css={css`
+                  flex: 0 0 300px;
+
+                  @media screen and (min-width: 769px) {
+                    flex: 0 0 300px;
+
+                    &:nth-child(-n + 1) {
+                      margin: 0;
+                    }
+
+                    &:nth-last-child(n + 1) {
+                      margin: 0 10px;
+                    }
+                  }
+                `}
+              >
                 <EventCard event={event} />
               </div>
             </Link>

@@ -13,14 +13,12 @@ export const EventDescription: React.FC<DescriptionProps> = ({ desc }) => (
   <DescriptionContainer css={PagePadding({ topAndBottom: 20 })}>
     <SectionTitle
       style={css`
-        @media screen and (max-width: 768px) {
-          div {
-            background: #ffba00;
-          }
+        div {
+          background: #ffba00;
         }
       `}
       title="ความน่าสนใจของกิจกรรม"
     />
-    <p>{desc}</p>
+    <div className="description" dangerouslySetInnerHTML={{ __html: desc }} />
   </DescriptionContainer>
 )

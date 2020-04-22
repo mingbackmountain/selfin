@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 
 export const Container = styled.div`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
-  background: #ffc626;
+  background: #ffba00;
   margin-top: 60px;
   display: none;
 
@@ -23,6 +23,7 @@ export const Menu = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  text-align: center;
 
   > div {
     min-height: 36px;
@@ -33,6 +34,7 @@ export const Menu = styled.div`
     display: flex;
     flex-flow: column;
     align-items: center;
+    text-align: center;
   }
 
   span {
@@ -40,8 +42,11 @@ export const Menu = styled.div`
     margin-bottom: 8px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 769px) {
     flex: 0 1 50%;
+  }
+
+  @media screen and (min-width: 1440px) {
     justify-content: space-evenly;
   }
 `
@@ -71,14 +76,16 @@ export const RightSection = styled.div`
   min-height: 450px;
   background-color: #fff;
   border-radius: 10px;
-  color: #ffc626;
+  color: #ffba00;
   box-sizing: border-box;
 
   p {
     font-size: 18px;
+    color: #000;
+    margin-bottom: 40px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 769px) {
     padding: 30px 50px 50px;
   }
 
@@ -97,6 +104,7 @@ export const Button = styled.div`
   font-weight: 300;
   text-align: center;
   padding: 5px 0;
+  cursor: pointer;
 `
 
 export const Navigation = styled.div`

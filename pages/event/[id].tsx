@@ -1,9 +1,11 @@
 import { NextPage } from "next"
-import { useRouter } from "next/router"
+import Head from "next/head"
 import { css } from "@emotion/core"
 import Axios from "axios"
+import Showdown from "showdown"
 
 import { Layout } from "../../components/layout"
+import { Mobile, Desktop } from "../../components/layout/size"
 import { Banner, MobileBanner } from "../../components/banner"
 import { NameSection, MobileNameSection } from "../../components/name-section"
 import { EventDescription } from "../../components/event-description"
@@ -14,39 +16,50 @@ import { PagePadding } from "../../styles/container"
 
 import { ResponseFromServer, Event } from "../../components/event/types"
 
-const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
-  isMobile,
-  event,
-}) => {
+const EventPage: NextPage<{ event: Event | undefined }> = ({ event }) => {
+  const markdown = new Showdown.Converter()
+
   return event ? (
     <Layout>
-      {isMobile ? (
-        <>
-          <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
-          <MobileNameSection
-            event={{
-              name: event.name,
-              date: event.time,
-              location: event.place,
-              price: event.price,
-            }}
-          />
-        </>
-      ) : (
-        <>
-          <Banner imgUrl="/images/S__1450016.png" />
-          <NameSection
-            event={{
-              name: event.name,
-              date: event.time,
-              location: event.place,
-              price: event.price,
-            }}
-          />
-        </>
-      )}
+      <Head>
+        <title>Selfin | {event.name}</title>
+      </Head>
 
-      <EventDescription desc={event.description} />
+      {/* On mobile */}
+      <Mobile>
+        <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
+        <MobileNameSection
+          event={{
+            name: event.name,
+            date: event.time,
+            location: event.place,
+            logo: event.logo,
+          }}
+        />
+      </Mobile>
+
+      {/* On desktop */}
+      <Desktop>
+        <Banner
+          imgUrl={event.img}
+          style={css`
+            .banner {
+              max-height: 500px;
+              object-fit: cover;
+            }
+          `}
+        />
+        <NameSection
+          event={{
+            name: event.name,
+            date: event.time,
+            location: event.place,
+            logo: event.logo,
+          }}
+        />
+      </Desktop>
+
+      <EventDescription desc={markdown.makeHtml(event.description)} />
 
       <Location />
 
@@ -82,10 +95,14 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
             padding: 5px 50px;
             font-size: 20px;
             font-weight: 300;
-            background-color: #f23318;
+            background-color: #fe2000;
             border: transparent;
             border-radius: 40px;
-            color: #fff;
+
+            a {
+              color: #fff;
+              text-decoration: none;
+            }
           }
         `}
       >
@@ -103,7 +120,9 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
           title="บัตรเข้าร่วมกิจกรรม"
         />
 
-        <button>จองเลย</button>
+        <button>
+          <a href="https://www.facebook.com/contact.selfin/">จองตอนนี้</a>
+        </button>
       </div>
     </Layout>
   ) : (
@@ -112,23 +131,18 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
 }
 
 EventPage.getInitialProps = async ctx => {
-  const isMobile = (ctx?.req?.headers["user-agent"]
-    ? ctx.req.headers["user-agent"]
-    : navigator.userAgent
-  ).match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i)
-    ? true
-    : false
-
-  const config = ctx.req ? { baseURL: "http://localhost:3000" } : {}
+  const config = ctx.req ? { baseURL: "https://selfin.co" } : {}
 
   const { data: response } = await Axios.get<ResponseFromServer>(
     "/api/event",
     config
   )
 
-  const event = response.data.find(event => event.id === ctx.query.id)
+  const event = response.data.find(
+    event => event.id === (ctx.query.id as string).padStart(2, "0")
+  )
 
-  return { isMobile, event }
+  return { event }
 }
 
 export default EventPage

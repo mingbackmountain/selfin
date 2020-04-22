@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
         </div>
         <NavItem isOpen={isOpen}>
           <NavbarItem href="/" linkName="หน้าแรก" />
-          <NavbarItem href="/" linkName="โปร์ไฟล์" />
+          <NavbarItem href="/" linkName="โปรไฟล์" />
           <NavbarItem href="/" linkName="กิจกรรม" />
           <NavbarItem href="/" linkName="ติดต่อเรา" />
           <LoginButton>

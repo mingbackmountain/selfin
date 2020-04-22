@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 export const FooterContainer = styled.footer`
-  background-color: #ffa81f;
+  background: #ffba00;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   font-weight: 300;
   padding: 30px 0;

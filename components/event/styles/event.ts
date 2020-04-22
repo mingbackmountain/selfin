@@ -9,28 +9,19 @@ export const EventContainer = styled.div`
   }
 
   > .cards {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4, 250px);
+    display: flex;
     overflow: scroll;
     padding-bottom: 10px;
-    cursor: pointer;
   }
 
   .all-event-button {
+    margin-top: 10px;
     display: none;
-    transform: translateY(20px);
 
     &.mobile {
       display: block;
       text-align: right;
       margin-bottom: 10px;
-    }
-  }
-
-  @media screen and (min-width: 426px) {
-    .cards {
-      gap: 20px;
     }
   }
 
@@ -47,24 +38,28 @@ export const EventContainer = styled.div`
       }
     }
   }
-
-  @media screen and (min-width: 1025px) {
-    > .cards {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
 `
 
 export const EventCardContainer = styled.div`
   width: 100%;
+  height: 400px;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.16);
   word-break: break-word;
   overflow-wrap: break-word;
+  position: relative;
+  z-index: 0;
+
+  section.event-info {
+    margin-bottom: 20px;
+    height: 100px;
+  }
 
   > img {
     width: 100%;
+    max-height: 150px;
+    object-fit: cover;
   }
 
   p {
@@ -74,11 +69,40 @@ export const EventCardContainer = styled.div`
 
   h2 {
     font-size: 15px;
-    color: #50bf8a;
+    color: #6ace9e;
     margin: 10px 20px;
+    font-weight: 700;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+
+    button {
+      cursor: pointer;
+      border-radius: 40px;
+      background-color: #6ace9e;
+      font-size: 15px;
+      color: #fff;
+      width: 200px;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   @media screen and (min-width: 426px) {
+    height: 480px;
+
+    section.event-info {
+      height: 150px;
+    }
+
     h2 {
       font-size: 18px;
     }
@@ -86,10 +110,20 @@ export const EventCardContainer = styled.div`
     p {
       font-size: 14px;
     }
+
+    .button-container {
+      button {
+        font-size: 18px;
+      }
+    }
   }
 
   @media screen and (min-width: 769px) {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+
+    section.event-info {
+      margin-bottom: 50px;
+    }
 
     h2 {
       font-size: 20px;
@@ -98,14 +132,23 @@ export const EventCardContainer = styled.div`
     p {
       font-size: 16px;
     }
+
+    .button-container {
+      button {
+        font-size: 24px;
+      }
+    }
   }
 `
 
 export const Price = styled.div`
-  color: #50bf8a;
+  color: #6ace9e;
   font-size: 15px;
   font-weight: 700;
   text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 
   > span {
     margin-right: 20px;
@@ -124,7 +167,9 @@ export const EventInfoText = styled.p`
   align-items: center;
 
   > img {
+    align-self: flex-start;
     width: 13px;
     margin-right: 10px;
+    margin-top: 5px;
   }
 `

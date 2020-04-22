@@ -112,13 +112,14 @@ export const NavItem = styled.div<NavItemOpenProps>`
 `
 
 export const NavLink = styled.a`
-  color: #461313;
+  color: #000;
   text-decoration: none;
   font-weight: lighter;
   text-align: center;
   width: 100px;
   padding: 15px 0;
   font-size: 20px;
+  cursor: pointer;
 
   /* This nth-child create border bottom except last one */
   @media screen and (max-width: 768px) {

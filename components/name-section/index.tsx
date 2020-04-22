@@ -16,7 +16,7 @@ interface NameProps {
     name: string
     date: string
     location: string
-    price: number
+    logo: string
   }
 }
 
@@ -25,27 +25,19 @@ export const NameSection: React.FC<NameProps> = ({ event }) => (
     <div>
       <h1>{event.name}</h1>
       <PlaceWithDescription>
-        <Logo>logo</Logo>
+        <Logo>{event.logo ? <img src={event.logo} /> : "logo"}</Logo>
         <div>
           <p>วันเวลา : {event.date}</p>
           <p>สถานที่ : {event.location}</p>
-          <p className="warning">กิจกรรมนี้เหมาะสำหรับเด็กอายุ 7 ปีขึ้นไป</p>
         </div>
       </PlaceWithDescription>
     </div>
     <ReservationContainer>
       <h1>บัตรเข้าร่วมกิจกรรม</h1>
-      <div>
-        <div className="price">
-          ฿{event.price} X{" "}
-          <select>
-            <option>1</option>
-            <option>2</option>
-          </select>
-        </div>
-      </div>
-      <div className="ticket-left">12 ที่นั่งเหลืออยู่</div>
-      <button>จองตอนนี้</button>
+
+      <button>
+        <a href="https://www.facebook.com/contact.selfin/">จองตอนนี้</a>
+      </button>
     </ReservationContainer>
   </NameContainer>
 )

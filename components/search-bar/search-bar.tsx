@@ -15,6 +15,7 @@ export const CustomDropdown: React.FC<DropdownProps> = ({
       <br />
       <span>{options.value}</span>
       <ul>
+        <li onClick={() => options.setValue("")}>--</li>
         {/* @todo: hard to understand, need to refactor */}
         {dropdownData.values.map(data => (
           <li key={data} onClick={() => options.setValue(data)}>

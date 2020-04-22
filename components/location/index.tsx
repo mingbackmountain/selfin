@@ -15,10 +15,8 @@ export const Location = () => (
       style={css`
         margin: 20px 0;
 
-        @media screen and (max-width: 768px) {
-          div {
-            background: #ffba00;
-          }
+        div {
+          background: #ffba00;
         }
       `}
     />
@@ -37,15 +35,27 @@ export const Location = () => (
         title="สอบถามข้อมูลเพิ่มเติม"
         style={css`
           margin: 20px 0;
+
+          div {
+            background: #ffba00;
+          }
         `}
       />
       <LocationAndTime>
         <FontAwesomeIcon icon={faFacebook} size="lg" />
-        <div>Lorem ipsum</div>
+        <a
+          css={css`
+            color: #000;
+            text-decoration: none;
+          `}
+          href="https://www.facebook.com/contact.selfin/"
+        >
+          Selfin - Family Playground
+        </a>
       </LocationAndTime>
       <LocationAndTime>
         <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
-        <div>Lorem ipsum</div>
+        <div>089 417 6886</div>
       </LocationAndTime>
     </div>
   </LocationContainer>

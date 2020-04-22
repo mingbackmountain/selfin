@@ -1,18 +1,19 @@
 export interface Event {
   id: string
   img: string
+  logo: string
   name: string
   place: string
+  excerpt: string
   description: string
   time: string
-  price: number
+  tel: string
   info: SearchInfo
 }
 
 export interface SearchInfo {
   addressCode: string
   type: string[]
-  month: string
 }
 
 export interface EventInfoProps {

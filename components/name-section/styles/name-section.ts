@@ -3,6 +3,10 @@ import styled from "@emotion/styled"
 export const NameContainer = styled.section`
   display: flex;
   justify-content: space-between;
+
+  h1 {
+    font-weight: 600;
+  }
 `
 
 export const PlaceWithDescription = styled.div`
@@ -13,7 +17,7 @@ export const PlaceWithDescription = styled.div`
   }
 
   p.warning {
-    color: #f23318;
+    color: #fe2000;
     font-size: 12px;
   }
 `
@@ -24,22 +28,27 @@ export const Logo = styled.div`
   border: 1px solid;
   border-radius: 20px;
   margin-right: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 `
 
 export const ReservationContainer = styled.div`
   transform: translateY(50px);
   z-index: 1;
-  background: #fff;
+  background: #ffba00;
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 10px 15px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   border-radius: 20px;
 
   h1 {
-    color: #ffc626;
+    color: #fff;
     margin: 0;
     text-align: center;
   }
@@ -62,10 +71,14 @@ export const ReservationContainer = styled.div`
   button {
     padding: 5px 15px;
     font-size: 18px;
-    background-color: #f23318;
+    background-color: #fe2000;
     border: transparent;
     border-radius: 40px;
-    color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 `
 

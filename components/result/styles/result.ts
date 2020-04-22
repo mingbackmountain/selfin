@@ -34,7 +34,7 @@ export const CardContainer = styled.div<Item>`
   padding: 20px;
 
   @media screen and (min-width: 426px) {
-    grid-template-columns: repeat(${props => props.item}, 280px);
+    display: flex;
     overflow: scroll;
     margin: auto 50px;
     padding: 20px 10px;
@@ -42,11 +42,9 @@ export const CardContainer = styled.div<Item>`
 
   @media screen and (min-width: 1025px) {
     margin: 20px 50px;
-    grid-template-columns: repeat(${props => props.item}, 1fr);
   }
 
   @media screen and (min-width: 1441px) {
-    grid-template-columns: repeat(${props => props.item}, 300px);
     margin: 20px auto;
   }
 `
@@ -57,6 +55,24 @@ export const Card = styled.div`
   box-sizing: border-box;
   background-color: #fff;
   border-radius: 30px;
+  padding-bottom: 20px;
+  cursor: pointer;
+
+  @media screen and (min-width: 426px) {
+    flex: 0 0 300px;
+
+    &:nth-child(-n + 1) {
+      margin: 0;
+    }
+
+    &:nth-last-child(n + 1) {
+      margin: 0 10px;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    flex: 0 0 300px;
+  }
 
   > img {
     width: 100%;
@@ -64,23 +80,37 @@ export const Card = styled.div`
 
   > .event-description {
     padding: 20px 40px;
+
+    section.name {
+      height: 250px;
+
+      p.excerpt {
+        overflow: hidden;
+      }
+    }
+
+    section.location-info {
+      height: 200px;
+
+      p.location {
+        display: flex;
+        align-items: center;
+
+        img {
+          align-self: flex-start;
+          width: 19px;
+          height: 19px;
+          margin-right: 30px;
+          margin-top: 5px;
+        }
+      }
+    }
   }
 
   h1 {
     margin: 0;
     font-size: 24px;
     text-align: center;
-  }
-
-  p {
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 19px;
-      height: 19px;
-      margin-right: 30px;
-    }
   }
 
   .button-container {
@@ -91,7 +121,7 @@ export const Card = styled.div`
     button {
       cursor: pointer;
       border-radius: 40px;
-      background-color: #50bf8a;
+      background-color: #6ace9e;
       font-size: 24px;
       color: #fff;
       width: 200px;

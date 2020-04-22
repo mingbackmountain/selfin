@@ -1,7 +1,9 @@
 import { NextPage } from "next"
+import Head from "next/head"
 import { css } from "@emotion/core"
 
 import { Layout } from "../components/layout"
+import { Mobile, Desktop } from "../components/layout/size"
 import { Banner, MobileBanner } from "../components/banner"
 import {
   NearbyEventForm,
@@ -12,26 +14,36 @@ import { Promotion } from "../components/promotion"
 import { Info, MobileInfo } from "../components/info"
 import { Blog } from "../components/blog"
 
-const HomePage: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
+const HomePage: NextPage = () => {
   return (
     <Layout>
-      {isMobile ? (
-        <>
-          <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
-          <MobileNearbyEventForm />
-        </>
-      ) : (
-        <>
-          <Banner imgUrl="/images/cover.png" />
-          <NearbyEventForm />
-        </>
-      )}
+      <Head>
+        <title>Selfin</title>
+      </Head>
 
-      <Events text="กิจกรรมที่น่าสนใจในเดือนนี้" />
+      {/* On mobile */}
+      <Mobile>
+        <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
+        <MobileNearbyEventForm />
+      </Mobile>
+
+      {/* On desktop */}
+      <Desktop>
+        <Banner imgUrl="/images/cover.png" />
+        <NearbyEventForm />
+      </Desktop>
+
+      <Events
+        style={css`
+          margin: 20px 0;
+        `}
+        text="กิจกรรมที่น่าสนใจในเดือนนี้"
+      />
 
       <Promotion />
 
-      {isMobile ? (
+      {/* On mobile */}
+      <Mobile>
         <MobileInfo
           usingBackground={true}
           style={css`
@@ -42,7 +54,10 @@ const HomePage: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
             }
           `}
         />
-      ) : (
+      </Mobile>
+
+      {/* On desktop */}
+      <Desktop>
         <Info
           usingBackground={true}
           style={css`
@@ -53,7 +68,7 @@ const HomePage: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
             }
           `}
         />
-      )}
+      </Desktop>
 
       <Blog
         style={css`
@@ -62,17 +77,6 @@ const HomePage: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
       />
     </Layout>
   )
-}
-
-HomePage.getInitialProps = ctx => {
-  const isMobile = (ctx?.req?.headers["user-agent"]
-    ? ctx.req.headers["user-agent"]
-    : navigator.userAgent
-  ).match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i)
-    ? true
-    : false
-
-  return { isMobile }
 }
 
 export default HomePage

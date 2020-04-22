@@ -14,7 +14,15 @@ export const BlogSection = styled.section`
 
   .top-section {
     display: flex;
-    justify-content: space-between;
+    flex-flow: column;
+  }
+
+  .all-blog-button {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+    margin: 10px 0;
   }
 
   > .cards {
@@ -22,19 +30,6 @@ export const BlogSection = styled.section`
     grid-template-columns: repeat(3, 100%);
     grid-gap: 20px;
     overflow: scroll;
-  }
-
-  .all-blog-button {
-    transform: translateY(20px);
-    display: none;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: right;
-    margin: 10px 0;
-
-    &.mobile {
-      display: block;
-    }
   }
 
   @media screen and (min-width: 426px) {
@@ -51,9 +46,8 @@ export const BlogSection = styled.section`
     .all-blog-button {
       display: block;
       margin: 0px 0px 10px;
-      transform: translateY(50px);
 
-      &.mobile {
+      span.mobile {
         display: none;
       }
     }

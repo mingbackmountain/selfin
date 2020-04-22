@@ -1,8 +1,10 @@
 import { NextPage } from "next"
+import Head from "next/head"
 import { css } from "@emotion/core"
 import Axios from "axios"
 
 import { Layout } from "../components/layout"
+import { Mobile, Desktop } from "../components/layout/size"
 import { Banner } from "../components/banner"
 import {
   NearbyEventForm,
@@ -13,12 +15,13 @@ import { Info } from "../components/info"
 
 import { ResponseFromServer, Event } from "../components/event/types"
 
-const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
-  isMobile,
-  result,
-}) => {
+const SearchResult: NextPage<{ result: Event[] }> = ({ result }) => {
   return (
     <Layout>
+      <Head>
+        <title>Selfin | Search Result</title>
+      </Head>
+
       <Banner
         style={css`
           @media screen and (max-width: 768px) {
@@ -28,17 +31,19 @@ const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
         imgUrl="/images/cover.png"
       />
 
-      {isMobile ? (
+      <Mobile>
         <MobileNearbyEventForm
           style={css`
             margin-top: 100px;
           `}
         />
-      ) : (
-        <NearbyEventForm />
-      )}
+      </Mobile>
 
-      <Result result={result} isMobile={isMobile} />
+      <Desktop>
+        <NearbyEventForm />
+      </Desktop>
+
+      <Result result={result} />
 
       <Info
         usingBackground={false}
@@ -73,14 +78,7 @@ const SearchResult: NextPage<{ isMobile: boolean; result: Event[] }> = ({
 }
 
 SearchResult.getInitialProps = async ctx => {
-  const isMobile = (ctx?.req?.headers["user-agent"]
-    ? ctx.req.headers["user-agent"]
-    : navigator.userAgent
-  ).match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i)
-    ? true
-    : false
-
-  const config = ctx.req ? { baseURL: "http://localhost:3000" } : {}
+  const config = ctx.req ? { baseURL: "https://selfin.co" } : {}
 
   const { data: response } = await Axios.get<ResponseFromServer>(
     "/api/event",
@@ -92,11 +90,10 @@ SearchResult.getInitialProps = async ctx => {
   const result = response.data.filter(
     event =>
       event.info.type.includes(query.eventType as string) ||
-      event.info.addressCode === query.district ||
-      event.info.month === query.month
+      event.info.addressCode === query.district
   )
 
-  return { isMobile, result }
+  return { result }
 }
 
 export default SearchResult
