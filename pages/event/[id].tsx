@@ -40,7 +40,15 @@ const EventPage: NextPage<{ isMobile: boolean; event: Event | undefined }> = ({
         </>
       ) : (
         <>
-          <Banner imgUrl="/images/S__1450016.png" />
+          <Banner
+            imgUrl={event.img}
+            style={css`
+              .banner {
+                max-height: 500px;
+                object-fit: cover;
+              }
+            `}
+          />
           <NameSection
             event={{
               name: event.name,
@@ -137,7 +145,9 @@ EventPage.getInitialProps = async ctx => {
     config
   )
 
-  const event = response.data.find(event => event.id === ctx.query.id)
+  const event = response.data.find(
+    event => event.id === (ctx.query.id as string).padStart(2, "0")
+  )
 
   return { isMobile, event }
 }
