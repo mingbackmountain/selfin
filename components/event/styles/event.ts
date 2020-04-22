@@ -42,7 +42,7 @@ export const EventContainer = styled.div`
 
 export const EventCardContainer = styled.div`
   width: 100%;
-  height: 420px;
+  height: 400px;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.16);
@@ -52,7 +52,7 @@ export const EventCardContainer = styled.div`
   z-index: 0;
 
   section.event-info {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     height: 100px;
   }
 
@@ -79,12 +79,13 @@ export const EventCardContainer = styled.div`
     display: flex;
     justify-content: center;
     position: absolute;
+    bottom: 20px;
 
     button {
       cursor: pointer;
       border-radius: 40px;
       background-color: #6ace9e;
-      font-size: 24px;
+      font-size: 15px;
       color: #fff;
       width: 200px;
 
@@ -108,10 +109,20 @@ export const EventCardContainer = styled.div`
     p {
       font-size: 14px;
     }
+
+    .button-container {
+      button {
+        font-size: 18px;
+      }
+    }
   }
 
   @media screen and (min-width: 769px) {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+
+    section.event-info {
+      margin-bottom: 50px;
+    }
 
     h2 {
       font-size: 20px;
@@ -119,6 +130,12 @@ export const EventCardContainer = styled.div`
 
     p {
       font-size: 16px;
+    }
+
+    .button-container {
+      button {
+        font-size: 24px;
+      }
     }
   }
 `

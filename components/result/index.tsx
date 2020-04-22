@@ -2,7 +2,7 @@ import { css } from "@emotion/core"
 import Link from "next/link"
 
 import { SectionTitle } from "../section-title"
-import { EventCardNoButton as EventCard } from "../event/card"
+import { EventCard } from "../event/card"
 
 import { Pagination } from "../../styles/pagination"
 import { Container, CardContainer, Navigation } from "./styles/result"
@@ -38,27 +38,24 @@ export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
 
         <CardContainer item={result.length}>
           {result.map(event => (
-            <Link key={event.name} href="/event/[id]" as={`/event/${event.id}`}>
-              <div
-                css={css`
-                  cursor: pointer;
+            <div
+              key={event.name}
+              css={css`
+                @media screen and (min-width: 426px) {
+                  flex: 0 0 300px;
 
-                  @media screen and (min-width: 426px) {
-                    flex: 0 0 300px;
-
-                    &:nth-child(-n + 1) {
-                      margin: 0;
-                    }
-
-                    &:nth-last-child(n + 1) {
-                      margin: 0 10px;
-                    }
+                  &:nth-child(-n + 1) {
+                    margin: 0;
                   }
-                `}
-              >
-                <EventCard event={event} />
-              </div>
-            </Link>
+
+                  &:nth-last-child(n + 1) {
+                    margin: 0 10px;
+                  }
+                }
+              `}
+            >
+              <EventCard event={event} />
+            </div>
           ))}
         </CardContainer>
 
