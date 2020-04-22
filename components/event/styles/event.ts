@@ -15,8 +15,8 @@ export const EventContainer = styled.div`
   }
 
   .all-event-button {
+    margin-top: 10px;
     display: none;
-    transform: translateY(20px);
 
     &.mobile {
       display: block;

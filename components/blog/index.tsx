@@ -21,15 +21,25 @@ export const Blog: React.FC<CSSProps> = ({ style }) => {
       `}
     >
       <div className="top-section">
-        <TitleWithYellowLine
-          title="กระดานความรู้"
-          style={css`
-            margin-bottom: 30px;
+        <div
+          css={css`
+            display: flex;
+            justify-content: center;
           `}
-        />
+        >
+          <TitleWithYellowLine
+            style={css`
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+            `}
+            title="กระดานความรู้"
+          />
+        </div>
 
-        <div className="all-blog-button">ดูทั้งหมด ></div>
-        <div className="all-blog-button mobile">ดูทั้งหมด >></div>
+        <div className="all-blog-button">
+          ดูทั้งหมด ><span className="mobile">></span>
+        </div>
       </div>
 
       <div className="cards">

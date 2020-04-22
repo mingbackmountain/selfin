@@ -29,15 +29,19 @@ export const Events: React.FC<EventTypeProps & CSSProps> = ({
       <div
         css={css`
           display: flex;
-          justify-content: space-between;
+          flex-flow: column;
         `}
       >
-        <TitleWithYellowLine
-          style={css`
-            margin-bottom: 30px;
-          `}
-          title={text}
-        />
+        <div>
+          <TitleWithYellowLine
+            style={css`
+              @media screen and (min-width: 769px) {
+                margin-bottom: 20px;
+              }
+            `}
+            title={text}
+          />
+        </div>
 
         <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด >></div>
       </div>
