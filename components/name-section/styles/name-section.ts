@@ -33,7 +33,7 @@ export const Logo = styled.div`
 export const ReservationContainer = styled.div`
   transform: translateY(50px);
   z-index: 1;
-  background: #fff;
+  background: #ffba00;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -43,7 +43,7 @@ export const ReservationContainer = styled.div`
   border-radius: 20px;
 
   h1 {
-    color: #ffba00;
+    color: #fff;
     margin: 0;
     text-align: center;
   }
