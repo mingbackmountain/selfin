@@ -45,35 +45,30 @@ export const Events: React.FC<EventTypeProps & CSSProps> = ({
       <div className="cards">
         {data &&
           data.slice(0, 4).map((event, index) => (
-            <Link
+            <div
               key={`${event.name}${index}`}
-              href="/event/[id]"
-              as={`/event/${event.id}`}
+              css={css`
+                flex: 0 0 100%;
+
+                &:nth-child(-n + 1) {
+                  margin: 0;
+                }
+
+                &:nth-last-child(n + 1) {
+                  margin: 0 10px;
+                }
+
+                @media screen and (min-width: 426px) {
+                  flex: 0 0 300px;
+                }
+
+                @media screen and (min-width: 1441px) {
+                  flex: 0 0 400px;
+                }
+              `}
             >
-              <div
-                css={css`
-                  flex: 0 0 100%;
-
-                  &:nth-child(-n + 1) {
-                    margin: 0;
-                  }
-
-                  &:nth-last-child(n + 1) {
-                    margin: 0 10px;
-                  }
-
-                  @media screen and (min-width: 426px) {
-                    flex: 0 0 300px;
-                  }
-
-                  @media screen and (min-width: 1441px) {
-                    flex: 0 0 400px;
-                  }
-                `}
-              >
-                <EventCard event={event} />
-              </div>
-            </Link>
+              <EventCard event={event} />
+            </div>
           ))}
       </div>
 
