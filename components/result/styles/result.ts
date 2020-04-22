@@ -56,6 +56,7 @@ export const Card = styled.div`
   background-color: #fff;
   border-radius: 30px;
   padding-bottom: 20px;
+  cursor: pointer;
 
   @media screen and (min-width: 426px) {
     flex: 0 0 300px;

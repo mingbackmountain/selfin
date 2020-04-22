@@ -41,6 +41,8 @@ export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
             <Link key={event.name} href="/event/[id]" as={`/event/${event.id}`}>
               <div
                 css={css`
+                  cursor: pointer;
+
                   @media screen and (min-width: 426px) {
                     flex: 0 0 300px;
 

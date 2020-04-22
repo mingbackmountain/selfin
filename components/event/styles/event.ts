@@ -12,7 +12,6 @@ export const EventContainer = styled.div`
     display: flex;
     overflow: scroll;
     padding-bottom: 10px;
-    cursor: pointer;
   }
 
   .all-event-button {
