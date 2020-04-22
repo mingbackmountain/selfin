@@ -15,10 +15,8 @@ export const Location = () => (
       style={css`
         margin: 20px 0;
 
-        @media screen and (max-width: 768px) {
-          div {
-            background: #ffba00;
-          }
+        div {
+          background: #ffba00;
         }
       `}
     />
@@ -37,6 +35,10 @@ export const Location = () => (
         title="สอบถามข้อมูลเพิ่มเติม"
         style={css`
           margin: 20px 0;
+
+          div {
+            background: #ffba00;
+          }
         `}
       />
       <LocationAndTime>
