@@ -77,7 +77,7 @@ const mockData: Event[] = [
     place: "วิชชาลัยในสวนบางมด",
     excerpt: `ที่อาณาจักร Taitonmai นั้นมีผู้ใหญ่สี่คนอาศัยอยู่ในภารกิจเพื่อสร้างจักรวาลมหัศจรรย์ที่เต็มไปด้วยโลกแฟนตาซีสำหรับเด็ก`,
     description: TaitonmaiMarkdown,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "086 979 2625",
     info: {
       addressCode: BKK,
@@ -108,7 +108,7 @@ const mockData: Event[] = [
     place: "Sukhumvit 49 (The Racquet Club) 2nd floor, building 4",
     excerpt: `เด็กๆจะได้รับความรู้หลากหลายด้านภายใต้แนวความคิด learning by cooking ไม่ว่าจะเป็นความรู้ด้านวิทยาศาสตร์ คณิตศาสตร์​ ศิลปะ ความคิดสร้างสรรค์ และทักษะการสร้างปฏิสัมพันธ์อื่น รวมไปถึงการรู้คุณค่าและความสัมคัญของอาหาร`,
     description: ALittleSomething,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "089 142 1108",
     info: {
       addressCode: BKK,
@@ -137,11 +137,11 @@ const mockData: Event[] = [
       "/events/04-mindful-spark/69824363_1334011030108174_5400785009508352000_o.jpg",
     logo: "",
     name: "Mindful Spark",
-    place: "-",
+    place: "ขึ้นอยู่กับกิจกรรม",
     excerpt: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
     description: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
     ipsum dolor sit amet, consetetur sadipscing elitr, sed diam`,
-    time: `-`,
+    time: `ขึ้นอยู่กับกิจกรรม`,
     tel: "098 765 4321",
     info: {
       addressCode: BKK,
@@ -171,10 +171,10 @@ const mockData: Event[] = [
     img: "/events/08-kids-journey/Screen Shot 2563-01-26 at 10.58.04.png",
     logo: "",
     name: "Kids’ Journey",
-    place: "-",
+    place: "กรุงเทพ",
     excerpt: `Kids’ Journey (คิดส์ เจอร์นีย์) เป็นสนามเรียนรู้สำหรับเด็กอายุ 7 – 12 ปี และครอบครัว เราจะพาคุณพ่อคุณแม่ทุกท่านไปรู้จักกับกิจกรรมสร้างสรรค์สำหรับเด็กๆ ที่จะทำให้ทุกเวลานอกห้องเรียน เป็นช่วงเวลาแห่งการทดลอง ภายใต้แนวคิด “ยิ่งลองเร็ว ยิ่งรู้เร็ว” สนับสนุนให้น้องๆ ได้ลองทุกประสบการณ์`,
     description: KidJourney,
-    time: `-`,
+    time: `ขึ้นอยู่กับกิจกรรม`,
     tel: "0628587114 (พี่ฝ้าย) ,0992134664 (พี่ท็อป)",
     info: {
       addressCode: BKK,
@@ -194,7 +194,7 @@ const mockData: Event[] = [
     อย่างมีความสุข
     `,
     description: DreamFarm,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "081 826 1908",
     info: {
       addressCode: NAKHONRAT,
@@ -210,7 +210,7 @@ const mockData: Event[] = [
       "เลขที่ 39 ห้อง B3 โครงการ เดอะ เซอร์เคิล ราชพฤกษ์ Ratchaphruek Rd, Bang Ramat, Taling Chan, Bangkok 10170",
     excerpt: `Play Academy เป็นสถาบันการศึกษาที่มุ่งเน้นให้เด็กได้เล่นและลงมือทำจริง`,
     description: PlayAcademy,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "083 596 5596",
     info: {
       addressCode: BKK,
@@ -225,7 +225,7 @@ const mockData: Event[] = [
     place: "กรุงเทพ (ขึ้นอยู่กับกิจกรรม)",
     excerpt: ` เกิดจากกลุ่มเพื่อนๆที่สนใจศึกษาแนวทางเลือกเกี่ยวกับการเสริมสร้างประสบการณ์ สร้างการเรียนรู้ใหม่ๆ ภายใต้การเล่น “นอกห้องเรียน`,
     description: LenNokBaan,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "094 265 6692",
     info: {
       addressCode: BKK,
@@ -240,7 +240,7 @@ const mockData: Event[] = [
     place: "1 ซอย ริมคลองพระโขนง Phra Khanong Nuea, Watthana, Bangkok",
     excerpt: `ห้องทดลองทางความคิดสำหรับเด็กที่ช่วยกระตุ้นความคิดสร้างสรรค์ เรียบเรียงกระบวนการคิด และค้นหา Passion ของตัวเองให้พบ ผ่านการใช้ Design Thinking`,
     description: KIDative,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "063 879 1449",
     info: {
       addressCode: BKK,
@@ -255,7 +255,7 @@ const mockData: Event[] = [
     place: "74/12 Tha Talat, Sam Phran District, Nakhon Pathom 73110",
     excerpt: `คลินิกกระตุ้นพัฒนาการเด็ก ออทิสติก สมาธิสั้น พัฒนาการช้า เรียนไม่ทันเพื่อน ปรับพฤติกรรม`,
     description: MeaningKids,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "090 926 9775",
     info: {
       addressCode: NAKHONPATHOM,
@@ -271,7 +271,7 @@ const mockData: Event[] = [
       "11 หมู่ 12 Bang Phrom 29 Alley, Bang Phrom, Taling Chan, Bangkok 10170",
     excerpt: `คลินิกกระตุ้นพัฒนาการเด็ก ออทิสติก สมาธิสั้น พัฒนาการช้า เรียนไม่ทันเพื่อน ปรับพฤติกรรม`,
     description: ATF,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "099 454 5395",
     info: {
       addressCode: BKK,
@@ -286,7 +286,7 @@ const mockData: Event[] = [
     place: "บ้านเล่นเสริมทักษะ ครูเดล ทวีวัฒนา กทม.",
     excerpt: `จัดกระบวนการสำหรับบุคคลที่มีความต้องการพิเศษ วางแผน จัดกิจกรรมส่งเสริมพัฒนาการและปรับพฤติกรรม สอนเสริมวิชาการควบคู่กับการฝึกทักษะชีวิต`,
     description: DalPlayhouseMarkdown,
-    time: "-",
+    time: "ขึ้นอยู่กับกิจกรรม",
     tel: "094-9154945",
     info: {
       addressCode: BKK,
