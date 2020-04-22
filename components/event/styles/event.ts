@@ -88,6 +88,7 @@ export const EventCardContainer = styled.div`
       font-size: 15px;
       color: #fff;
       width: 200px;
+      border: none;
 
       &:focus {
         outline: none;
