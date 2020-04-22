@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 
 import { EventInfo } from "./card-info"
 
@@ -15,7 +16,24 @@ export const EventCard: React.FC<EventCardProps> = ({ event }) => {
         <EventInfo placeName={event.place} />
         <EventInfo time={event.time} />
       </section>
-      <Learnmore>เรียนรู้เพิ่มเติม</Learnmore>
+      <div className="button-container">
+        <Link href="/event/[id]" as={`/event/${event.id}`}>
+          <button>เรียนรู้เพิ่มเติม</button>
+        </Link>
+      </div>
+    </EventCardContainer>
+  )
+}
+
+export const EventCardNoButton: React.FC<EventCardProps> = ({ event }) => {
+  return (
+    <EventCardContainer>
+      <img src={event.img} alt="event" />
+      <h2>{event.name}</h2>
+      <section className="event-info">
+        <EventInfo placeName={event.place} />
+        <EventInfo time={event.time} />
+      </section>
     </EventCardContainer>
   )
 }

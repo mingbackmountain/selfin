@@ -32,7 +32,12 @@ const HomePage: NextPage<{ isMobile: boolean }> = ({ isMobile }) => {
         </>
       )}
 
-      <Events text="กิจกรรมที่น่าสนใจในเดือนนี้" />
+      <Events
+        style={css`
+          margin: 20px 0;
+        `}
+        text="กิจกรรมที่น่าสนใจในเดือนนี้"
+      />
 
       <Promotion />
 

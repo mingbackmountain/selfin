@@ -13,11 +13,19 @@ import { useMockEventData } from "../../utils/hooks-get-mock-event"
 import { EventTypeProps } from "./types"
 import { CSSProps } from "../layout/types"
 
-export const Events: React.FC<EventTypeProps> = ({ text }) => {
+export const Events: React.FC<EventTypeProps & CSSProps> = ({
+  text,
+  style,
+}) => {
   const data = useMockEventData()
 
   return (
-    <EventContainer css={PagePadding()}>
+    <EventContainer
+      css={css`
+        ${PagePadding()}
+        ${style}
+      `}
+    >
       <div
         css={css`
           display: flex;

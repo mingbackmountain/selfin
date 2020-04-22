@@ -2,8 +2,7 @@ import { css } from "@emotion/core"
 import Link from "next/link"
 
 import { SectionTitle } from "../section-title"
-import { EventCard } from "./event"
-import { EventCard as MobileEventCard } from "../event/card"
+import { EventCardNoButton as EventCard } from "../event/card"
 
 import { Pagination } from "../../styles/pagination"
 import { Container, CardContainer, Navigation } from "./styles/result"
@@ -38,35 +37,27 @@ export const Result: React.FC<ResultProps> = ({ isMobile, result }) => {
         </div>
 
         <CardContainer item={result.length}>
-          {result.map(event =>
-            isMobile ? (
-              <Link
-                key={event.name}
-                href="/event/[id]"
-                as={`/event/${event.id}`}
-              >
-                <div
-                  css={css`
-                    @media screen and (min-width: 426px) {
-                      flex: 0 0 300px;
+          {result.map(event => (
+            <Link key={event.name} href="/event/[id]" as={`/event/${event.id}`}>
+              <div
+                css={css`
+                  @media screen and (min-width: 426px) {
+                    flex: 0 0 300px;
 
-                      &:nth-child(-n + 1) {
-                        margin: 0;
-                      }
-
-                      &:nth-last-child(n + 1) {
-                        margin: 0 10px;
-                      }
+                    &:nth-child(-n + 1) {
+                      margin: 0;
                     }
-                  `}
-                >
-                  <MobileEventCard event={event} />
-                </div>
-              </Link>
-            ) : (
-              <EventCard key={event.name} event={event} />
-            )
-          )}
+
+                    &:nth-last-child(n + 1) {
+                      margin: 0 10px;
+                    }
+                  }
+                `}
+              >
+                <EventCard event={event} />
+              </div>
+            </Link>
+          ))}
         </CardContainer>
 
         <div className="button">
