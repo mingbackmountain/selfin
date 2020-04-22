@@ -140,7 +140,7 @@ EventPage.getInitialProps = async ctx => {
     ? true
     : false
 
-  const config = ctx.req ? { baseURL: "http://localhost:3000" } : {}
+  const config = ctx.req ? { baseURL: "https://selfin.co" } : {}
 
   const { data: response } = await Axios.get<ResponseFromServer>(
     "/api/event",
