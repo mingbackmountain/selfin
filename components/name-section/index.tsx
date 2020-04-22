@@ -16,6 +16,7 @@ interface NameProps {
     name: string
     date: string
     location: string
+    logo: string
   }
 }
 
@@ -24,7 +25,7 @@ export const NameSection: React.FC<NameProps> = ({ event }) => (
     <div>
       <h1>{event.name}</h1>
       <PlaceWithDescription>
-        <Logo>logo</Logo>
+        <Logo>{event.logo ? <img src={event.logo} /> : "logo"}</Logo>
         <div>
           <p>วันเวลา : {event.date}</p>
           <p>สถานที่ : {event.location}</p>

@@ -39,6 +39,7 @@ const mockData: Event[] = [
     id: "01",
     img:
       "/events/01-w-academy/71828247_527117681356052_680448095292489728_o.jpg",
+    logo: "/events/01-w-academy/image.png",
     name: "W Academy",
     place: "Too Fast To Sleep : Sasin (ในจุฬาลงกรณ์มหาวิทยาลัย)",
     excerpt: `W Academy โรงเรียนการเงินสำหรับเด็กโดยทีมเอกการเงิน BBA ธรรมศาสตร์ เน้นการเรียนการสอนที่เข้าใจในธรรมชาติของเด็ก ผ่านการเรียนรู้ในรูปแบบ "play-based learning" เพื่อให้เด็กได้ลงมือทำมากกว่าการท่องจำในห้องเรียน`,
@@ -53,6 +54,7 @@ const mockData: Event[] = [
   {
     id: "02",
     img: "/events/02-know-are/image (4).png",
+    logo: "/events/02-know-are/image (8).png",
     name: "Know-are",
     place:
       "KnowAre Learning ซอยงามวงศ์วาน 14 ต. บางเขน อ. เมืองนนทบุรี จ.นนทบุรี 11000",
@@ -69,6 +71,8 @@ const mockData: Event[] = [
     id: "06",
     img:
       "/events/06-taitonmai/46511036_2211964662409803_8209990433397276672_o.jpg",
+    logo:
+      "/events/06-taitonmai/84507787_2543251472614452_3720907280091185152_o.png",
     name: "Taitonmai",
     place: "วิชชาลัยในสวนบางมด",
     excerpt: `ที่อาณาจักร Taitonmai นั้นมีผู้ใหญ่สี่คนอาศัยอยู่ในภารกิจเพื่อสร้างจักรวาลมหัศจรรย์ที่เต็มไปด้วยโลกแฟนตาซีสำหรับเด็ก`,
@@ -84,6 +88,7 @@ const mockData: Event[] = [
     id: "07",
     img:
       "/events/07-farm-sanook/83923396_2631429500469034_118510018986246144_o.jpg",
+    logo: "/events/07-farm-sanook/image.png",
     name: "Farm Sanook Kid Camp",
     place: "อำเภอ คลองหลวง ปทุมธานี",
     excerpt: `เล่นเพื่อเพิ่มพัฒนาการทางร่างกาย และ จิตใจ เล่นเพื่อปรับตัวให้เข้ากับสังคม เล่นเพื่อให้เกิดการเรียนรู้ เล่นเพื่อพัฒนาสมอง เล่นเพื่อให้ใช้ชีวิตในสังคมได้อย่างมีความสุข`,
@@ -98,6 +103,7 @@ const mockData: Event[] = [
   {
     id: "16",
     img: "/events/16-a-little-something/image.png",
+    logo: "/events/16-a-little-something/image (8).png",
     name: "A little something",
     place: "Sukhumvit 49 (The Racquet Club) 2nd floor, building 4",
     excerpt: `เด็กๆจะได้รับความรู้หลากหลายด้านภายใต้แนวความคิด learning by cooking ไม่ว่าจะเป็นความรู้ด้านวิทยาศาสตร์ คณิตศาสตร์​ ศิลปะ ความคิดสร้างสรรค์ และทักษะการสร้างปฏิสัมพันธ์อื่น รวมไปถึงการรู้คุณค่าและความสัมคัญของอาหาร`,
@@ -113,6 +119,7 @@ const mockData: Event[] = [
   {
     id: "03",
     img: "/events/03-ekachai-hospital/image.png",
+    logo: "/events/03-ekachai-hospital/4ceb7a9f6a3142caba2b413f1f1d1356.jpg",
     name: "Ekachai Hospital",
     place: "99/9 หมู่ 4 ถนนเอกชัย ตำบลโคกขาม อำเภอเมือง จังหวัดสมุทรสาคร 74000",
     excerpt: `โรงพยาบาลเอกชัยจัดตั้งขึ้นโดยกลุ่มแพทย์ที่มีความเชี่ยวชาญและประสบการณ์ เป็นที่เชื่อมั่นของคนในจังหวัดสมุทรสาครและจังหวัดใกล้เคียง ตั้งแต่ปีพ.ศ. 2546`,
@@ -128,6 +135,7 @@ const mockData: Event[] = [
     id: "04",
     img:
       "/events/04-mindful-spark/69824363_1334011030108174_5400785009508352000_o.jpg",
+    logo: "",
     name: "Mindful Spark",
     place: "-",
     excerpt: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
@@ -144,6 +152,8 @@ const mockData: Event[] = [
     id: "05",
     img:
       "/events/05-landlab/92836182_1267784356752925_4992967290543669248_o.jpg",
+    logo:
+      "/events/05-landlab/31764751_774717972726235_7189445266871681024_o.jpg",
     name: "Landlab",
     place: "เขตทวีวัฒนา, อำเภอไทรน้อย, เทศบาลนครนนทบุรี 11150",
     description: LandlabMarkdown,
@@ -159,6 +169,7 @@ const mockData: Event[] = [
   {
     id: "08",
     img: "/events/08-kids-journey/Screen Shot 2563-01-26 at 10.58.04.png",
+    logo: "",
     name: "Kids’ Journey",
     place: "-",
     excerpt: `Kids’ Journey (คิดส์ เจอร์นีย์) เป็นสนามเรียนรู้สำหรับเด็กอายุ 7 – 12 ปี และครอบครัว เราจะพาคุณพ่อคุณแม่ทุกท่านไปรู้จักกับกิจกรรมสร้างสรรค์สำหรับเด็กๆ ที่จะทำให้ทุกเวลานอกห้องเรียน เป็นช่วงเวลาแห่งการทดลอง ภายใต้แนวคิด “ยิ่งลองเร็ว ยิ่งรู้เร็ว” สนับสนุนให้น้องๆ ได้ลองทุกประสบการณ์`,
@@ -173,6 +184,7 @@ const mockData: Event[] = [
   {
     id: "09",
     img: "/events/09-dream-farm/image (1).png",
+    logo: "",
     name: "ฟาร์มนี้มีฝัน",
     place: "สบ.4040 Sap Sanun, Muak Lek District, Saraburi 18220",
     excerpt: `กิจกรรม Nature Kids Camp ค่ายยุวชน "วิชาชีวิต" 
@@ -192,6 +204,7 @@ const mockData: Event[] = [
   {
     id: "10",
     img: "/images/s-1450016.png",
+    logo: "",
     name: "Play Academy",
     place:
       "เลขที่ 39 ห้อง B3 โครงการ เดอะ เซอร์เคิล ราชพฤกษ์ Ratchaphruek Rd, Bang Ramat, Taling Chan, Bangkok 10170",
@@ -207,6 +220,7 @@ const mockData: Event[] = [
   {
     id: "11",
     img: "/events/11-len-nok-baan/image (4).png",
+    logo: "/events/11-len-nok-baan/image.png",
     name: "เล่นนอกบ้าน Len Nok Baan",
     place: "-",
     excerpt: ` เกิดจากกลุ่มเพื่อนๆที่สนใจศึกษาแนวทางเลือกเกี่ยวกับการเสริมสร้างประสบการณ์ สร้างการเรียนรู้ใหม่ๆ ภายใต้การเล่น “นอกห้องเรียน`,
@@ -221,6 +235,7 @@ const mockData: Event[] = [
   {
     id: "12",
     img: "/images/s-1450016.png",
+    logo: "",
     name: "KIDative: Innovation and Design Lab for Kids",
     place: "1 ซอย ริมคลองพระโขนง Phra Khanong Nuea, Watthana, Bangkok",
     excerpt: `ห้องทดลองทางความคิดสำหรับเด็กที่ช่วยกระตุ้นความคิดสร้างสรรค์ เรียบเรียงกระบวนการคิด และค้นหา Passion ของตัวเองให้พบ ผ่านการใช้ Design Thinking`,
@@ -235,6 +250,7 @@ const mockData: Event[] = [
   {
     id: "13",
     img: "/images/s-1450016.png",
+    logo: "",
     name: "คลินิกกระตุ้นพัฒนาการเด็ก Meaning-Kids",
     place: "74/12 Tha Talat, Sam Phran District, Nakhon Pathom 73110",
     excerpt: `คลินิกกระตุ้นพัฒนาการเด็ก ออทิสติก สมาธิสั้น พัฒนาการช้า เรียนไม่ทันเพื่อน ปรับพฤติกรรม`,
@@ -249,6 +265,7 @@ const mockData: Event[] = [
   {
     id: "14",
     img: "/images/s-1450016.png",
+    logo: "",
     name: "Autistic Thai Foundation มูลนิธิออทิสติกไทย",
     place:
       "11 หมู่ 12 Bang Phrom 29 Alley, Bang Phrom, Taling Chan, Bangkok 10170",
@@ -264,6 +281,7 @@ const mockData: Event[] = [
   {
     id: "15",
     img: "/events/15-del/87299412_2525804744350353_5989290014045896704_o.jpg",
+    logo: "/events/15-del/77122131_2429701210627374_7653225761163182080_n.jpg",
     name: "บ้านเล่นและเสริมทักษะ by ครูเดล",
     place: "บ้านเล่นเสริมทักษะ ครูเดล ทวีวัฒนา กทม.",
     excerpt: `จัดกระบวนการสำหรับบุคคลที่มีความต้องการพิเศษ วางแผน จัดกิจกรรมส่งเสริมพัฒนาการและปรับพฤติกรรม สอนเสริมวิชาการควบคู่กับการฝึกทักษะชีวิต`,

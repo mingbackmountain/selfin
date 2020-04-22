@@ -28,6 +28,11 @@ export const Logo = styled.div`
   border: 1px solid;
   border-radius: 20px;
   margin-right: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 `
 
 export const ReservationContainer = styled.div`

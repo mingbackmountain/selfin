@@ -1,6 +1,7 @@
 export interface Event {
   id: string
   img: string
+  logo: string
   name: string
   place: string
   excerpt: string
