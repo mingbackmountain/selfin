@@ -43,12 +43,12 @@ export const Location = () => (
         <FontAwesomeIcon icon={faFacebook} size="lg" />
         <a
           css={css`
-            color: #ffba00;
+            color: #000;
             text-decoration: none;
           `}
           href="https://www.facebook.com/contact.selfin/"
         >
-          ติดต่อเฟสบุ๊ค
+          Selfing - Family Playground
         </a>
       </LocationAndTime>
       <LocationAndTime>
