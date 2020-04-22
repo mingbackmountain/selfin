@@ -18,27 +18,27 @@ import ALittleSomething from "../../events-info/16.md"
 
 import { Event } from "../../components/event/types"
 
-const ARTMUSIC = "ศิลปะและดนตรี"
-const SPORT = "กีฬา"
-const THERAPY = "กิจกรรมบำบัด"
-const WORKSHOP = "เวิร์คช็อพ และ คลาสเรียนสร้างสรรค์"
-const CAMPING = "ค่ายการเรียนรู้"
-const COVID = "กิจกรรมช่วงโควิด"
-const COMMUNITY = "คอมมูนิตี้"
+export const ARTMUSIC = "ศิลปะและดนตรี"
+export const SPORT = "กีฬา"
+export const THERAPY = "กิจกรรมบำบัด"
+export const WORKSHOP = "เวิร์คช็อพ และ คลาสเรียนสร้างสรรค์"
+export const CAMPING = "ค่ายการเรียนรู้"
+export const COVID = "กิจกรรมช่วงโควิด"
+export const COMMUNITY = "คอมมูนิตี้"
 
-const BKK = "กรุงเทพ"
-const NONTHABURI = "นนทบุรี"
-const SAMUTSAKORN = "สมุทรสาคร"
-const PATHUMTANI = "ปทุมธานี"
-const SARABURI = "สระบุรี"
-const NAKHONPATHOM = "นครปฐม"
-const UNKNOWN = "ไม่ระบุ"
+export const BKK = "กรุงเทพฯ"
+export const NONTHABURI = "นนทบุรี"
+export const SAMUTSAKORN = "สมุทรสาคร"
+export const PATHUMTANI = "ปทุมธานี"
+export const NAKHONPATHOM = "นครปฐม"
+export const NAKHONRAT = "นครราชสีมา"
 
 const mockData: Event[] = [
   // Mostly focus
   {
     id: "01",
-    img: "/images/s-1450016.png",
+    img:
+      "/events/01-w-academy/71828247_527117681356052_680448095292489728_o.jpg",
     name: "W Academy",
     place: "Too Fast To Sleep : Sasin (ในจุฬาลงกรณ์มหาวิทยาลัย)",
     excerpt: `W Academy โรงเรียนการเงินสำหรับเด็กโดยทีมเอกการเงิน BBA ธรรมศาสตร์ เน้นการเรียนการสอนที่เข้าใจในธรรมชาติของเด็ก ผ่านการเรียนรู้ในรูปแบบ "play-based learning" เพื่อให้เด็กได้ลงมือทำมากกว่าการท่องจำในห้องเรียน`,
@@ -52,7 +52,7 @@ const mockData: Event[] = [
   },
   {
     id: "02",
-    img: "/images/36044.png",
+    img: "/events/02-know-are/image (4).png",
     name: "Know-are",
     place:
       "KnowAre Learning ซอยงามวงศ์วาน 14 ต. บางเขน อ. เมืองนนทบุรี จ.นนทบุรี 11000",
@@ -67,7 +67,8 @@ const mockData: Event[] = [
   },
   {
     id: "06",
-    img: "/images/s-1450016.png",
+    img:
+      "/events/06-taitonmai/46511036_2211964662409803_8209990433397276672_o.jpg",
     name: "Taitonmai",
     place: "วิชชาลัยในสวนบางมด",
     excerpt: `ที่อาณาจักร Taitonmai นั้นมีผู้ใหญ่สี่คนอาศัยอยู่ในภารกิจเพื่อสร้างจักรวาลมหัศจรรย์ที่เต็มไปด้วยโลกแฟนตาซีสำหรับเด็ก`,
@@ -81,7 +82,8 @@ const mockData: Event[] = [
   },
   {
     id: "07",
-    img: "/images/s-1450014.png",
+    img:
+      "/events/07-farm-sanook/83923396_2631429500469034_118510018986246144_o.jpg",
     name: "Farm Sanook Kid Camp",
     place: "อำเภอ คลองหลวง ปทุมธานี",
     excerpt: `เล่นเพื่อเพิ่มพัฒนาการทางร่างกาย และ จิตใจ เล่นเพื่อปรับตัวให้เข้ากับสังคม เล่นเพื่อให้เกิดการเรียนรู้ เล่นเพื่อพัฒนาสมอง เล่นเพื่อให้ใช้ชีวิตในสังคมได้อย่างมีความสุข`,
@@ -95,7 +97,7 @@ const mockData: Event[] = [
   },
   {
     id: "16",
-    img: "/images/36044.png",
+    img: "/events/16-a-little-something/image.png",
     name: "A little something",
     place: "Sukhumvit 49 (The Racquet Club) 2nd floor, building 4",
     excerpt: `เด็กๆจะได้รับความรู้หลากหลายด้านภายใต้แนวความคิด learning by cooking ไม่ว่าจะเป็นความรู้ด้านวิทยาศาสตร์ คณิตศาสตร์​ ศิลปะ ความคิดสร้างสรรค์ และทักษะการสร้างปฏิสัมพันธ์อื่น รวมไปถึงการรู้คุณค่าและความสัมคัญของอาหาร`,
@@ -110,7 +112,7 @@ const mockData: Event[] = [
   // Not focus with
   {
     id: "03",
-    img: "/images/s-1450014.png",
+    img: "/events/03-ekachai-hospital/image.png",
     name: "Ekachai Hospital",
     place: "99/9 หมู่ 4 ถนนเอกชัย ตำบลโคกขาม อำเภอเมือง จังหวัดสมุทรสาคร 74000",
     excerpt: `โรงพยาบาลเอกชัยจัดตั้งขึ้นโดยกลุ่มแพทย์ที่มีความเชี่ยวชาญและประสบการณ์ เป็นที่เชื่อมั่นของคนในจังหวัดสมุทรสาครและจังหวัดใกล้เคียง ตั้งแต่ปีพ.ศ. 2546`,
@@ -124,7 +126,8 @@ const mockData: Event[] = [
   },
   {
     id: "04",
-    img: "/images/s-1450016.png",
+    img:
+      "/events/04-mindful-spark/69824363_1334011030108174_5400785009508352000_o.jpg",
     name: "Mindful Spark",
     place: "-",
     excerpt: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
@@ -133,13 +136,14 @@ const mockData: Event[] = [
     time: `-`,
     tel: "098 765 4321",
     info: {
-      addressCode: UNKNOWN,
-      type: [UNKNOWN],
+      addressCode: BKK,
+      type: [WORKSHOP],
     },
   },
   {
     id: "05",
-    img: "/images/s-1450016.png",
+    img:
+      "/events/05-landlab/92836182_1267784356752925_4992967290543669248_o.jpg",
     name: "Landlab",
     place: "เขตทวีวัฒนา, อำเภอไทรน้อย, เทศบาลนครนนทบุรี 11150",
     description: LandlabMarkdown,
@@ -154,7 +158,7 @@ const mockData: Event[] = [
   },
   {
     id: "08",
-    img: "/images/s-1450016.png",
+    img: "/events/08-kids-journey/Screen Shot 2563-01-26 at 10.58.04.png",
     name: "Kids’ Journey",
     place: "-",
     excerpt: `Kids’ Journey (คิดส์ เจอร์นีย์) เป็นสนามเรียนรู้สำหรับเด็กอายุ 7 – 12 ปี และครอบครัว เราจะพาคุณพ่อคุณแม่ทุกท่านไปรู้จักกับกิจกรรมสร้างสรรค์สำหรับเด็กๆ ที่จะทำให้ทุกเวลานอกห้องเรียน เป็นช่วงเวลาแห่งการทดลอง ภายใต้แนวคิด “ยิ่งลองเร็ว ยิ่งรู้เร็ว” สนับสนุนให้น้องๆ ได้ลองทุกประสบการณ์`,
@@ -168,7 +172,7 @@ const mockData: Event[] = [
   },
   {
     id: "09",
-    img: "/images/s-1450016.png",
+    img: "/events/09-dream-farm/image (1).png",
     name: "ฟาร์มนี้มีฝัน",
     place: "สบ.4040 Sap Sanun, Muak Lek District, Saraburi 18220",
     excerpt: `กิจกรรม Nature Kids Camp ค่ายยุวชน "วิชาชีวิต" 
@@ -181,7 +185,7 @@ const mockData: Event[] = [
     time: "-",
     tel: "081 826 1908",
     info: {
-      addressCode: SARABURI,
+      addressCode: NAKHONRAT,
       type: [WORKSHOP, CAMPING],
     },
   },
@@ -202,7 +206,7 @@ const mockData: Event[] = [
   },
   {
     id: "11",
-    img: "/images/s-1450016.png",
+    img: "/events/11-len-nok-baan/image (4).png",
     name: "เล่นนอกบ้าน Len Nok Baan",
     place: "-",
     excerpt: ` เกิดจากกลุ่มเพื่อนๆที่สนใจศึกษาแนวทางเลือกเกี่ยวกับการเสริมสร้างประสบการณ์ สร้างการเรียนรู้ใหม่ๆ ภายใต้การเล่น “นอกห้องเรียน`,
@@ -210,7 +214,7 @@ const mockData: Event[] = [
     time: "-",
     tel: "094 265 6692",
     info: {
-      addressCode: UNKNOWN,
+      addressCode: BKK,
       type: [ARTMUSIC, SPORT, WORKSHOP, CAMPING],
     },
   },
@@ -259,7 +263,7 @@ const mockData: Event[] = [
   },
   {
     id: "15",
-    img: "/images/36044.png",
+    img: "/events/15-del/87299412_2525804744350353_5989290014045896704_o.jpg",
     name: "บ้านเล่นและเสริมทักษะ by ครูเดล",
     place: "บ้านเล่นเสริมทักษะ ครูเดล ทวีวัฒนา กทม.",
     excerpt: `จัดกระบวนการสำหรับบุคคลที่มีความต้องการพิเศษ วางแผน จัดกิจกรรมส่งเสริมพัฒนาการและปรับพฤติกรรม สอนเสริมวิชาการควบคู่กับการฝึกทักษะชีวิต`,

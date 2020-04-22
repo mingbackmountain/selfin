@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 
+import { COVID } from "../pages/api/event"
+
 import { ResponseFromServer, Event } from "../components/event/types"
 
 export function useMockEventData() {
@@ -32,7 +34,9 @@ export function useSearchOption(): AvailableSearchOption {
 
   if (data) {
     // using Set to get the unique option
-    const eventType = [...new Set(data.flatMap(item => item.info.type))]
+    const eventType = [
+      ...new Set([COVID, ...data.flatMap(item => item.info.type)]),
+    ]
     const district = [...new Set(data.map(item => item.info.addressCode))]
 
     return {
