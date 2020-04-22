@@ -1,3 +1,6 @@
+import Link from "next/link"
+import { css } from "@emotion/core"
+
 import { SectionTitle } from "../section-title"
 import { MenuItem } from "./menu-item"
 
@@ -28,7 +31,15 @@ export const Promotion: React.FC = () => (
 
     <MainContent>
       <LeftSection>
-        <img src="/images/cover-slide.png" alt="cover-slide" />
+        <Link href="/search-result?eventType=กิจกรรมช่วงโควิด">
+          <img
+            css={css`
+              cursor: pointer;
+            `}
+            src="/images/cover-slide.png"
+            alt="cover-slide"
+          />
+        </Link>
 
         <Navigation>
           <div className="button-group">
