@@ -72,6 +72,7 @@ export const EventCardContainer = styled.div`
     font-size: 15px;
     color: #6ace9e;
     margin: 10px 20px;
+    font-weight: 700;
   }
 
   .button-container {

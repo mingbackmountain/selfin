@@ -3,6 +3,10 @@ import styled from "@emotion/styled"
 export const NameContainer = styled.section`
   display: flex;
   justify-content: space-between;
+
+  h1 {
+    font-weight: 600;
+  }
 `
 
 export const PlaceWithDescription = styled.div`
