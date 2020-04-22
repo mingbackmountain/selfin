@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
           <LeftSection>
             <img src="/images/white.png" alt="white logo" />
             <p>
-              We believe every kid has Potential.
+              We believe every kid has potential.
               <br />
               We offer a wide range of classes from
               <br />
@@ -129,10 +129,10 @@ export const Footer: React.FC = () => {
               Phutthamonthon District, Nakhon Pathom 73170
               <br />
               <br />
-              Email: Sparkspace.edu.com
+              Email: contact.selfin@gmail.com
               <br />
               <br />
-              Call: +66-987654321
+              Call: 089 417 6886
             </p>
           </RightSection>
         </div>

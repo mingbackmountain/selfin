@@ -50,12 +50,12 @@ export const Location = () => (
           `}
           href="https://www.facebook.com/contact.selfin/"
         >
-          Selfing - Family Playground
+          Selfin - Family Playground
         </a>
       </LocationAndTime>
       <LocationAndTime>
         <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
-        <div>098 765 4321</div>
+        <div>089 417 6886</div>
       </LocationAndTime>
     </div>
   </LocationContainer>

@@ -222,7 +222,7 @@ const mockData: Event[] = [
     img: "/events/11-len-nok-baan/image (4).png",
     logo: "/events/11-len-nok-baan/image.png",
     name: "เล่นนอกบ้าน Len Nok Baan",
-    place: "-",
+    place: "กรุงเทพ (ขึ้นอยู่กับกิจกรรม)",
     excerpt: ` เกิดจากกลุ่มเพื่อนๆที่สนใจศึกษาแนวทางเลือกเกี่ยวกับการเสริมสร้างประสบการณ์ สร้างการเรียนรู้ใหม่ๆ ภายใต้การเล่น “นอกห้องเรียน`,
     description: LenNokBaan,
     time: "-",
