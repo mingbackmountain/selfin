@@ -66,7 +66,7 @@ export const SearchButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-color: transparent;
+  border: transparent;
 
   @media screen and (min-width: 426px) {
     width: 150px;
