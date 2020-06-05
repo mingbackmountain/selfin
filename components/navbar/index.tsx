@@ -21,12 +21,7 @@ export const Navbar: React.FC = () => {
         </div>
         <NavItem isOpen={isOpen}>
           <NavbarItem href="/" linkName="หน้าแรก" />
-          <NavbarItem href="/" linkName="โปรไฟล์" />
-          <NavbarItem href="/" linkName="กิจกรรม" />
           <NavbarItem href="/" linkName="ติดต่อเรา" />
-          <LoginButton>
-            <FontAwesomeIcon icon={faUser} size="lg" />
-          </LoginButton>
         </NavItem>
       </div>
     </NavbarContainer>

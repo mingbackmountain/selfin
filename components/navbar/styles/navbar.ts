@@ -103,7 +103,7 @@ export const NavItem = styled.div<NavItemOpenProps>`
   @media screen and (min-width: 769px) {
     display: flex;
     flex-flow: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex: 0 1 90%;
     background-color: #fff;
     width: auto;
