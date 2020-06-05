@@ -121,7 +121,7 @@ const EventPage: NextPage<{ event: Event | undefined }> = ({ event }) => {
         />
 
         <button>
-          <a href="https://www.facebook.com/contact.selfin/">จองตอนนี้</a>
+          <a href="https://contactselfin.typeform.com/to/yq3qrD">จองตอนนี้</a>
         </button>
       </div>
     </Layout>
