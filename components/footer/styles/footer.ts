@@ -1,9 +1,10 @@
 import styled from "@emotion/styled"
 
 export const FooterContainer = styled.footer`
-  background: #ffba00;
+  background: #353535;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   font-weight: 300;
+  color: white;
   padding: 30px 0;
   display: flex;
   justify-content: center;
@@ -12,11 +13,6 @@ export const FooterContainer = styled.footer`
   > div {
     display: flex;
     flex-flow: column;
-
-    > img {
-      max-width: 200px;
-      margin-bottom: 20px;
-    }
   }
 
   @media screen and (min-width: 769px) {
@@ -30,15 +26,17 @@ export const FooterContainer = styled.footer`
 `
 
 export const LeftSection = styled.div`
-  margin-bottom: 30px;
   word-break: break-all;
 
+  h6,
   p {
     margin: 0;
   }
 
-  @media screen and (min-width: 769px) {
-    margin-bottom: 0px;
+  h6 {
+    font-size: 20px;
+    font-weight: 300;
+    font-weight: bold;
   }
 `
 
@@ -53,5 +51,6 @@ export const RightSection = styled.div`
   h6 {
     font-size: 20px;
     font-weight: 300;
+    font-weight: bold;
   }
 `

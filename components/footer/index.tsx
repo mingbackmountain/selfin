@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 import styled from "@emotion/styled"
 
 import { PagePadding } from "../../styles/container"
+import { UnderLine } from "../../styles/underline"
 import { FooterContainer, LeftSection, RightSection } from "./styles/footer"
 
 const MainFooter = styled.div`
@@ -112,7 +113,7 @@ export const Footer: React.FC = () => {
       <FooterContainer className="desktop">
         <div css={PagePadding()}>
           <LeftSection>
-            <img src="/images/white.png" alt="white logo" />
+            <h6>Selfin</h6>
             <p>
               We believe every kid has potential.
               <br />
@@ -122,18 +123,17 @@ export const Footer: React.FC = () => {
             </p>
           </LeftSection>
           <RightSection>
-            <h6>ADDRESS</h6>
+            <h6>Contact</h6>
             <p>
+              Email: contact.selfin@gmail.com
+              <br />
+              Phone: 089 417 6886
+              <br />
               999 Phutthamonthon Sai 4 Rd, Salaya,
               <br />
               Phutthamonthon District, Nakhon Pathom 73170
-              <br />
-              <br />
-              Email: contact.selfin@gmail.com
-              <br />
-              <br />
-              Call: 089 417 6886
             </p>
+            <UnderLine color="yellow" />
           </RightSection>
         </div>
       </FooterContainer>
