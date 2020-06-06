@@ -6,9 +6,7 @@ import { CSSProps } from "../layout/types"
 export const Banner: React.FC<BannerProps & CSSProps> = ({ imgUrl, style }) => {
   return (
     <BannerContainer css={style}>
-      <SlideButton src="/images/prev.png" isLeft={true} />
       <img className="banner" src={imgUrl} alt="banner" />
-      <SlideButton src="/images/next.png" isLeft={false} />
     </BannerContainer>
   )
 }
