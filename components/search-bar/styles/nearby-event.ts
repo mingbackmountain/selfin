@@ -50,6 +50,7 @@ export const Button = styled.button`
   border-radius: 19px;
   color: white;
   background-color: #fe2000;
+  border: transparent;
   font-size: 28px;
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
   cursor: pointer;
@@ -66,7 +67,6 @@ export const SearchButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: transparent;
 
   @media screen and (min-width: 426px) {
     width: 150px;

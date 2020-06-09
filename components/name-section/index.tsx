@@ -36,7 +36,7 @@ export const NameSection: React.FC<NameProps> = ({ event }) => (
       <h1>บัตรเข้าร่วมกิจกรรม</h1>
 
       <button>
-        <a href="https://www.facebook.com/contact.selfin/">จองตอนนี้</a>
+        <a href="https://contactselfin.typeform.com/to/yq3qrD">จองตอนนี้</a>
       </button>
     </ReservationContainer>
   </NameContainer>

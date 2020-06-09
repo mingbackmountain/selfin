@@ -122,6 +122,7 @@ export const Footer: React.FC = () => {
               20+ fields of interest especially for your kids.
             </p>
           </LeftSection>
+
           <RightSection>
             <h6>Contact</h6>
             <p>
@@ -133,8 +134,22 @@ export const Footer: React.FC = () => {
               <br />
               Phutthamonthon District, Nakhon Pathom 73170
             </p>
-            <UnderLine color="yellow" />
           </RightSection>
+        </div>
+        <div row>
+          <div row>
+            <UnderLine color="yellow" />
+          </div>
+          <div row>
+            <LeftSection>
+              <p>Selfin, Inc. 2020</p>
+            </LeftSection>
+            <RightSection>
+              <p>
+                <img /> Selfin - Family Playground
+              </p>
+            </RightSection>
+          </div>
         </div>
       </FooterContainer>
     </MainFooter>

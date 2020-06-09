@@ -27,7 +27,7 @@ export const FooterContainer = styled.footer`
 
 export const LeftSection = styled.div`
   word-break: break-all;
-
+  padding-left: 100px;
   h6,
   p {
     margin: 0;
@@ -35,14 +35,13 @@ export const LeftSection = styled.div`
 
   h6 {
     font-size: 20px;
-    font-weight: 300;
-    font-weight: bold;
+    font-weight: 700;
   }
 `
 
 export const RightSection = styled.div`
   word-break: break-all;
-
+  padding-right: 100px;
   h6,
   p {
     margin: 0;
@@ -50,7 +49,6 @@ export const RightSection = styled.div`
 
   h6 {
     font-size: 20px;
-    font-weight: 300;
-    font-weight: bold;
+    font-weight: 700;
   }
 `
