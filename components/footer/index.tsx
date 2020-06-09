@@ -1,8 +1,10 @@
 import { useRouter } from "next/router"
+import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 import { PagePadding } from "../../styles/container"
-import { UnderLine } from "../../styles/underline"
 import { FooterContainer, LeftSection, RightSection } from "./styles/footer"
 
 const MainFooter = styled.div`
@@ -79,6 +81,20 @@ const MobileFooter = styled.div`
   }
 `
 
+const UnderLine = styled.div`
+  width: 90%;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 100px;
+  background-color: #f2d600;
+  border-radius: 40px;
+
+  @media screen and (min-width: 769px) {
+    height: 5px;
+  }
+`
+
 export const Footer: React.FC = () => {
   const router = useRouter()
 
@@ -136,20 +152,26 @@ export const Footer: React.FC = () => {
             </p>
           </RightSection>
         </div>
-        <div row>
-          <div row>
-            <UnderLine color="yellow" />
-          </div>
-          <div row>
-            <LeftSection>
-              <p>Selfin, Inc. 2020</p>
-            </LeftSection>
-            <RightSection>
-              <p>
-                <img /> Selfin - Family Playground
-              </p>
-            </RightSection>
-          </div>
+        <div css={PagePadding()}>
+          <UnderLine />
+        </div>
+        <div css={PagePadding()}>
+          <LeftSection>
+            <p>Selfin, Inc. 2020</p>
+          </LeftSection>
+          <RightSection>
+            <FontAwesomeIcon icon={faFacebook} size="lg" />
+            <a
+              css={css`
+                color: #fff;
+                margin-left: 10px;
+                text-decoration: none;
+              `}
+              href="https://www.facebook.com/contact.selfin/"
+            >
+              Selfin - Family Playground
+            </a>
+          </RightSection>
         </div>
       </FooterContainer>
     </MainFooter>
