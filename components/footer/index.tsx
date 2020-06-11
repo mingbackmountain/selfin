@@ -82,8 +82,8 @@ const MobileFooter = styled.div`
 `
 
 const UnderLine = styled.div`
-  width: 90%;
-  height: 1px;
+  width: 85%;
+  height: 2px;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: 100px;
@@ -91,7 +91,7 @@ const UnderLine = styled.div`
   border-radius: 40px;
 
   @media screen and (min-width: 769px) {
-    height: 5px;
+    height: 2px;
   }
 `
 

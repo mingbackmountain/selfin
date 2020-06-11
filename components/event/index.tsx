@@ -43,9 +43,9 @@ export const Events: React.FC<EventTypeProps & CSSProps> = ({
           />
         </div>
 
-        <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด >></div>
+        <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด > </div>
+        <div className="all-event-button">ดูกิจกรรมทั้งหมด > </div>
       </div>
-
       <div className="cards">
         {data &&
           data.slice(0, 4).map((event, index) => (
@@ -75,8 +75,6 @@ export const Events: React.FC<EventTypeProps & CSSProps> = ({
             </div>
           ))}
       </div>
-
-      <div className="all-event-button">ดูกิจกรรมทั้งหมด ></div>
     </EventContainer>
   )
 }

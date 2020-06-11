@@ -28,7 +28,9 @@ export const EventContainer = styled.div`
   @media screen and (min-width: 769px) {
     .all-event-button {
       display: block;
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-right: 70px;
       font-size: 20px;
       font-weight: 500;
       text-align: right;

@@ -69,12 +69,6 @@ const HomePage: NextPage = () => {
           `}
         />
       </Desktop>
-
-      <Blog
-        style={css`
-          margin: 60px 0;
-        `}
-      />
     </Layout>
   )
 }
