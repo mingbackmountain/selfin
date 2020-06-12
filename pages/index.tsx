@@ -12,7 +12,6 @@ import {
 import { Events } from "../components/event"
 import { Promotion } from "../components/promotion"
 import { Info, MobileInfo } from "../components/info"
-import { Blog } from "../components/blog"
 
 const HomePage: NextPage = () => {
   return (
@@ -59,7 +58,7 @@ const HomePage: NextPage = () => {
       {/* On desktop */}
       <Desktop>
         <Info
-          usingBackground={true}
+          usingBackground={false}
           style={css`
             padding: 20px 0 50px;
 

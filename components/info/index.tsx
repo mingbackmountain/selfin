@@ -5,13 +5,29 @@ import { InfoContainer, WrapContainer, Card } from "./styles/info"
 import { InfoContainerProps } from "./types"
 import { CSSProps } from "../layout/types"
 import { css } from "@emotion/core"
+import styled from "@emotion/styled"
+
+const UnderLine = styled.div`
+  width: 15%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #f2d600;
+  border-radius: 40px;
+
+  @media screen and (min-width: 769px) {
+    height: 3px;
+  }
+`
 
 export const Info: React.FC<InfoContainerProps & CSSProps> = ({
   usingBackground,
   style,
 }) => (
   <InfoContainer usingBackground={usingBackground} css={style}>
-    <h1 className="title">จองกิจกรรมให้ลูกง่ายๆ</h1>
+    <div>
+      <h1 className="title">จองกิจกรรมให้ลูกง่ายๆ</h1>
+      <UnderLine />
+    </div>
     <WrapContainer>
       <Card>
         <img src="/images/list.png" />
