@@ -60,5 +60,6 @@ export const GlobalStyle = css`
   html,
   body {
     margin: 0;
+    scroll-behavior: smooth;
   }
 `

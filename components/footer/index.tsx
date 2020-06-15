@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
   const router = useRouter()
 
   return (
-    <MainFooter>
+    <MainFooter id="footer">
       <MobileFooter className="mobile">
         <div className="svg">
           <h1>ติดต่อเรา</h1>
