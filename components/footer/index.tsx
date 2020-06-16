@@ -115,7 +115,7 @@ export const Footer: React.FC = () => {
           <p>
             Email: contact.selfin@gmail.com
             <br />
-            Phone: 089 417 6886
+            Phone: 089-417-6886
             <br />
             999 Phutthamonthon Sai 4 Rd, Salaya,
             <br />
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
             <p>
               Email: contact.selfin@gmail.com
               <br />
-              Phone: 089 417 6886
+              Phone: 089-417-6886
               <br />
               999 Phutthamonthon Sai 4 Rd, Salaya,
               <br />
