@@ -113,9 +113,9 @@ export const Footer: React.FC = () => {
         </div>
         <div className="contact" css={PagePadding({ topAndBottom: 20 })}>
           <p>
-            Email: Sparkspace.edu.com
+            Email: contact.selfin@gmail.com
             <br />
-            Call: +66-987654321
+            Phone: 089 417 6886
             <br />
             999 Phutthamonthon Sai 4 Rd, Salaya,
             <br />
