@@ -23,9 +23,7 @@ export const Promotion: React.FC = () => (
       <SectionTitle title="โปรโมชั่นประจำเดือน" />
 
       <Menu>
-        <MenuItem isSelected={true}>ข้อเสนอพิเศษ</MenuItem>
-        <MenuItem>วันหยุดสุดพิเศษ</MenuItem>
-        <span>ดูโปรโมชั่นทั้งหมด</span>
+        <MenuItem isSelected={false}>ข้อเสนอพิเศษ</MenuItem>
       </Menu>
     </Upper>
 
@@ -42,11 +40,6 @@ export const Promotion: React.FC = () => (
         </Link>
 
         <Navigation>
-          <div className="button-group">
-            <img className="left" src="/svg/left.svg" alt="left" />
-            <img className="right" src="/svg/right.svg" alt="" />
-          </div>
-
           <div className="pages-group">
             <Pagination className="selected" />
             <Pagination />
@@ -57,7 +50,12 @@ export const Promotion: React.FC = () => (
       </LeftSection>
 
       <RightSection>
-        <SectionTitle title="กิจกรรมสุดพิเศษในช่วง Covid-19" />
+        <SectionTitle
+          title="กิจกรรมสุดพิเศษในช่วง Covid-19"
+          style={css`
+            color: #ff2004;
+          `}
+        />
 
         <p>
           เนื่องจากสถานการณ์ระบาดโควิด19 เป็นผลให้ต้องยกเลิกกิจกรรมบางประเภท
