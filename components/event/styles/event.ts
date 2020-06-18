@@ -2,6 +2,7 @@ import styled from "@emotion/styled"
 
 export const EventContainer = styled.div`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
+  cursor: pointer;
 
   > h1 {
     font-weight: 600;
@@ -44,7 +45,7 @@ export const EventContainer = styled.div`
 
 export const EventCardContainer = styled.div`
   width: 100%;
-  height: 400px;
+  height: 380px;
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.16);
@@ -60,7 +61,7 @@ export const EventCardContainer = styled.div`
 
   > img {
     width: 100%;
-    max-height: 150px;
+    max-height: 170px;
     object-fit: cover;
   }
 
@@ -71,7 +72,7 @@ export const EventCardContainer = styled.div`
 
   h2 {
     font-size: 15px;
-    color: #6ace9e;
+    color: #000000;
     margin: 10px 20px;
     font-weight: 700;
   }
@@ -99,10 +100,10 @@ export const EventCardContainer = styled.div`
   }
 
   @media screen and (min-width: 426px) {
-    height: 480px;
+    height: 380px;
 
     section.event-info {
-      height: 150px;
+      height: 170px;
     }
 
     h2 {
