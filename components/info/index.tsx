@@ -14,14 +14,13 @@ import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 
 const UnderLine = styled.div`
-  width: 25%;
-  height: 3px;
+  width: 12%;
   margin: 0 auto;
   background-color: #f2d600;
   border-radius: 40px;
 
   @media screen and (min-width: 769px) {
-    height: 3px;
+    height: 4px;
   }
 `
 
@@ -31,7 +30,7 @@ export const Info: React.FC<InfoContainerProps & CSSProps> = ({
 }) => (
   <InfoContainer usingBackground={usingBackground} css={style}>
     <div>
-      <h1 className="title">จองกิจกรรมที่เหมาะสมกับลูกของคุณ?</h1>
+      <h1 className="title">บริการของเรา</h1>
       <UnderLine />
     </div>
     <div
@@ -39,8 +38,8 @@ export const Info: React.FC<InfoContainerProps & CSSProps> = ({
         display: flex;
         flex-flow: row;
         justify-content: space-between;
-        margin-left: 175px;
-        margin-right: 175px;
+        margin-left: 250px;
+        margin-right: 250px;
       `}
     >
       <TextLable>เร็วๆนี้</TextLable>
@@ -98,34 +97,49 @@ export const MobileInfo: React.FC<InfoContainerProps & CSSProps> = ({
       `}
     >
       <TitleWithYellowLine
-        title="จองกิจกรรมให้ลูกง่ายๆ"
+        title="บริการของเรา"
         style={css`
           display: flex;
           flex-flow: column;
           align-items: center;
-          margin-bottom: 30px;
         `}
       />
     </div>
     <WrapContainer>
-      <Card className="mobile">
-        <img src="/images/placeholder.png" />
-        <p>ค้นหากิจกรรมที่ใกล้ที่สุด</p>
+      <Card>
+        <img src="/images/list.png" />
+        <TextSection backgroundColor="#73bc99">
+          <h1>แบบประเมินออนไลน์</h1>
+          <p>
+            ทดลองทำแบบทดสอบ
+            <br />
+            เพื่อประเมินพฤติกรรมของลูก
+          </p>
+        </TextSection>
       </Card>
 
       <Card>
         <img src="/images/soccer.png" />
-        <p>กิจกรรมที่แนะนำ</p>
+        <TextSection backgroundColor="#fcba00">
+          <h1>กิจกรรมที่แนะนำ</h1>
+          <p>
+            เลือกกิจกรรมที่น่าสนใจ
+            <br />
+            ที่ถูกคัดสรรมาเพื่อลูกคุณโดยเฉพาะ
+          </p>
+        </TextSection>
       </Card>
 
       <Card>
         <img src="/images/up.png" />
-        <p>ติดตามผล</p>
-      </Card>
-
-      <Card>
-        <img src="/images/list.png" />
-        <p>แบบประเมินออนไลน์</p>
+        <TextSection backgroundColor="#e84b33">
+          <h1>ติดตามผล</h1>
+          <p>
+            ติดตามผลลัพธ์ของลูก
+            <br />
+            เพื่อการดูแลอย่างเหมาะสม
+          </p>
+        </TextSection>
       </Card>
     </WrapContainer>
   </InfoContainer>

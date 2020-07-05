@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { css } from "@emotion/core"
 
-import { SectionTitle } from "../section-title"
+import { TitleWithYellowLine, SectionTitle } from "../section-title"
 import { MenuItem } from "./menu-item"
 
 import {
@@ -20,34 +20,11 @@ import { Pagination } from "../../styles/pagination"
 export const Promotion: React.FC = () => (
   <Container css={PagePadding({ topAndBottom: 60 })}>
     <Upper>
-      <SectionTitle title="โปรโมชั่นประจำเดือน" />
-
-      <Menu>
-        <MenuItem isSelected={false}>ข้อเสนอพิเศษ</MenuItem>
-      </Menu>
+      <TitleWithYellowLine title="โปรโมชั่นประจำเดือน" />
     </Upper>
 
     <MainContent>
-      <LeftSection>
-        <Link href="/search-result?eventType=กิจกรรมช่วงโควิด">
-          <img
-            css={css`
-              cursor: pointer;
-            `}
-            src="/images/cover-slide.png"
-            alt="cover-slide"
-          />
-        </Link>
-
-        <Navigation>
-          <div className="pages-group">
-            <Pagination className="selected" />
-            <Pagination />
-            <Pagination />
-            <Pagination />
-          </div>
-        </Navigation>
-      </LeftSection>
+      <LeftSection></LeftSection>
 
       <RightSection>
         <SectionTitle
