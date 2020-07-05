@@ -35,12 +35,17 @@ export const InfoContainer = styled.div<InfoContainerProps>`
 export const WrapContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 20px;
-  padding: 0 60px;
+  padding: 10px 10px 10px 10px;
 
-  @media screen and (min-width: 375px) and (max-width: 450) {
-    overflow: scroll;
+  @media only screen and (min-width: 480px) {
+    justify-content: space-evenly;
+  }
+
+  @media only screen and (max-width: 479px) {
+    margin-top: 20px;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow: auto;
   }
 `
 
@@ -114,8 +119,8 @@ export const Card = styled.div`
       width: 110px;
       height: 110px;
     }
-    width: 45%;
-    margin-right: 20px;
+    width: 70%;
+    margin-right: 15px;
   }
 
   @media screen and (min-width: 426px) {
@@ -123,8 +128,8 @@ export const Card = styled.div`
       width: 110px;
       height: 110px;
     }
-    width: 50%;
-    margin-right: 30px;
+    width: 70%;
+    margin-right: 15px;
   }
 
   @media screen and (min-width: 769px) {

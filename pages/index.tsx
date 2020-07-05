@@ -39,7 +39,7 @@ const HomePage: NextPage = () => {
         text="กิจกรรมที่น่าสนใจในเดือนนี้"
       />
 
-      <Promotion />
+      {/* <Promotion /> */}
 
       {/* On mobile */}
       <Mobile>

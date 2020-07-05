@@ -38,8 +38,8 @@ export const Info: React.FC<InfoContainerProps & CSSProps> = ({
         display: flex;
         flex-flow: row;
         justify-content: space-between;
-        margin-left: 250px;
-        margin-right: 250px;
+        margin-left: 220px;
+        margin-right: 220px;
       `}
     >
       <TextLable>เร็วๆนี้</TextLable>
