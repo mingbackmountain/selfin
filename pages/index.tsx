@@ -22,7 +22,7 @@ const HomePage: NextPage = () => {
 
       {/* On mobile */}
       <Mobile>
-        <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
+        <MobileBanner imgUrl="/images/use-res.png" />
         <MobileNearbyEventForm />
       </Mobile>
 

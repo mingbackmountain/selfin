@@ -17,7 +17,6 @@ export const MobileBanner: React.FC<BannerProps & CSSProps> = ({
 }) => {
   return (
     <BannerContainer css={style}>
-      <div>แหล่งรวมกิจกรรมเพื่อพัฒนาเด็ก ADHD</div>
       <img className="banner" src={imgUrl} alt="banner" />
     </BannerContainer>
   )
