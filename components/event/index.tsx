@@ -35,6 +35,7 @@ export const Events: React.FC<EventTypeProps & CSSProps> = ({
         <div>
           <TitleWithYellowLine
             style={css`
+              margin-bottom: 20px;
               @media screen and (min-width: 769px) {
                 margin-bottom: 20px;
               }
@@ -42,9 +43,6 @@ export const Events: React.FC<EventTypeProps & CSSProps> = ({
             title={text}
           />
         </div>
-
-        <div className="all-event-button mobile">ดูกิจกรรมทั้งหมด > </div>
-        <div className="all-event-button">ดูกิจกรรมทั้งหมด > </div>
       </div>
       <div className="cards">
         {data &&
