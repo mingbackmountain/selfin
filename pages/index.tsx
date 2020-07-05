@@ -44,7 +44,7 @@ const HomePage: NextPage = () => {
       {/* On mobile */}
       <Mobile>
         <MobileInfo
-          usingBackground={false}
+          usingBackground={true}
           style={css`
             padding: 20px 0 50px;
 
