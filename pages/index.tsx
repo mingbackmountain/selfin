@@ -22,8 +22,8 @@ const HomePage: NextPage = () => {
 
       {/* On mobile */}
       <Mobile>
-        <MobileBanner imgUrl="/images/use-res.png" />
-        <MobileNearbyEventForm />
+        <MobileBanner />
+        {/* <MobileNearbyEventForm /> */}
       </Mobile>
 
       {/* On desktop */}

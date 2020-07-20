@@ -6,6 +6,8 @@ import { CacheProvider, Global } from "@emotion/core"
 import { cache } from "emotion"
 
 import { GlobalStyle } from "../styles/global"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 export default class App extends NextApp {
   render() {
