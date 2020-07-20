@@ -23,7 +23,7 @@ const HomePage: NextPage = () => {
       {/* On mobile */}
       <Mobile>
         <MobileBanner />
-        {/* <MobileNearbyEventForm /> */}
+        <MobileNearbyEventForm />
       </Mobile>
 
       {/* On desktop */}
