@@ -27,7 +27,6 @@ const EventPage: NextPage<{ event: Event | undefined }> = ({ event }) => {
 
       {/* On mobile */}
       <Mobile>
-        <MobileBanner imgUrl="/images/289308-P6O0H1-96.png" />
         <MobileNameSection
           event={{
             name: event.name,

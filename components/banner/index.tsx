@@ -16,7 +16,6 @@ export const MobileBanner = () => {
     infinite: true,
     autoplay: true,
     adaptiveHeight: true,
-    centerPadding: "50px",
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -24,7 +23,6 @@ export const MobileBanner = () => {
 
   return (
     <div>
-      <h2> Single Item</h2>
       <Slider {...settings}>
         <div>
           <img src={slideImages[0]} />
