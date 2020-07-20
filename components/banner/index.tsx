@@ -1,8 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import { BannerContainer } from "./styles/banner"
 import { BannerProps } from "./types"
 import { CSSProps } from "../layout/types"
 import Slider from "react-slick"
+import styled from "@emotion/styled"
 
 export const MobileBanner = () => {
   const slideImages = [
@@ -24,7 +25,7 @@ export const MobileBanner = () => {
   return (
     <div
       style={{
-        marginTop: "89px",
+        marginTop: "87px",
         marginBottom: "30px",
       }}
     >
