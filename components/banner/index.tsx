@@ -13,16 +13,21 @@ export const MobileBanner = () => {
 
   const settings = {
     dots: true,
+    fade: true,
     infinite: true,
-    autoplay: true,
-    adaptiveHeight: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
   }
 
   return (
-    <div>
+    <div
+      style={{
+        marginTop: "89px",
+        marginBottom: "30px",
+      }}
+    >
       <Slider {...settings}>
         <div>
           <img src={slideImages[0]} />
