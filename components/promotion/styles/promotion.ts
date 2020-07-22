@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 
 export const Container = styled.div`
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
-  background: #f7f7f7;
+  background: #ffffff;
   margin-top: 60px;
   display: none;
 
@@ -74,7 +74,6 @@ export const LeftSection = styled.div`
 export const RightSection = styled.div`
   flex: 0 1 40%;
   min-height: 450px;
-  background-color: #ffba00;
   border-radius: 10px;
   color: #ffba00;
   box-sizing: border-box;

@@ -8,7 +8,7 @@ export const InfoContainer = styled.div<InfoContainerProps>`
     props.usingBackground
       ? `background: url("/images/kid.png") center center;
     background-size: cover;`
-      : `background: #fff;`}
+      : `background: #f7f7f7;`}
   font-family: "SukhumvitSet", Arial, Helvetica, sans-serif;
 
   .title {

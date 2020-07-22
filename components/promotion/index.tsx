@@ -1,49 +1,122 @@
-import Link from "next/link"
-import { css } from "@emotion/core"
-
-import { TitleWithYellowLine, SectionTitle } from "../section-title"
-import { MenuItem } from "./menu-item"
-
+import { TitleWithYellowLine } from "../section-title"
 import {
   Container,
   Upper,
-  Menu,
   MainContent,
   LeftSection,
-  Navigation,
   RightSection,
-  Button,
 } from "./styles/promotion"
 import { PagePadding } from "../../styles/container"
-import { Pagination } from "../../styles/pagination"
+import Slider from "react-slick"
+
+const settings = {
+  fade: true,
+  infinite: true,
+  speed: 200,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+}
+
+const slideImages = [
+  "images/slider_desktop/test-dis.png",
+  "images/slider_desktop/covid.png",
+  "images/slider_desktop/customer-sc.png",
+]
 
 export const Promotion: React.FC = () => (
   <Container css={PagePadding({ topAndBottom: 60 })}>
-    <Upper>
-      <TitleWithYellowLine title="โปรโมชั่นประจำเดือน" />
-    </Upper>
-
     <MainContent>
-      <LeftSection></LeftSection>
+      <LeftSection>
+        <div
+          style={{
+            width: "500px",
+            height: "400px",
+            margin: "0 auto",
+          }}
+        >
+          <Slider {...settings}>
+            <div
+              style={{
+                width: "500px",
+                height: "400px",
+              }}
+            >
+              <TitleWithYellowLine title="โปรโมชั่นสุดพิเศษ" />
+              <p>
+                แทนคำขอบคุณที่ให้การสนับสนุนเราเป็นอย่างดี
+                เราขอมอบของขวัญสุดพิเศษให้กับทุกท่าน จองกิจกรรมครั้งแรก ลดทันที
+                10% ทุกกิจกรรม จองเลยวันนี้ - 30 สิงหาคม 2563 นี้!
+                <br />
+                <br />* 1 ท่าน/1สิทธิ์ เท่านั้น
+              </p>
+            </div>
+            <div
+              style={{
+                width: "500px",
+                height: "400px",
+              }}
+            >
+              <TitleWithYellowLine title="กิจกรรมในช่วง Covid-19" />
+              <p>
+                ปลอดภัยหายห่วงกับกิจกรรมที่เราคัดสรรเพื่อลูกของคุณ
+                รวมกิจกรรมที่มีมาตราการรองรับระหว่างทำกิจกรรม
+                เพื่อการป้องกันการติดเชื้อไวรัส COVID-19
+              </p>
+            </div>
+            <div
+              style={{
+                width: "500px",
+                height: "400px",
+              }}
+            >
+              <TitleWithYellowLine title="เลือกกิจกรรมไม่ได้ให้เราช่วยคุณ" />
+              <p>
+                สอบถามรายละเอียดของกิจกรรมเพิ่มเติม ไม่เข้าใจวิธีใช้งานเว็บไซต์
+                พบปัญหาในการใช้งาน ติดต่อฝ่ายCustomer Service ได้ตลอด 24ชม.
+              </p>
+            </div>
+          </Slider>
+        </div>
+      </LeftSection>
 
-      <RightSection>
-        <SectionTitle
-          title="กิจกรรมสุดพิเศษในช่วง Covid-19"
-          style={css`
-            color: #ff2004;
-          `}
-        />
-
-        <p>
-          เนื่องจากสถานการณ์ระบาดโควิด19 เป็นผลให้ต้องยกเลิกกิจกรรมบางประเภท
-          แต่วันนี้เรามีหลากหลายกิจกรรมเสริมสร้างพัฒนาการที่คุณสามารถทำได้ที่บ้าน
-          หรือPlay From Home กันได้เลย{" "}
-        </p>
-
-        <Link href="/search-result?eventType=กิจกรรมช่วงโควิด">
-          <Button>อ่านต่อ</Button>
-        </Link>
-      </RightSection>
+      <div
+        style={{
+          width: "500px",
+          height: "400px",
+          margin: "0 auto",
+        }}
+      >
+        <Slider {...settings}>
+          <div>
+            <img
+              src={slideImages[0]}
+              style={{
+                width: "500px",
+                height: "400px",
+              }}
+            />
+          </div>
+          <div>
+            <img
+              src={slideImages[1]}
+              style={{
+                width: "500px",
+                height: "400px",
+              }}
+            />
+          </div>
+          <div>
+            <img
+              src={slideImages[2]}
+              style={{
+                width: "500px",
+                height: "400px",
+              }}
+            />
+          </div>
+        </Slider>
+      </div>
     </MainContent>
   </Container>
 )
