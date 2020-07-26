@@ -1,11 +1,5 @@
 import { TitleWithYellowLine } from "../section-title"
-import {
-  Container,
-  Upper,
-  MainContent,
-  LeftSection,
-  RightSection,
-} from "./styles/promotion"
+import { Container, MainContent, LeftSection } from "./styles/promotion"
 import { PagePadding } from "../../styles/container"
 import Slider from "react-slick"
 

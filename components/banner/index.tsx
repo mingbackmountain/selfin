@@ -25,19 +25,44 @@ export const MobileBanner = () => {
   return (
     <div
       style={{
-        marginTop: "87px",
-        marginBottom: "30px",
+        width: "300px",
+        height: "470px",
+        marginTop: "100px",
+        marginBottom: "50px",
+        marginLeft: "50px",
+        marginRight: "50px",
       }}
     >
       <Slider {...settings}>
         <div>
-          <img src={slideImages[0]} />
+          <img
+            style={{
+              width: "300px",
+              height: "470px",
+              margin: "0 auto",
+            }}
+            src={slideImages[0]}
+          />
         </div>
         <div>
-          <img src={slideImages[1]} />
+          <img
+            style={{
+              width: "300px",
+              height: "470px",
+              margin: "0 auto",
+            }}
+            src={slideImages[1]}
+          />
         </div>
         <div>
-          <img src={slideImages[2]} />
+          <img
+            style={{
+              width: "300px",
+              height: "470px",
+              margin: "0 auto",
+            }}
+            src={slideImages[2]}
+          />
         </div>
       </Slider>
     </div>
@@ -51,14 +76,3 @@ export const Banner: React.FC<BannerProps & CSSProps> = ({ imgUrl, style }) => {
     </BannerContainer>
   )
 }
-
-// export const MobileBanner: React.FC<BannerProps & CSSProps> = ({
-//   imgUrl,
-//   style,
-// }) => {
-//   return (
-//     <BannerContainer css={style}>
-//       <img className="banner" src={imgUrl} alt="banner" />
-//     </BannerContainer>
-//   )
-// }
